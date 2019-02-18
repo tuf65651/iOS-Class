@@ -22,17 +22,18 @@ class Bagels {
     // Return secret number as three digit string
     func generateSecretNumber() {
         // generate number in [100, 999]
-        let generated: UInt32 = arc4random_uniform(900) + 100;
-        secretNumber = String(generated);
+//        let generated: UInt32 = arc4random_uniform(900) + 100;
+//        secretNumber = String(generated);
+        secretNumber = "171";
     }
     
     // Check if arguent matches secret number
-    func isGuessCorrect(guess:String) -> Bool {
+    private func isGuessCorrect(guess:String) -> Bool {
         return guess == secretNumber;
     }
     
     // Prompt user to enter guess
-    func acceptGuess() {
+    private func acceptGuess() {
         print("Type in a three digit number, if you've got the nerve.");
 
         var validInput:Bool = false;
@@ -54,7 +55,7 @@ class Bagels {
     }
     
     // Print 'Bagels' if no matching digits, else print 'Fermi' for each digit in correct place, 'Pico' for wrong place
-    func buildHint(guess: String) -> String {
+    private func buildHint(guess: String) -> String {
         
         var hint = "";
         var secretDigits:Array<Character> = Array(secretNumber);
@@ -64,17 +65,16 @@ class Bagels {
         for i in 0...2 {
             
             if leftToMatch[i] == secretDigits[i] {
-                // Write placeholder to avoid double matching
+                // Write placeholders to avoid double matching
                 leftToMatch[i] = "\r";
+                secretDigits[i] = "\t"
 //
                 hint = "Fermi " + hint;
             } // Search all exact matches before Out of Place matches to avoid guess:011 secret:991 returning Pico
         }
         // Loop searching for Out of Place Match
         for i in 0...2 {
-            if leftToMatch.contains(secretDigits[i]){
-                // find out of place match
-//                print("Found out of place match");
+            if secretDigits.contains(leftToMatch[i]){ // find out of place match
                 leftToMatch[leftToMatch.index(of: secretDigits[i])!] = "\r";
                 hint.append("Pico ");
             }
@@ -83,7 +83,7 @@ class Bagels {
         return String("guess - \(currentGuess), \(hint.isEmpty ? "Bagels" : hint)");
     }
     
-    func printHint(guess: String){
+    private func printHint(guess: String){
         print(buildHint(guess: guess));
     }
     
