@@ -37,39 +37,41 @@ class Bagels {
             currentGuess = tryInput;
         }
         else {currentGuess = ""};
+        // Invalid input will be ignored if too short else truncated to first three chars and used.
     }
     
     // Print 'Begels' if no matching digits, else print 'Fermi' for each digit in correct place, 'Pico' for wrong place
-    func buildHint() -> String {
-//        var exact = 0;
-//        var inexact = 0;
+    func buildHint(guess: String) -> String {
+        
         var hint = "";
         var secretDigits:Array<Character> = Array(secretNumber);
-        var leftToMatch:Array<Character> = Array(currentGuess);
-        print("sd \(secretDigits.count) ltm \(leftToMatch.count)")
-//        if leftToMatch.count > 0 {
+        var leftToMatch:Array<Character> = Array(guess);
+        
+        // Loop searching for exact matches
         for i in 0...2 {
-            print(i)
-//                let digit:Character = leftToMatch.remove(at: 0);
-            //print("digit is \(digit)")
-            // find exact match
+            
             if leftToMatch[i] == secretDigits[i] {
+                // Write placeholder to avoid double matching
                 leftToMatch[i] = "\r";
-                print("Found exact match");
+//
                 hint = "Fermi " + hint;
-            } else if leftToMatch.contains(secretDigits[i]){
+            } // Search all exact matches before Out of Place matches to avoid guess:011 secret:991 returning Pico
+        }
+        // Loop searching for Out of Place Match
+        for i in 0...2 {
+            if leftToMatch.contains(secretDigits[i]){
                 // find out of place match
-                print("Found out of place match");
+//                print("Found out of place match");
                 leftToMatch[leftToMatch.index(of: secretDigits[i])!] = "\r";
                 hint.append("Pico ");
             }
-        } // endfor -- counted matches
+        } // endfor -- counted all matches
 //        }
-        return String("guess - \(currentGuess) \(hint.isEmpty ? "Bagels" : hint)");
+        return String("guess - \(currentGuess), \(hint.isEmpty ? "Bagels" : hint)");
     }
     
-    func printHint() {
-        print(buildHint());
+    func printHint(guess: String){
+        print(buildHint(guess: guess));
     }
     
     public func playGame() {
@@ -80,12 +82,11 @@ class Bagels {
         repeat {
             acceptGuess();
             if isGuessCorrect(guess: currentGuess){
-                stillPlaying = true;
+                stillPlaying = false;
             } else {
-                printHint()
+                printHint(guess: currentGuess);
             }
         } while (stillPlaying)
-        
-        print("Thanks for playing")
+        print("guess - \(currentGuess), Winner!");
     }
 }
