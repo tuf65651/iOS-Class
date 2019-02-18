@@ -22,9 +22,8 @@ class Bagels {
     // Return secret number as three digit string
     func generateSecretNumber() {
         // generate number in [100, 999]
-//        let generated: UInt32 = arc4random_uniform(900) + 100;
-//        secretNumber = String(generated);
-        secretNumber = "171";
+        let generated: UInt32 = arc4random_uniform(900) + 100;
+        secretNumber = String(generated);
     }
     
     // Check if arguent matches secret number
