@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PicoFermiBagel/Bagels.swift"
-            timestampString = "572202019.397877"
+            timestampString = "572202821.9911129"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PicoFermiBagel/Bagels.swift"
-            timestampString = "572202019.398088"
+            timestampString = "572202821.991335"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "buildHint(guess:)"
             landmarkType = "7">
          </BreakpointContent>

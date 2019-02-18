@@ -67,7 +67,7 @@ class Bagels {
             if leftToMatch[i] == secretDigits[i] {
                 // Write placeholders to avoid double matching
                 leftToMatch[i] = "\r";
-                secretDigits[i] = "\t"
+                secretDigits[i] = "\n"
 //
                 hint = "Fermi " + hint;
             } // Search all exact matches before Out of Place matches to avoid guess:011 secret:991 returning Pico
@@ -75,7 +75,7 @@ class Bagels {
         // Loop searching for Out of Place Match
         for i in 0...2 {
             if secretDigits.contains(leftToMatch[i]){ // find out of place match
-                leftToMatch[leftToMatch.index(of: secretDigits[i])!] = "\r";
+                leftToMatch[i] = "\r";
                 hint.append("Pico ");
             }
         } // endfor -- counted all matches
