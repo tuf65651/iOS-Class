@@ -33,14 +33,26 @@ class Bagels {
     // Prompt user to enter guess
     func acceptGuess() {
         print("Type in a three digit number, if you've got the nerve.");
-        if let tryInput:String = readLine() {
-            currentGuess = tryInput;
-        }
-        else {currentGuess = ""};
+
+        var validInput:Bool = false;
+        repeat {
+            if let tryInput = readLine(){
+                if (tryInput.count != 3){
+                    print("Enter three digits");
+                }
+                else {
+                    validInput = true;
+                    currentGuess = tryInput;
+                }
+            } // readline didn't send anything back
+            else {
+                print("Type your guess and then return");
+            }
+        } while !validInput
         // Invalid input will be ignored if too short else truncated to first three chars and used.
     }
     
-    // Print 'Begels' if no matching digits, else print 'Fermi' for each digit in correct place, 'Pico' for wrong place
+    // Print 'Bagels' if no matching digits, else print 'Fermi' for each digit in correct place, 'Pico' for wrong place
     func buildHint(guess: String) -> String {
         
         var hint = "";
@@ -81,6 +93,14 @@ class Bagels {
         
         repeat {
             acceptGuess();
+            
+            // Allow early quit
+            if (Set(["Q", "QUIT"]).contains(currentGuess.uppercased())){
+                print("Goodbye");
+                exit(0);
+            }
+            
+            // Did user guess the number?
             if isGuessCorrect(guess: currentGuess){
                 stillPlaying = false;
             } else {
