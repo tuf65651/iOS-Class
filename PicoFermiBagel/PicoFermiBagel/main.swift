@@ -8,21 +8,28 @@
 
 import Foundation
 
-let game = Bagels();
-var running = true;
-repeat {
-    game.playGame();
-    running = askContinue();
-} while running
-
-let continueResponses: Set = ['Y', 'YES'];
+let continueResponses: Set = ["Y", "YES"];
 
 func askContinue() -> Bool {
     print("Play again? (y, yes)");
     let userResponse:String? = readLine();
-    if let realResponse = userResponse!.uppercased() {
-        return (realResponse in continuResponses);
+    if let realResponse = userResponse?.uppercased() {
+        return (continueResponses.contains(realResponse));
     } else {
         return askContinue();
     }
 }
+
+func main() {
+    var running = true;
+    var game: Bagels;
+    repeat {
+        game = Bagels();
+        game.playGame();
+        running = askContinue();
+    } while running
+    
+    print("Thanks for playing");
+}
+
+main();
