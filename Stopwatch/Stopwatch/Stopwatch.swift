@@ -22,6 +22,11 @@ class Stopwatch {
     
     var elapsedTimeAsString: String {
         let timeFormat = "%02d:%02d";
+        
+        let elapsedTime = startTime!.timeIntervalSinceNow;
+        let diffHours = Int((elapsedTime.truncatingRemainder(dividingBy: 86400) / (3600) ))
+        let diffMinutes = Int( elapsedTime.truncatingRemainder(dividingBy: 3600))
+        let diffSeconds = elapsedTime.truncatingRemainder(dividingBy: <#T##TimeInterval#>)
         return String(format: timeFormat, elapsedTime/60, elapsedTime.truncatingRemainder(dividingBy: 60))
     }
     
