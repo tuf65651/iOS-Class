@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let stopwatch = Stopwatch();
+    
     @IBOutlet weak var elapsedTimeLabel: UILabel!;
 
     override func viewDidLoad() {
@@ -24,10 +26,21 @@ class ViewController: UIViewController {
     
     @IBAction func startButtonTapped(sender: UIButton){
         // start clock
+        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateElapsedTimeLabel), userInfo:nil, repeats: true)
+        stopwatch.start();
     }
     
     @IBAction func stopButtonTapped(sender: UIButton){
-        // start clock
+        // stop clock
+        stopwatch.stop();
+    }
+    
+    @objc func updateElapsedTimeLabel(timer: Timer) {
+        if stopwatch.isRunning {
+            elapsedTimeLabel.text = stopwatch.elapsedTimeAsString
+        } else {
+            timer.invalidate();
+        }
     }
 
 }

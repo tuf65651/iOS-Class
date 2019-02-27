@@ -21,13 +21,24 @@ class Stopwatch {
     }
     
     var elapsedTimeAsString: String {
-        let timeFormat = "%02d:%02d";
+        let timeFormat = "%02d:%02d.%01d";
         
-        let elapsedTime = startTime!.timeIntervalSinceNow;
-        let diffHours = Int((elapsedTime.truncatingRemainder(dividingBy: 86400) / (3600) ))
-        let diffMinutes = Int( elapsedTime.truncatingRemainder(dividingBy: 3600))
-        let diffSeconds = elapsedTime.truncatingRemainder(dividingBy: <#T##TimeInterval#>)
-        return String(format: timeFormat, elapsedTime/60, elapsedTime.truncatingRemainder(dividingBy: 60))
+        let elapsedTime = -1 * startTime!.timeIntervalSinceNow;
+        //let elapsedHours = Int( elapsedTime.truncatingRemainder(dividingBy: 86400) / 60);
+        let elapsedMinutes = Int( elapsedTime.truncatingRemainder(dividingBy: 3600) / 60);
+        let elapsedSeconds = Int( elapsedTime.truncatingRemainder(dividingBy: 60));
+        let elapsedFractionalSeconds: Double = elapsedTime - Double(Int(elapsedTime));
+        //TODO: find smoother floor division
+        let elapsedDeciSeconds: Double = elapsedFractionalSeconds;// - elapsedTime.truncatingRemainder(dividingBy: 0.01);
+        
+        return String(format: timeFormat, elapsedMinutes, elapsedSeconds, elapsedDeciSeconds);
+    }
+    
+    var isRunning: Bool {
+        if let _ = startTime {
+            return true;
+        }
+        return false;
     }
     
     func start() {
