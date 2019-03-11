@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C144BA87223602C40090EA1D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C144BA86223602C40090EA1D /* main.swift */; };
 		C154690E2235800100147C3E /* TempleBookstore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C154690D2235800100147C3E /* TempleBookstore.swift */; };
 		C15469152235802200147C3E /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15469142235802200147C3E /* Book.swift */; };
 		C15469172235842900147C3E /* Bookstore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15469162235842900147C3E /* Bookstore.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C144BA86223602C40090EA1D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C154690A2235800100147C3E /* Lab03 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab03; sourceTree = BUILT_PRODUCTS_DIR; };
 		C154690D2235800100147C3E /* TempleBookstore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempleBookstore.swift; sourceTree = "<group>"; };
 		C15469142235802200147C3E /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				C154690D2235800100147C3E /* TempleBookstore.swift */,
 				C15469142235802200147C3E /* Book.swift */,
 				C15469162235842900147C3E /* Bookstore.swift */,
+				C144BA86223602C40090EA1D /* main.swift */,
 			);
 			path = Lab03;
 			sourceTree = "<group>";
@@ -127,6 +130,7 @@
 			files = (
 				C15469172235842900147C3E /* Bookstore.swift in Sources */,
 				C15469152235802200147C3E /* Book.swift in Sources */,
+				C144BA87223602C40090EA1D /* main.swift in Sources */,
 				C154690E2235800100147C3E /* TempleBookstore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

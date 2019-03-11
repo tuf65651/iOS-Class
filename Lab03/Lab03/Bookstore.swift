@@ -23,7 +23,7 @@ class Bookstore {
         gross = 0;
     }
     
-    private func addNewBook(book:Book) {
+    public func addNewBook(book:Book) {
         books.append(book);
     }
     
@@ -44,7 +44,12 @@ class Bookstore {
     public func inStock(title:String, quantity:Int)->Bool {
         let knownBookFound:Book? = books.first(where: {$0.getTitle() == title})
         if let bookFound = knownBookFound {
-            return bookFound.getTitle() == title;
+            if bookFound.getQuantity() >= quantity{
+                return true;
+            } else {
+                //TODO: major refactor needed, then move response to outer class
+                print("only \(bookFound.getQuantity()) copies available");
+            }
         }
         return false;
     }
@@ -53,14 +58,20 @@ class Bookstore {
     // buyer. (Note: there is no I/O done in this method, the Bookstore object is changed to reflect
     // the sale. The method returns true if the sale was executed successfully, false otherwise.
     public func sellBook(title:String, quantity:Int)->Bool {
-        
+        if !inStock(title: title, quantity: quantity) {
+            return false;
+        }
+        // Find correct entry and update inventory
         for i in 0..<books.count {
             if books[i].getTitle() == title {
-                books[i].addQuantity(amount: -1 * quantity);
+                // Brilliant architecture -- every function loops over whole list -- why not use dictionary keyed to title?
+                addBookQuantity(title:title, quantity: -1 * quantity);
                 gross += (books[i].getPrice() * Double(quantity));
                 return true;
             }
         }
+        // Code below should be unreachable
+        print("Threre's been a terrible mistake");
         return false;
     }
     
@@ -73,9 +84,9 @@ class Bookstore {
     
     // Lists all of the information about the books in the Bookstore object.
     public func listBooks() {
+        print("\(totalbooks) in stock.\nItems:");
         for b in books {
-            print("\(totalbooks) in stock.\nItems:")
-            print(b.getTitle());
+            print("\(b.toString())");
         }
     }
     
