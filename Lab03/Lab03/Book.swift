@@ -20,10 +20,16 @@ class Book {
     // and the number of copies (quantity) of books and initializes each of the appropriate propertiesin
     //the object.
     public init?(theTitle: String, pages: Int, cost: Double, num: Int) {
-        title = theTitle;
-        numOfPages = pages;
-        price = cost;
-        quantity = num;
+        if theTitle.isEmpty {
+            
+            return nil;
+            
+        } else {
+            self.title = theTitle;
+            self.numOfPages = pages;
+            self.price = cost;
+            self.quantity = num
+        }
     }
     
     // Returns the title of the Book object the method is called on.

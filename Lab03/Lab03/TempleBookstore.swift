@@ -34,7 +34,7 @@ class TempleBookstore {
     
     init() {
         running = true;
-        store = Bookstore()!;
+        store = Bookstore();
     }
     
     let menuOptions = """
@@ -189,10 +189,12 @@ What would you like to do today?
     func getInput() {
         let userResponse:String? = readLine();
         if let realResponse = userResponse?.uppercased() {
-            latestInput = realResponse;
-        } else {
-            latestInput = nil; // Invalidate persistent input storage, for future logic.
+            if !realResponse.isEmpty {
+                latestInput = realResponse;
+                return;
+            }
         }
+        latestInput = nil; // Invalidate persistent input storage, for future logic.
     }
     
     func main() {

@@ -16,8 +16,8 @@ class Bookstore {
     private var gross:Double;
     private let MAXNUMOFBOOKS = 1000;
     
-    // a failable initializer that creates a new, empty Bookstore object.
-    public init?() {
+    // a non-failable initializer that creates a new, empty Bookstore object.
+    public init() {
         books = [];
         totalbooks = 0;
         gross = 0;
