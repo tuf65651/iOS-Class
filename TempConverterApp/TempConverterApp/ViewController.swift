@@ -21,13 +21,42 @@ class ViewController: UIViewController {
     }
     
     @IBAction func convertButtonTapped(sender: UIButton) {
-        if let inputTemp: String = textInput.text {
-            let convertedText = TempConverter.convert(temp: Int(inputTemp)!, unit: TempConverter.TempUnit.Far);
-            
+        var inputTemp: String = textInput.text!;
+        var outputTemp: String;
+        
+        if inputTemp == "" {
+            inputTemp = "-500";
         }
+        
+        outputTemp = "N/A";
+        
+        // Check for valid input
+        if let degreesInput: Int = Int( inputTemp ) {
+            if let outputdegrees:Int = TempConverter.convert(temp: degreesInput) {
+                outputTemp = String( "\(outputdegrees)" );
+            }
+        }
+        
+        displayTemp.text = outputTemp;
     }
     
+    @IBAction func switchChanged() {
+        TempConverter.toggleUnits();
+        updateLabels();
+    }
+    
+    @IBOutlet weak var displayTemp: UILabel!
+    @IBOutlet weak var displayUnit: UILabel!
+    @IBOutlet weak var inputUnit: UILabel!
+    
     @IBOutlet weak var textInput: UITextField!
+    
+    @IBAction func updateLabels() {
+        
+        displayUnit.text = TempConverter.getToggleString();
+        inputUnit.text = TempConverter.getUnitString();
+        
+    }
     
 }
 
