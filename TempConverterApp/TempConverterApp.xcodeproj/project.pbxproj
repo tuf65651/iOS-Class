@@ -15,6 +15,7 @@
 		C13F7FED223AA7730072D07F /* TempConverterAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F7FEC223AA7730072D07F /* TempConverterAppTests.swift */; };
 		C13F7FF8223AA7730072D07F /* TempConverterAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F7FF7223AA7730072D07F /* TempConverterAppUITests.swift */; };
 		C13F8006223AA8210072D07F /* TempConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F8005223AA8210072D07F /* TempConverter.swift */; };
+		C19A20A6223F1E4A00F3DE5F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A20A5223F1E4A00F3DE5F /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C13F7FF7223AA7730072D07F /* TempConverterAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempConverterAppUITests.swift; sourceTree = "<group>"; };
 		C13F7FF9223AA7730072D07F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C13F8005223AA8210072D07F /* TempConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempConverter.swift; sourceTree = "<group>"; };
+		C19A20A5223F1E4A00F3DE5F /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				C13F7FD7223AA7720072D07F /* AppDelegate.swift */,
 				C13F7FD9223AA7720072D07F /* ViewController.swift */,
 				C13F7FDB223AA7720072D07F /* Main.storyboard */,
+				C19A20A5223F1E4A00F3DE5F /* AboutViewController.swift */,
 				C13F7FDE223AA7730072D07F /* Assets.xcassets */,
 				C13F7FE0223AA7730072D07F /* LaunchScreen.storyboard */,
 				C13F7FE3223AA7730072D07F /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				C13F8006223AA8210072D07F /* TempConverter.swift in Sources */,
 				C13F7FDA223AA7720072D07F /* ViewController.swift in Sources */,
+				C19A20A6223F1E4A00F3DE5F /* AboutViewController.swift in Sources */,
 				C13F7FD8223AA7720072D07F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

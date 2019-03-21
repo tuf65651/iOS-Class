@@ -8,11 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //STEP10: self.inputTemperature.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,6 +59,14 @@ class ViewController: UIViewController {
         inputUnit.text = TempConverter.getUnitString();
         
     }
+    
+/*STEP10:
+    func textFieldShouldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        inputTemperature.resignFirstResponder()
+        return true;
+        
+    } */
     
 }
 
