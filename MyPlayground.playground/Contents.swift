@@ -2,11 +2,4 @@
 
 import Foundation
 
-public struct Card {
-    
-    public let face: Face;
-    public let suit: Suit;
-    
-    public var 
-    
-}
+
