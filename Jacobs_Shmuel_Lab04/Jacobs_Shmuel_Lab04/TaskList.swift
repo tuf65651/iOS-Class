@@ -53,20 +53,26 @@ class TaskList {
         return taskList;
     }
     
+    /**
+     Get list of all tasks due on a day before today.
+     - Note: tasks due earlier today will not be included in the list returned
+     
+     - Returns: Array containing all tasks due yesterday or earlier
+     */
     public func pastDueTasks() -> [Task] {
         let todayDate = NSDate();
         
         //TODO: round so task isn't past due until next day
         
-        func dueDatePast(task: Task) -> Bool {
-            if let dd: NSDate = task.dueDate {
-                return todayDate.timeIntervalSince( dd as Date ) > 0;
-            } else {
-                return false;
-            }
-        }
+//        func dueDatePast(task: Task) -> Bool {
+//            if let dd: NSDate = task.dueDate {
+//                return todayDate.timeIntervalSince( dd as Date ) > 0;
+//            } else {
+//                return false;
+//            }
+//        }
         
-        return taskList.filter( dueDatePast );
+        return taskList.filter( {$0.pastDue()} );
     }
     
     /**

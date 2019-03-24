@@ -56,4 +56,23 @@ class Task: Equatable {
         //TODO:
     }
     
+    public func pastDue() -> Bool {
+        
+        if var dueDateComponents = NSDateComponents( dueDate ){
+            
+            let today = NSDate;
+            let compToday = Calendar.compare(dueDate, today, toGranularity: .day);
+            
+            return compToday == .orderedDescending;
+//            var todayComponents = NSDateComponents();
+            
+//            // Set both times to mindnight to compare dates but not times
+//            dueDateComponents.hour = 0;
+//            dueDateComponents.minute = 0;
+//            dueDateComponents.second = 0;
+//
+//            todayComponents.
+        }
+    }
+    
 }
