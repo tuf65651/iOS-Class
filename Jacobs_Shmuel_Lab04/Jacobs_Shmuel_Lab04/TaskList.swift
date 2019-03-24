@@ -70,20 +70,13 @@ class TaskList {
     /**
      Get list of all tasks starting on or after start date and on or before end date.
     */
-    public func tasksBetween(startDate: NSDate, endDate: NSDate) -> [Task] {
+    public func tasksBetween(startDate: Date, endDate: Date) -> [Task] {
         
-        func dueBetweenDates(task: Task, start: NSDate, end: NSDate) -> Bool {
-            if let dd: NSDate = task.dueDate {
+        func dueBetweenDates(task: Task, start: Date, end: Date) -> Bool {
+            if let dd: Date = task.dueDate as Date {
                 
-                let ddDate = dd as Date;
-                let start = startDate as Date;
-                let end = endDate as Date;
+                return DateInterval(start, end).contains(dd);
                 
-                if ddDate.compare(<#T##other: Date##Date#>) || end.timeIntervalSince(dd as Date) < 0 {
-                    return false;
-                } else {
-                    return true;
-                }
             }
             return false;
         }

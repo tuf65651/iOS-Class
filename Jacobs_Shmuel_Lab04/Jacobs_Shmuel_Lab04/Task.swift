@@ -5,6 +5,13 @@
 //  Created by Shmuel Jacobs on 3/21/19.
 //  Copyright © 2019 Shmuel Jacobs. All rights reserved.
 //
+/**
+ - author: Shmuel Jacobs
+ - TUID: 915046889
+ - class: Intro to iOS
+ - assignment: Lab 4
+ - purpose: Hands on experience utilizing XCode as a development environment, compiling Swift source code, foundation framework classes, writing custom Swift classes, declaring properties.
+ */
 
 import Foundation
 
@@ -30,7 +37,7 @@ class Task: Equatable {
         self.init();
     }
     
-    public init(text: String?, dueDate: NSDate?, priority: Priority = .medium, completed: Bool = false) {
+    public init(text: String, dueDate:Date, priority: Priority = .medium, completed: Bool = false) {
         if let inputText:String = text {
             self.text = inputText as NSString;
         } else {
@@ -43,6 +50,10 @@ class Task: Equatable {
         }
         self.priority = priority
         self.completed = completed;
+    }
+    
+    public convenience init(text: String?, dueDate:Date?, priority: Priority = .medium, completed: Bool = false) {
+        //TODO:
     }
     
 }
