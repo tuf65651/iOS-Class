@@ -113,6 +113,7 @@ class TaskList {
             return false;
         } else {
             taskList.append(task);
+            count++;
             // should always be true, checking for silent exceptions
             return taskList.contains(task);
         }
@@ -122,6 +123,7 @@ class TaskList {
      Empty all tasks from task list.
      */
     public func removeAllTasks() {
+        count = 0;
         taskList.removeAll();
     }
     
@@ -133,6 +135,7 @@ class TaskList {
     public func remove(task: Task) -> Bool {
         if taskList.contains(task) {
             taskList.remove(at: taskList.index(of: task)!);
+            count--;
             // should always be true, checking for missed duplicates
             return !taskList.contains(task);
         }
