@@ -41,16 +41,16 @@ class Task: Equatable {
     }
     
     public init(text: String, dueDate:Date, priority: Priority, completed: Bool) {
-        self.text = inputText as NSString;
-        self.dueDate = inputDate;
+        self.text = text as NSString;
+        self.dueDate = dueDate as NSDate;
         self.priority = priority
         self.completed = completed;
     }
     
     public convenience init(text: String, dueDate: NSDate) {
-        let priority = .medium;
-        let completed = false;
-        self.init(text, dueDate, priority, completed);
+        //        let priority = Priority.medium;
+//        let completed = false;
+        self.init(text: text, dueDate: dueDate as Date, priority: Priority.medium, completed: false);
     }
     
 //    Removed from requirements
@@ -65,10 +65,10 @@ class Task: Equatable {
      */
     public func pastDue() -> Bool {
         
-        if var dueDateComponents = NSDateComponents( dueDate ){
+        if let dueDate = dueDate {
             
-            let today = NSDate;
-            let compToday = Calendar.compare(dueDate, today, toGranularity: .day);
+            let today = NSDate();
+            let compToday = Calendar.current.compare(dueDate as Date, to: today as Date, toGranularity: .day);
             
             return compToday == .orderedDescending;
 //            var todayComponents = NSDateComponents();
@@ -80,6 +80,8 @@ class Task: Equatable {
 //
 //            todayComponents.
         }
+        // no dueDate
+        return false;
     }
     
 }
