@@ -8,7 +8,12 @@
 
 import Foundation
 
-class Task {
+class Task: Equatable {
+    
+    // Tasks are considered equal only if ALL properties match
+    static func == (lhs: Task, rhs: Task) -> Bool {
+        return lhs.completed == rhs.completed && lhs.dueDate == rhs.dueDate && lhs.priority == rhs.priority && lhs.text == rhs.text;
+    }
     
     public enum Priority {
         case low
@@ -25,14 +30,14 @@ class Task {
         self.init();
     }
     
-    public init(text: String?, dueDate: Date?, priority: Priority = .medium, completed: Bool = false) {
+    public init(text: String?, dueDate: NSDate?, priority: Priority = .medium, completed: Bool = false) {
         if let inputText:String = text {
             self.text = inputText as NSString;
         } else {
             self.text = nil;
         }
-        if let inputDate: Date = dueDate {
-            self.dueDate = inputDate as NSDate;
+        if let inputDate: NSDate = dueDate {
+            self.dueDate = inputDate;
         } else {
             self.dueDate = nil;
         }

@@ -42,8 +42,8 @@ class TaskList {
         let todayDate = NSDate();
         
         func dueDatePast(task: Task) -> Bool {
-            if let dd: Date = task.dueDate as Date {
-                return todayDate.timeIntervalSince( dd ) > 0;
+            if let dd: NSDate = task.dueDate {
+                return todayDate.timeIntervalSince( dd as Date ) > 0;
             } else {
                 return false;
             }
@@ -52,8 +52,20 @@ class TaskList {
         return taskList.filter( dueDatePast );
     }
     
-    public func tasksBetween(startDate: Date, endDate: Date) -> [Task] {
-        return [];
+    public func tasksBetween(startDate: NSDate, endDate: NSDate) -> [Task] {
+        
+        func dueBetweenDates(task: Task, start: NSDate, end: NSDate) -> Bool {
+            if let dd: NSDate = task.dueDate {
+                if start.timeIntervalSince(dd as Date) > 0 || end.timeIntervalSince(dd as Date) < 0 {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+            return false;
+        }
+        
+        return taskList.filter( {dueBetweenDates(task: $0, start: startDate, end: endDate)} );
     }
     
     public func add(task: Task) -> Bool {
@@ -61,14 +73,18 @@ class TaskList {
     }
     
     public func removeAllTasks() {
-        
+        taskList.removeAll();
     }
     
     public func remove(task: Task) -> Bool {
+        if taskList.contains(task) {
+            taskList.remove(at: taskList.index(of: task)!);
+            return true;
+        }
         return false;
     }
     
     public func removeCompletedTasks() {
-        
+        taskList = taskList.filter({ !$0.completed });
     }
 }
