@@ -33,13 +33,19 @@ class Task: Equatable {
     public var priority: Priority
     public var completed: Bool
     
+    public init() {
+        text = nil;
+        dueDate = nil;
+        self.priority = .medium;
+        self.completed = false;
+    }
+    
     public init(text: String, dueDate:Date, priority: Priority, completed: Bool) {
         self.text = inputText as NSString;
         self.dueDate = inputDate;
         self.priority = priority
         self.completed = completed;
     }
-    
     
     public convenience init(text: String, dueDate: NSDate) {
         let priority = .medium;
@@ -52,6 +58,11 @@ class Task: Equatable {
 //
 //    }
     
+    /**
+     Check if task was due yesterday or earlier.
+     - Note: will not detect task due earlier today is past due
+     - Returns: true if task due yesterday or earlier, else false
+     */
     public func pastDue() -> Bool {
         
         if var dueDateComponents = NSDateComponents( dueDate ){
