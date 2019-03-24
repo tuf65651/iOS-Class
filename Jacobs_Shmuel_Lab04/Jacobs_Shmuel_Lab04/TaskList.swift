@@ -56,6 +56,8 @@ class TaskList {
     public func pastDueTasks() -> [Task] {
         let todayDate = NSDate();
         
+        //TODO: round so task isn't past due until next day
+        
         func dueDatePast(task: Task) -> Bool {
             if let dd: NSDate = task.dueDate {
                 return todayDate.timeIntervalSince( dd as Date ) > 0;
@@ -72,6 +74,7 @@ class TaskList {
     */
     public func tasksBetween(startDate: Date, endDate: Date) -> [Task] {
         
+        
         func dueBetweenDates(task: Task, start: Date, end: Date) -> Bool {
             if let dd: Date = task.dueDate as Date {
                 
@@ -84,22 +87,45 @@ class TaskList {
         return taskList.filter( {dueBetweenDates(task: $0, start: startDate, end: endDate)} );
     }
     
+    /**
+     If exact matching task not already present in taskList, then insert new task.
+     - Parameter task: Task instance to be inserted in List
+     - Returns: true if task added in list, else false
+    */
     public func add(task: Task) -> Bool {
-        return false;
+        if taskList.contains(task) {
+            return false;
+        } else {
+            taskList.append(task);
+            // should always be true, checking for silent exceptions
+            return taskList.contains(task);
+        }
     }
     
+    /**
+     Empty all tasks from task list.
+     */
     public func removeAllTasks() {
         taskList.removeAll();
     }
     
+    /**
+     Remove task from task list
+     - Parameter task: Task instance to be removed from List
+     - Returns: true if task removed from list, else false
+     */
     public func remove(task: Task) -> Bool {
         if taskList.contains(task) {
             taskList.remove(at: taskList.index(of: task)!);
-            return true;
+            // should always be true, checking for missed duplicates
+            return !taskList.contains(task);
         }
         return false;
     }
     
+    /**
+     Remove all completed tasks from task list.
+     */
     public func removeCompletedTasks() {
         taskList = taskList.filter({ !$0.completed });
     }
