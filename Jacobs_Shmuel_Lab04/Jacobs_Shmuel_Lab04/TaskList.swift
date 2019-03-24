@@ -18,7 +18,7 @@ import Foundation
 class TaskList {
     
     //TODO: make read-only
-    private var count: Int;
+    private(set) var count: Int;
     private var taskList: [Task]
     
     public init() {
@@ -26,14 +26,29 @@ class TaskList {
         taskList = [];
     }
     
+    /**
+     Get list of all completed tasks in TaskList.
+     
+     - Returns: Array containing all Task objects in TaskList whose 'complete' field is marked true.
+    */
     public func completeTasks() -> [Task] {
         return taskList.filter({$0.completed});
     }
     
+    /**
+     Get list of all incomplete tasks in TaskList.
+     
+     - Returns: Array containing all Task objects in TaskList whose 'complete' field is marked false.
+     */
     public func incompleteTasks() -> [Task] {
         return taskList.filter({!$0.completed});
     }
     
+    /**
+    Get entire list of tasks.
+ 
+    - Returns: Array containing all tasks
+    */
     public func allTasks() -> [Task] {
         return taskList;
     }
@@ -52,11 +67,19 @@ class TaskList {
         return taskList.filter( dueDatePast );
     }
     
+    /**
+     Get list of all tasks starting on or after start date and on or before end date.
+    */
     public func tasksBetween(startDate: NSDate, endDate: NSDate) -> [Task] {
         
         func dueBetweenDates(task: Task, start: NSDate, end: NSDate) -> Bool {
             if let dd: NSDate = task.dueDate {
-                if start.timeIntervalSince(dd as Date) > 0 || end.timeIntervalSince(dd as Date) < 0 {
+                
+                let ddDate = dd as Date;
+                let start = startDate as Date;
+                let end = endDate as Date;
+                
+                if ddDate.compare(<#T##other: Date##Date#>) || end.timeIntervalSince(dd as Date) < 0 {
                     return false;
                 } else {
                     return true;
