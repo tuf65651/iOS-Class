@@ -15,17 +15,17 @@
 
 import Foundation
 
+public enum Priority {
+    case low
+    case medium
+    case high
+}
+
 class Task: Equatable {
     
     // Tasks are considered equal only if ALL properties match
     static func == (lhs: Task, rhs: Task) -> Bool {
         return lhs.completed == rhs.completed && lhs.dueDate == rhs.dueDate && lhs.priority == rhs.priority && lhs.text == rhs.text;
-    }
-    
-    public enum Priority {
-        case low
-        case medium
-        case high
     }
     
     public var text: NSString?

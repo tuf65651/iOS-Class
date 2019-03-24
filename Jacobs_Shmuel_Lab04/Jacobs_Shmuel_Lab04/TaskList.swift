@@ -93,6 +93,10 @@ class TaskList {
         return taskList.filter( {dueBetweenDates(task: $0, start: startDate, end: endDate)} );
     }
     
+    public func tasks(with p: Priority) {
+        
+    }
+    
     /**
      If exact matching task not already present in taskList, then insert new task.
      - Parameter task: Task instance to be inserted in List
