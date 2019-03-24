@@ -77,6 +77,7 @@ class TaskList {
     
     /**
      Get list of all tasks starting on or after start date and on or before end date.
+     - Returns: Array containing all tasks starting on or after start date and on or before end date
     */
     public func tasksBetween(startDate: Date, endDate: Date) -> [Task] {
         
@@ -93,8 +94,13 @@ class TaskList {
         return taskList.filter( {dueBetweenDates(task: $0, start: startDate, end: endDate)} );
     }
     
+    /**
+     Get list of all tasks of given priority level.
+     
+     - Returns: Array containing all tasks with matching priority level.
+     */
     public func tasks(with p: Priority) {
-        
+        return taskList.filter({ $0.priority == p })
     }
     
     /**
