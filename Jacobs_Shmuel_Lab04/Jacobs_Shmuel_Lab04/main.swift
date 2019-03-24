@@ -8,12 +8,10 @@
 
 import Foundation
 
-print("Hello, World!")
-
 func unitTests() {
     
     initTests();
-    taskCountReadOnly();
+    //taskCountReadOnly();
     addRemoveTasksTests();
     tasksListingsTests();
     pastDueTasksTests();
@@ -31,7 +29,7 @@ func initTests() {
     } else {
         print("Initialized without text");
     }
-    if let blankDueDate = blankInit.dueDate() {
+    if let blankDueDate = blankInit.dueDate {
         print("PROBLEM - Initialized with dueDate: \(blankDueDate.description)")
     } else {
         print("Initialized without dueDate");
@@ -45,8 +43,8 @@ func initTests() {
     // Done testing this initializer
     print();
     
-    print("Try init with text")
-    let textInit = Task("Born with text");
+    print("Try init with text and dueDate")
+    let textInit = "Born with text";
     let todayDate = NSDate();
     let convenientInit: Task = Task(text: textInit, dueDate: todayDate);
     print("Initialized task with convenience init. Task Description...");
@@ -55,30 +53,31 @@ func initTests() {
     print("priotity: \(convenientInit.priority)");
     print("completed: \(convenientInit.completed)");
     
-    print("Finished testing initializers");
+    print("Finished testing initializers\n");
 }
 
-func taskCountReadOnly() {
-    print("Checking that Tasklist.count is read only\n")
-    let tl = TaskList();
-    do {
-        try {tl.count = 2}
-        print("PROBLEM - tasklist allows setting count property")
-    } catch {
-        print("Tasklist prevents setting count property");
-    }
-    print("count field is readable and is set to \(tl.count)")
-}
+//Compiler errors on this function verify
+//func taskCountReadOnly() {
+//    print("Checking that Tasklist.count is read only\n")
+//    let tl = TaskList();
+//    if tl.count = 2 {
+//        print("PROBLEM - tasklist allows setting count property");
+//    } else {
+//        print("Tasklist prevents setting count property");
+//    }
+//    print("Finished checking count accessibility. count = \(tl.count)")
+//}
 
 func addRemoveTasksTests() {
     print("Checking that tasks are added and removed correctly")
     let tl = TaskList();
     let t1 = Task();
     let t2 = Task();
-    let neverAdded = Task(text: "This task is never in the list", dueDate: <#T##NSDate#>())
+    let today = NSDate();
+    var neverAdded: Task = Task(text: "This task is never in the list", dueDate: today);
     if !tl.add(task: t1) {
         print("PROBLEM - Failed to add task")
-    } else if count != 1 {
+    } else if tl.count != 1 {
         print("PROBLEM - count = \(tl.count)")
     }
     if tl.add(task: t2) {
@@ -95,7 +94,7 @@ func addRemoveTasksTests() {
         print("PROBLEM - can't get task from list")
     }
     if tl.remove(task: t1) {
-        print("PROBLEM - got same task twice in a row")
+        print("PROBLEM - got same task twice in a row\n")
     }
     
     print("Finished checking add and remove functionality")
@@ -133,25 +132,31 @@ func tasksListingsTests() {
     if completedTasks.contains(t4){
         print("PROBLEM - t4 in completed tasks");
     }
-    print("Finished check complete and incomplete tasks");
+    print("Finished check complete and incomplete tasks\n");
     
 }
 
 func pastDueTasksTests() {
     print("Checking filter for tasks past due");
     
-    let todayCal = Calendar.current;
-    let yesterdayDate = today.date(byAdding: .day, value: -1, to: Date() );
-    let tomorrowDate = today.date(byAdding: .day, value: 1, to: Date() );
-    let todayDate = today.date();
+    var todayCal = Calendar.current;
     
-    let dueYesterday = Task(text: "Task due yesterday", dueDate: yesterdayDate);
-    let dueToday = Task(text: "Task due today", dueDate: todayDate);
-    let dueTomorrow = Task(text: "Task due tomorrow", dueDate: tomorrowDate);
+//    var adjustment = DateComponent();
+//    adjustment.year = 0;
+//    adjustment.month = 0;
+//    adjustment.day = 0;
+    
+    let yesterdayDate = todayCal.date(byAdding: .day, value: -1, to: Date() );
+    let tomorrowDate = todayCal.date(byAdding: .day, value: 1, to: Date() );
+    let todayDate = todayCal.date(byAdding: .day, value: 0, to: Date() );
+    
+    let dueYesterday = Task(text: "Task due yesterday", dueDate: yesterdayDate as! NSDate);
+    let dueToday = Task(text: "Task due today", dueDate: todayDate as! NSDate);
+    let dueTomorrow = Task(text: "Task due tomorrow", dueDate: tomorrowDate as! NSDate);
     
     let tl = TaskList();
     for i in [dueToday, dueTomorrow, dueYesterday] {
-        tl.add(i);
+        tl.add(task: i);
     }
     let pastDueTasks: [Task] = tl.pastDueTasks();
     
@@ -173,21 +178,21 @@ func taskBetweenTests() {
     let todayCal = Calendar.current;
     let weekAgoDate = todayCal.date(byAdding: .day, value: -7, to: Date() );
     let tomorrowDate = todayCal.date(byAdding: .day, value: 1, to: Date() );
-    let todayDate = todayCal.date();
+    let todayDate = todayCal.date(byAdding: .day, value: 0, to: Date() );
     let weekFromNowDate = todayCal.date(byAdding: .day, value: 7, to: Date() );
     
-    let dueWeekAgo = Task(text: "Task due week ago", dueDate: weekAgoDate);
-    let dueToday = Task(text: "Task due today", dueDate: todayDate);
-    let dueTomorrow = Task(text: "Task due tomorrow", dueDate: tomorrowDate);
-    let dueWeekFromNow = Task(text: "Task due week from now", dueDate: weekFromNowDate);
+    let dueWeekAgo = Task(text: "Task due week ago", dueDate: weekAgoDate as! NSDate);
+    let dueToday = Task(text: "Task due today", dueDate: todayDate as! NSDate);
+    let dueTomorrow = Task(text: "Task due tomorrow", dueDate: tomorrowDate as! NSDate);
+    let dueWeekFromNow = Task(text: "Task due week from now", dueDate: weekFromNowDate as! NSDate);
     
     let tl = TaskList();
     for i in [dueToday, dueTomorrow, dueWeekAgo, dueWeekFromNow] {
-        tl.add(i);
+        tl.add(task: i);
     }
     
-    let startDate: Date = todayCal.date(byAdding: .day, value: -2, to: Date() );
-    let endDate: Date = todayCal.date(byAdding: .day, value: 2, to: Date() );
+    let startDate: Date = todayCal.date(byAdding: .day, value: -2, to: Date() )!;
+    let endDate: Date = todayCal.date(byAdding: .day, value: 2, to: Date() )!;
     let targetDateTasks = tl.tasksBetween(startDate: startDate, endDate: endDate);
     
     if targetDateTasks.contains(dueWeekAgo) {
@@ -208,3 +213,5 @@ func tasksByPriorityTests() {
     
     print("Finished checking filter tasks by priority");
 }
+
+unitTests();

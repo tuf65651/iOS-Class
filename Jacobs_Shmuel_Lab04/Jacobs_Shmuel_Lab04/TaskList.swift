@@ -83,9 +83,9 @@ class TaskList {
         
         
         func dueBetweenDates(task: Task, start: Date, end: Date) -> Bool {
-            if let dd: Date = task.dueDate as Date {
+            if let dd: Date = task.dueDate as! Date {
                 
-                return DateInterval(start, end).contains(dd);
+                return DateInterval(start: start, end: end).contains(dd);
                 
             }
             return false;
@@ -99,7 +99,7 @@ class TaskList {
      
      - Returns: Array containing all tasks with matching priority level.
      */
-    public func tasks(with p: Priority) {
+    public func tasks(with p: Priority) -> [Task] {
         return taskList.filter({ $0.priority == p })
     }
     
@@ -113,7 +113,7 @@ class TaskList {
             return false;
         } else {
             taskList.append(task);
-            count++;
+            count += 1;
             // should always be true, checking for silent exceptions
             return taskList.contains(task);
         }
@@ -135,7 +135,7 @@ class TaskList {
     public func remove(task: Task) -> Bool {
         if taskList.contains(task) {
             taskList.remove(at: taskList.index(of: task)!);
-            count--;
+            count-=1;
             // should always be true, checking for missed duplicates
             return !taskList.contains(task);
         }
