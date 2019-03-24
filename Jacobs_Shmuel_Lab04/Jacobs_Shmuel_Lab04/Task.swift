@@ -33,28 +33,24 @@ class Task: Equatable {
     public var priority: Priority
     public var completed: Bool
     
-    public convenience init() {
-        self.init();
-    }
-    
-    public init(text: String, dueDate:Date, priority: Priority = .medium, completed: Bool = false) {
-        if let inputText:String = text {
-            self.text = inputText as NSString;
-        } else {
-            self.text = nil;
-        }
-        if let inputDate: NSDate = dueDate {
-            self.dueDate = inputDate;
-        } else {
-            self.dueDate = nil;
-        }
+    public init(text: String, dueDate:Date, priority: Priority, completed: Bool) {
+        self.text = inputText as NSString;
+        self.dueDate = inputDate;
         self.priority = priority
         self.completed = completed;
     }
     
-    public convenience init(text: String?, dueDate:Date?, priority: Priority = .medium, completed: Bool = false) {
-        //TODO:
+    
+    public convenience init(text: String, dueDate: NSDate) {
+        let priority = .medium;
+        let completed = false;
+        self.init(text, dueDate, priority, completed);
     }
+    
+//    Removed from requirements
+//    public convenience init(text: String?, dueDate:Date?, priority: Priority = .medium, completed: Bool = false) {
+//
+//    }
     
     public func pastDue() -> Bool {
         
