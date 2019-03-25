@@ -60,7 +60,7 @@ class TaskList {
      - Returns: Array containing all tasks due yesterday or earlier
      */
     public func pastDueTasks() -> [Task] {
-        let todayDate = NSDate();
+        //let todayDate = NSDate();
         
         //TODO: round so task isn't past due until next day
         

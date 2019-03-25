@@ -70,7 +70,7 @@ class Task: Equatable {
             let today = NSDate();
             let compToday = Calendar.current.compare(dueDate as Date, to: today as Date, toGranularity: .day);
             
-            return compToday == .orderedDescending;
+            return compToday == .orderedAscending;
 //            var todayComponents = NSDateComponents();
             
 //            // Set both times to mindnight to compare dates but not times

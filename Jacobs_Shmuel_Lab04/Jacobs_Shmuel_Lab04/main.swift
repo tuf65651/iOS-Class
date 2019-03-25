@@ -5,7 +5,13 @@
 //  Created by Shmuel Jacobs on 3/20/19.
 //  Copyright © 2019 Shmuel Jacobs. All rights reserved.
 //
-
+/**
+ - author: Shmuel Jacobs
+ - TUID: 915046889
+ - class: Intro to iOS
+ - assignment: Lab 4
+ - purpose: Unit tests for Lab4
+ */
 import Foundation
 
 func unitTests() {
@@ -16,7 +22,8 @@ func unitTests() {
     tasksListingsTests();
     pastDueTasksTests();
     taskBetweenTests();
-    
+    tasksByPriorityTests();
+    removeCompletedTests();
 }
 
 func initTests() {
@@ -95,6 +102,16 @@ func addRemoveTasksTests() {
     }
     if tl.remove(task: t1) {
         print("PROBLEM - got same task twice in a row\n")
+    }
+    
+    tl.removeAllTasks();
+    if tl.count != 0 {
+        print("PROBLEM - count doesn't reset when list empties");
+    }
+    for t in [t1, t2, neverAdded ] {
+        if tl.remove(task: t) {
+            print("PROBLEM - found task \(t) in list");
+        }
     }
     
     print("Finished checking add and remove functionality")
@@ -210,8 +227,44 @@ func taskBetweenTests() {
 
 func tasksByPriorityTests() {
     print("Checking list tasks by prioriy");
+    let today = Date();
+    let t1 = Task(text: "This task is low priority", dueDate: today, priority: Priority.low, completed: false);
+    let t2 = Task(text: "This task is medium priority", dueDate: today, priority: Priority.medium, completed: false);
+    let t3 = Task(text: "This task is high priority", dueDate: today, priority: Priority.high, completed: false);
+    let t4 = Task(text: "This task is also medium priority", dueDate: today, priority: Priority.medium, completed: false);
+    let tl = TaskList();
+    for t in [t1,t2,t3,t4] {
+        tl.add(task: t);
+    }
+    let medTasks = tl.tasks(with: Priority.medium);
+    if medTasks.contains(t1) || medTasks.contains(t3) {
+        print("PROBLEM - unexpected tasks in medium priority task list");
+    }
+    if !medTasks.contains(t2) || !medTasks.contains(t4) {
+        print("PROBLEM - missing tasks in medium priority task list");
+    }
+    print("Finished checking filter tasks by priority\n");
+}
+
+func removeCompletedTests() {
+    print("Checking remove completed tasks");
+    let today = Date();
+    let t1 = Task(text: "This task is low priority", dueDate: today, priority: Priority.low, completed: false);
+    let t2 = Task(text: "This task is medium priority", dueDate: today, priority: Priority.medium, completed: false);
     
-    print("Finished checking filter tasks by priority");
+    let tl = TaskList();
+    for t in [t1,t2] {
+        tl.add(task: t);
+    }
+    t1.completed = true;
+    tl.removeCompletedTasks();
+    if tl.remove(task: t1) {
+        print("PROBLEM - found completed task after removal of completed tasks");
+    }
+    if !tl.remove(task: t2) {
+        print("PROBLEM - removed incomplete task")
+    }
+    print("Finished checking removal of completed tasks\n");
 }
 
 unitTests();
