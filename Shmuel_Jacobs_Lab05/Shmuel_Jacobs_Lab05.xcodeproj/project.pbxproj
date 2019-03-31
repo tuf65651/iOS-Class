@@ -14,6 +14,7 @@
 		C136A7E4224D1B53001B9D8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C136A7E2224D1B53001B9D8F /* LaunchScreen.storyboard */; };
 		C136A7EF224D1B53001B9D8F /* Shmuel_Jacobs_Lab05Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136A7EE224D1B53001B9D8F /* Shmuel_Jacobs_Lab05Tests.swift */; };
 		C136A7FA224D1B53001B9D8F /* Shmuel_Jacobs_Lab05UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136A7F9224D1B53001B9D8F /* Shmuel_Jacobs_Lab05UITests.swift */; };
+		C16114742250659200C1125A /* PigGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16114732250659200C1125A /* PigGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		C136A7F5224D1B53001B9D8F /* Shmuel_Jacobs_Lab05UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Shmuel_Jacobs_Lab05UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C136A7F9224D1B53001B9D8F /* Shmuel_Jacobs_Lab05UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shmuel_Jacobs_Lab05UITests.swift; sourceTree = "<group>"; };
 		C136A7FB224D1B53001B9D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C16114732250659200C1125A /* PigGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PigGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				C136A7D9224D1B52001B9D8F /* AppDelegate.swift */,
 				C136A7DB224D1B52001B9D8F /* ViewController.swift */,
 				C136A7DD224D1B52001B9D8F /* Main.storyboard */,
+				C16114732250659200C1125A /* PigGame.swift */,
 				C136A7E0224D1B53001B9D8F /* Assets.xcassets */,
 				C136A7E2224D1B53001B9D8F /* LaunchScreen.storyboard */,
 				C136A7E5224D1B53001B9D8F /* Info.plist */,
@@ -258,6 +261,7 @@
 			files = (
 				C136A7DC224D1B52001B9D8F /* ViewController.swift in Sources */,
 				C136A7DA224D1B52001B9D8F /* AppDelegate.swift in Sources */,
+				C16114742250659200C1125A /* PigGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
