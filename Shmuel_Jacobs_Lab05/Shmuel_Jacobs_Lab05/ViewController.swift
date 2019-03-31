@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let game = PigGame();
+    var currentRoll = 0;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -29,10 +32,38 @@ class ViewController: UIViewController {
     
     @IBAction func roll(_ sender: Any) {
         // TODO: generate random value and change dieLabel
+        currentRoll = game.rollDie();
     }
 
     @IBAction func hold(_ sender: Any) {
         
+    }
+    
+    func runPlayerTurn() {
+        
+        var turnScore = 0;
+        while currentRoll != 1 {
+            
+            turnScore += currentRoll;
+            dieLabel.text = String("\(currentRoll)");
+            
+            if askContinue() {
+                currentRoll = game.rollDie();
+                continue;
+            } else {
+                game.endTurn(score: turnScore);
+                return;
+            }
+        }
+        print("Player \(game.getCurrentTurn()) busts");
+        game.endTurn(score: 0);
+    }
+    
+    func askContinue() -> Bool {
+        rollButton.isEnabled = true;
+        holdButton.isEnabled = true;
+        
+        return false;
     }
     
     @IBOutlet weak var newGameButton: UIButton!
