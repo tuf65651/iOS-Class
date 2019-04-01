@@ -26,7 +26,7 @@
                                     <color key="titleColor" red="0.20480644627468447" green="0.41903484212827874" blue="0.78115085659898476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1LQ-hm-ANL"/>
+                                    <action selector="startTurn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1LQ-hm-ANL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfS-vh-fUf">
@@ -34,7 +34,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91148123540000003" green="0.97892843419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Roll">
-                                    <color key="titleColor" red="0.2048064463" green="0.41903484210000003" blue="0.78115085660000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.45177064119152138" green="0.78115085660000005" blue="0.5333682946999444" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="roll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="okq-3v-Yfk"/>
@@ -45,7 +45,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91148123540000003" green="0.97892843419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Hold">
-                                    <color key="titleColor" red="0.2048064463" green="0.41903484210000003" blue="0.78115085660000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.78115085660000005" green="0.3804614155258042" blue="0.36594608646918203" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="hold:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LM8-27-e39"/>
@@ -108,7 +108,7 @@
                     <connections>
                         <outlet property="dieLabel" destination="jeC-NA-lFE" id="2Tz-Iu-7Je"/>
                         <outlet property="holdButton" destination="76n-VS-ND8" id="bcr-be-XbM"/>
-                        <outlet property="newGameButton" destination="xlH-mI-oQd" id="npK-b3-jt6"/>
+                        <outlet property="nextButton" destination="xlH-mI-oQd" id="npK-b3-jt6"/>
                         <outlet property="player1Progress" destination="8wm-hY-pJt" id="9bh-Ii-RRw"/>
                         <outlet property="player1Score" destination="T04-sg-Pgu" id="GaG-P4-Yig"/>
                         <outlet property="player2Progress" destination="0Sb-lh-ayh" id="4WD-ag-SX2"/>
