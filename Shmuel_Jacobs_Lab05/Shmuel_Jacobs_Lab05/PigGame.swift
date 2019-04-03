@@ -65,7 +65,7 @@ class PigGame {
         let endingScore = scores[currentTurn];
         print("Player \(currentTurn) ends turn with \(currentTurnScore) points for \(scores[currentTurn]).");
         currentTurnScore = 0;
-        currentTurn = currentTurn + 1 % numPlayers;
+        currentTurn = (currentTurn + 1) % numPlayers;
         return endingScore;
     }
 }

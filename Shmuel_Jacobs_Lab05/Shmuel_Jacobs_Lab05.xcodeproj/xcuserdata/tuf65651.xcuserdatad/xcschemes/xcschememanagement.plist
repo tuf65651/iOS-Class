@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Shmuel_Jacobs_Lab05 2.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Shmuel_Jacobs_Lab05.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,24 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>C136A7D5224D1B52001B9D8F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C136A7E9224D1B53001B9D8F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C136A7F4224D1B53001B9D8F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
