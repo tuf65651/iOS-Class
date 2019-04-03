@@ -68,4 +68,24 @@ class PigGame {
         currentTurn = (currentTurn + 1) % numPlayers;
         return endingScore;
     }
+    
+//    func getWinner() -> Int? {
+//        for player in 0...(scores.count - 1) {
+//            if scores[player] + currentTurnScore >= WINNINGSCORE{
+//                return player;
+//            }
+//        }
+//        return nil;
+//    }
+
+    func justWon() -> Bool {
+        return currentTurnScore + scores[currentTurn] >= WINNINGSCORE;
+    }
+    
+    func reset() {
+        for i in 0...numPlayers {
+            scores[i] = 0;
+            currentTurn = 0;
+        }
+    }
 }

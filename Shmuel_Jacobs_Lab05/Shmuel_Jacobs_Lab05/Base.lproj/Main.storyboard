@@ -18,11 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlH-mI-oQd">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlH-mI-oQd" userLabel="NextButton">
                                 <rect key="frame" x="52" y="512" width="270" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91148123540000003" green="0.97892843419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="New Game">
+                                <state key="normal" title="Tap To Continue">
                                     <color key="titleColor" red="0.20480644627468447" green="0.41903484212827874" blue="0.78115085659898476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -101,6 +101,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1KR-lw-mHa" userLabel="NewGameButton">
+                                <rect key="frame" x="52" y="512" width="270" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="newGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vWI-8l-4jp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -108,6 +116,7 @@
                     <connections>
                         <outlet property="dieLabel" destination="jeC-NA-lFE" id="2Tz-Iu-7Je"/>
                         <outlet property="holdButton" destination="76n-VS-ND8" id="bcr-be-XbM"/>
+                        <outlet property="newGameButton" destination="1KR-lw-mHa" id="SbI-KT-yK6"/>
                         <outlet property="nextButton" destination="xlH-mI-oQd" id="npK-b3-jt6"/>
                         <outlet property="player1Progress" destination="8wm-hY-pJt" id="9bh-Ii-RRw"/>
                         <outlet property="player1Score" destination="T04-sg-Pgu" id="GaG-P4-Yig"/>

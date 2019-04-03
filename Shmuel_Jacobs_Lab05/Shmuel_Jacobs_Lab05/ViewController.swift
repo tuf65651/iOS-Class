@@ -14,19 +14,48 @@ class ViewController: UIViewController {
     var currentRoll = 0;
     var gameIsLive = false;
     
+    let rollButtonColor = UIColor(red: 137/255, green: 197/255, blue: 141/255, alpha: 1);
+    let holdButtonColor = UIColor(red: 185/255, green: 103/255, blue: 97/255, alpha: 1);
+    let disabledButtonColor = UIColor.lightGray;
+    let nextColor = UIColor.blue;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         rollButton.isEnabled = false;
+        rollButton.setTitleColor(rollButtonColor, for: .normal);
         holdButton.isEnabled = false;
+        holdButton.setTitleColor(holdButtonColor, for: .normal);
+        
         dieLabel.isHidden = true;
         playerPromptLabel.isHidden = true;
+        
+        
+        newGameButton.isEnabled = true;
+        newGameButton.isHidden = false;
+        
+        nextButton.isEnabled = false;
+        nextButton.isHidden = true;
+        nextButton.setTitleColor(nextColor, for: .normal);
+        
+        holdButton.setTitleColor(disabledButtonColor, for: .disabled);
+        rollButton.setTitleColor(disabledButtonColor, for: .disabled);
+        nextButton.setTitleColor(disabledButtonColor, for: .disabled);
     }
     
+    @IBAction func newGame(_ sender: Any) {
+        
+        player1Progress.progress = 0;
+        player2Progress.progress = 0;
+        newGameButton.isHidden = true;
+        nextButton.isHidden = false;
+        nextButton.isEnabled = true;
+        
+        game.reset();
+    }
     
     @IBAction func startTurn(_ sender: Any) {
         
-        nextButton.setTitle("Tap to continue", for: .normal);
         nextButton.isEnabled = false;
         rollButton.isEnabled = true;
         holdButton.isEnabled = false;
@@ -61,17 +90,30 @@ class ViewController: UIViewController {
             
             // Allow next player to start turn
             nextButton.isEnabled = true;
-        }
+        } // Player did not just score points
         
-        playerPromptLabel.text = "Turn total \(game.getCurrentTurnScore)";
+        // Note: Game will know if current player just won. If current player just changed then score didn't
+        
+        // Check if game over
+        if game.justWon() {
+            playerPromptLabel.text = "Congratulations Player \(game.getCurrentTurn + 1)! Good game."
+            // TODO: clean up game
+        } else {
+            playerPromptLabel.text = "Turn total \(game.getCurrentTurnScore)";
+        }
     }
 
     @IBAction func hold(_ sender: Any) {
         
+        holdButton.isEnabled = false;
+        rollButton.isEnabled = false;
+        
         if game.getCurrentTurn == 0 {
+            player1Progress.progress += Float(game.getCurrentTurnScore / game.WINNINGSCORE);
             playerPromptLabel.text = "\(game.getCurrentTurnScore) points scored! It's now player 2's turn";
             player1Score.text = String(game.endTurn());
         } else {
+            player2Progress.progress += Float(game.getCurrentTurnScore / game.WINNINGSCORE);
             playerPromptLabel.text = "\(game.getCurrentTurnScore) points scored! It's now player 1's turn";
             player2Score.text = String(game.endTurn());
         }
@@ -107,6 +149,7 @@ class ViewController: UIViewController {
 //        return false;
 //    }
     
+    @IBOutlet weak var newGameButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var holdButton: UIButton!
     @IBOutlet weak var rollButton: UIButton!
