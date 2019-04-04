@@ -53,10 +53,16 @@ class ViewController: UIViewController {
         
         game.reset();
         
-        startTurn(nil);
+        // Easiest to duplicate code from newTurn
+        nextButton.isEnabled = false;
+        rollButton.isEnabled = true;
+        holdButton.isEnabled = false;
+        playerPromptLabel.isHidden = false;
+        playerPromptLabel.text = "Player \(game.getCurrentTurn + 1)'s turn - tap Roll to begin.";
+        dieLabel.isHidden = true;
     }
     
-    @IBAction func startTurn(_ sender: Any) {
+    @IBAction func newTurn(_ sender: Any) {
         
         nextButton.isEnabled = false;
         rollButton.isEnabled = true;
@@ -109,15 +115,17 @@ class ViewController: UIViewController {
         
         holdButton.isEnabled = false;
         rollButton.isEnabled = false;
+        let justScored = game.getCurrentTurnScore;
+        let endingScore = game.endTurn();
         
         if game.getCurrentTurn == 0 {
-            player1Progress.progress += Float(game.getCurrentTurnScore / game.WINNINGSCORE);
-            playerPromptLabel.text = "\(game.getCurrentTurnScore) points scored! It's now player 2's turn";
-            player1Score.text = String(game.endTurn());
+            player1Progress.setProgress( Float(endingScore) / Float(game.WINNINGSCORE), animated: true );
+            playerPromptLabel.text = "\(justScored) points scored! It's now player 2's turn";
+            player1Score.text = String(endingScore);
         } else {
-            player2Progress.progress += Float(game.getCurrentTurnScore / game.WINNINGSCORE);
-            playerPromptLabel.text = "\(game.getCurrentTurnScore) points scored! It's now player 1's turn";
-            player2Score.text = String(game.endTurn());
+            player2Progress.setProgress( Float(endingScore) / Float(game.WINNINGSCORE), animated: true);
+            playerPromptLabel.text = "\(justScored) points scored! It's now player 1's turn";
+            player2Score.text = String(endingScore);
         }
         
         // Allow next player to start turn
@@ -130,6 +138,8 @@ class ViewController: UIViewController {
         nextButton.isHidden = true;
         newGameButton.isHidden = false;
         newGameButton.isEnabled = true;
+        
+        game.reset();
         
         //playerPromptLabel.text = "Tap to play again."
     }

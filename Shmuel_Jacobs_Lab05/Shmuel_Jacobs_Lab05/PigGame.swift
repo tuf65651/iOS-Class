@@ -17,7 +17,7 @@ class PigGame {
     private var currentTurn: Int;
     private var currentTurnScore: Int;
     private var numPlayers: Int;
-    let WINNINGSCORE = 10; // TODO: set to 100
+    let WINNINGSCORE = 100; // TODO: set to 100
     
     init(numPlayers: Int) {
         self.numPlayers = numPlayers;
@@ -87,6 +87,7 @@ class PigGame {
         for i in 0...numPlayers {
             scores[i] = 0;
             currentTurn = 0;
+            currentTurnScore = 0;
         }
     }
 }
