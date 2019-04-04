@@ -17,6 +17,7 @@ class PigGame {
     private var currentTurn: Int;
     private var currentTurnScore: Int;
     private var numPlayers: Int;
+    let WINNINGSCORE = 10; // TODO: set to 100
     
     init(numPlayers: Int) {
         self.numPlayers = numPlayers;

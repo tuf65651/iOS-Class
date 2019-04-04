@@ -52,6 +52,8 @@ class ViewController: UIViewController {
         nextButton.isEnabled = true;
         
         game.reset();
+        
+        startTurn(nil);
     }
     
     @IBAction func startTurn(_ sender: Any) {
@@ -97,7 +99,7 @@ class ViewController: UIViewController {
         // Check if game over
         if game.justWon() {
             playerPromptLabel.text = "Congratulations Player \(game.getCurrentTurn + 1)! Good game."
-            // TODO: clean up game
+            cleanupGame();
         } else {
             playerPromptLabel.text = "Turn total \(game.getCurrentTurnScore)";
         }
@@ -120,6 +122,16 @@ class ViewController: UIViewController {
         
         // Allow next player to start turn
         nextButton.isEnabled = true;
+    }
+    
+    func cleanupGame() {
+        rollButton.isEnabled = false;
+        holdButton.isEnabled = false;
+        nextButton.isHidden = true;
+        newGameButton.isHidden = false;
+        newGameButton.isEnabled = true;
+        
+        //playerPromptLabel.text = "Tap to play again."
     }
     
 //    func runPlayerTurn() {
