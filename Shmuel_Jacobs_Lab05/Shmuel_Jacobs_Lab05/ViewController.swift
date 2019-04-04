@@ -5,6 +5,13 @@
 //  Created by Shmuel Jacobs on 3/28/19.
 //  Copyright © 2019 Shmuel Jacobs. All rights reserved.
 //
+/**
+ - author: Shmuel Jacobs
+ - TUID: 915046889
+ - class: Intro to iOS
+ - assignment: Lab 5
+ - purpose: Hands on experience utilizing XCode as a development environment; using Interface Builder; declaring and wiring up IBOutlets; declaring and wiring up IBActions; using various iOS widgets - UILabel, UIButton, UIImageView, UIProgressView; testing applications in the iPhone Simulator
+ */
 
 import UIKit
 
@@ -45,8 +52,8 @@ class ViewController: UIViewController {
     
     @IBAction func newGame(_ sender: Any) {
         
-        player1Progress.progress = 0;
-        player2Progress.progress = 0;
+        player1Progress.setProgress(0, animated: true)
+        player2Progress.setProgress(0, animated: true)
         newGameButton.isHidden = true;
         nextButton.isHidden = false;
         nextButton.isEnabled = true;

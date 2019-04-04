@@ -5,6 +5,13 @@
 //  Created by Shmuel Jacobs on 3/30/19.
 //  Copyright © 2019 Shmuel Jacobs. All rights reserved.
 //
+/**
+ - author: Shmuel Jacobs
+ - TUID: 915046889
+ - class: Intro to iOS
+ - assignment: Lab 5
+ - purpose: Hands on experience utilizing XCode as a development environment; using Interface Builder; declaring and wiring up IBOutlets; declaring and wiring up IBActions; using various iOS widgets - UILabel, UIButton, UIImageView, UIProgressView; testing applications in the iPhone Simulator
+ */
 
 import Foundation
 
@@ -13,12 +20,22 @@ private let NUMPLAYERS = 2;
 
 class PigGame {
     
+    // Array holds scores indexed by player ID
     private var scores: [Int];
+    // ID of current player
     private var currentTurn: Int;
+    // sum of points rolled during current turn
     private var currentTurnScore: Int;
+    // number of players in current game
     private var numPlayers: Int;
+    // play until someone scores this many points
     let WINNINGSCORE = 100; // TODO: set to 100
     
+    /**
+     Create new game object with this many players. Reset all fields for new game.
+     
+     - Parameter numPlayers: Number of players playing current game
+     */
     init(numPlayers: Int) {
         self.numPlayers = numPlayers;
         // Create array to store scores
@@ -36,12 +53,17 @@ class PigGame {
         self.init(numPlayers: NUMPLAYERS);
     }
     
+    /**
+     Get new random roll of six-sided die.
+     - Returns: Int in range [1,6]
+     */
     private func rollDie() -> Int {
         return Int(arc4random_uniform(6)) + 1;
     }
     
     /**
      Generate die roll. Add to current score if not 1, else set current turn score to 0.
+     - Returns: Int in range [1,6]
      */
     func rollAndUpdateScore() -> Int {
         let roll = rollDie();
@@ -61,6 +83,10 @@ class PigGame {
         return currentTurnScore;
     }
     
+    /**
+     Game logic for ending current turn. Saves points, resets current turn to 0 points, changes current player
+     - Returns: Player total score after end of turn.
+     */
     func endTurn() -> Int{
         scores[currentTurn] += currentTurnScore;
         let endingScore = scores[currentTurn];
@@ -79,15 +105,21 @@ class PigGame {
 //        return nil;
 //    }
 
+    /**
+     Check if someone just won the game.
+     */
     func justWon() -> Bool {
         return currentTurnScore + scores[currentTurn] >= WINNINGSCORE;
     }
     
+    /**
+     Reset all game state information for new game.
+     */
     func reset() {
         for i in 0...numPlayers {
             scores[i] = 0;
-            currentTurn = 0;
-            currentTurnScore = 0;
         }
+        currentTurn = 0;
+        currentTurnScore = 0;
     }
 }
