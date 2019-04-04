@@ -30,6 +30,8 @@ class PigGame {
     private var numPlayers: Int;
     // play until someone scores this many points
     let WINNINGSCORE = 100; // TODO: set to 100
+    // Which player goes first
+    var startingPlayer: Int;
     
     /**
      Create new game object with this many players. Reset all fields for new game.
@@ -44,9 +46,9 @@ class PigGame {
         for _ in 0...numPlayers {
             scores.append(0);
         }
-        // Set current turn to Player 0
-        currentTurn = 0;
         currentTurnScore = 0;
+        startingPlayer = 0;
+        currentTurn = startingPlayer;
     }
     
     convenience init() {
@@ -119,7 +121,9 @@ class PigGame {
         for i in 0...numPlayers {
             scores[i] = 0;
         }
-        currentTurn = 0;
         currentTurnScore = 0;
+        // Change who goes first
+        startingPlayer = (startingPlayer+1) % numPlayers;
+        currentTurn = startingPlayer;
     }
 }

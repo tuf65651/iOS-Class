@@ -29,22 +29,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // Don't allow gameplay before beginning game
         rollButton.isEnabled = false;
         rollButton.setTitleColor(rollButtonColor, for: .normal);
         holdButton.isEnabled = false;
         holdButton.setTitleColor(holdButtonColor, for: .normal);
-        
         dieLabel.isHidden = true;
         playerPromptLabel.isHidden = true;
         
-        
+        // Allow user to begin game
         newGameButton.isEnabled = true;
         newGameButton.isHidden = false;
-        
         nextButton.isEnabled = false;
         nextButton.isHidden = true;
         nextButton.setTitleColor(nextColor, for: .normal);
         
+        // Grey out disabled buttons
         holdButton.setTitleColor(disabledButtonColor, for: .disabled);
         rollButton.setTitleColor(disabledButtonColor, for: .disabled);
         nextButton.setTitleColor(disabledButtonColor, for: .disabled);
@@ -52,9 +53,12 @@ class ViewController: UIViewController {
     
     @IBAction func newGame(_ sender: Any) {
         
+        // Set view to indicate no score yet
         player1Progress.setProgress(0, animated: true)
         player2Progress.setProgress(0, animated: true)
+        // Game in progress, so don't show newGame button
         newGameButton.isHidden = true;
+        // show next button
         nextButton.isHidden = false;
         nextButton.isEnabled = true;
         
@@ -71,6 +75,7 @@ class ViewController: UIViewController {
     
     @IBAction func newTurn(_ sender: Any) {
         
+        // Allow player to start rolling
         nextButton.isEnabled = false;
         rollButton.isEnabled = true;
         holdButton.isEnabled = false;
@@ -84,12 +89,14 @@ class ViewController: UIViewController {
     @IBAction func roll(_ sender: Any) {
         // TODO: generate random value and change dieLabel
         currentRoll = game.rollAndUpdateScore();
+        // display roll value
         dieLabel.isHidden = false;
         dieLabel.text = String(currentRoll);
         holdButton.isEnabled = true;
         
         print("Just rolled \(currentRoll)");
         
+        // 
         if currentRoll == 1 { // Bust - end turn with no points gained
             rollButton.isEnabled = false;
             holdButton.isEnabled = false;
