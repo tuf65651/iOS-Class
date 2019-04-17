@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'outlook-client-tutorial' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for outlook-client-tutorial
+  pod 'p2.OAuth2'
+  pod 'SwiftyJSON'
+
+  target 'outlook-client-tutorialTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'outlook-client-tutorialUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

@@ -1,0 +1,1286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0DB19FFD0E012313DD4C5AAF7062E9EA /* OAuth2AuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60625C84D33CD4571A934FA907BBBBA0 /* OAuth2AuthConfig.swift */; };
+		104C0C323984E398CA2C99A1F4764840 /* OAuth2DynReg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EFF62953237F4C2A93AF1A264A6205 /* OAuth2DynReg.swift */; };
+		16F040072C188BBBC7AB778D936F2980 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F296C01FFACA80FDE3AE236F23425680 /* Foundation.framework */; };
+		1E6399CF47CDA1BB4201B43B4260EEE5 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC1DBA4BEF549DC1A178F03A8D9ACE2A /* SafariServices.framework */; };
+		25EA4DE129C28557BC5C4E1B35248C43 /* OAuth2Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7172738344055C8B83C498D7C84D76 /* OAuth2Response.swift */; };
+		27BE287CFACBB30393DCE7144B09F5DE /* OAuth2ImplicitGrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61409E3F14ECADD210FD6FA87F513763 /* OAuth2ImplicitGrant.swift */; };
+		2C2F3D81B5A19BF4D9398EB4D14554E0 /* OAuth2ClientCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1D1ABDF91BCDECCCCDE6F3A3CE69A /* OAuth2ClientCredentials.swift */; };
+		30126A4CB48E290DFB2740F3FC65EDB2 /* OAuth2CodeGrantBasicAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E8B6912D9C688C5EA2B083365D321 /* OAuth2CodeGrantBasicAuth.swift */; };
+		31192D4A7B0DC89C4FD0502F471DA4A3 /* Pods-outlook-client-tutorial-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E3BD9F337D3B5E398ED8EAAE338400C /* Pods-outlook-client-tutorial-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		366B55484B806C602404D09F6BBDEE22 /* OAuth2Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747DF554D676DCB7A7DB70175511E27 /* OAuth2Base.swift */; };
+		3ABBB12BAC3F7BE81DA7C13C2555FED4 /* OAuth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE8A320DC4ACCC55FC14D5E04DF978A /* OAuth2.swift */; };
+		43690B1A5DA6CF4D4BD361982E5B300E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F296C01FFACA80FDE3AE236F23425680 /* Foundation.framework */; };
+		451DD2451949A63F2362E963E0D674F4 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E41C197FF2273F6FAC558E6F0B0799 /* Keychain.swift */; };
+		598243B4413B2DA6278DD6D3FCD41A2A /* p2.OAuth2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE3E6A7D17BE399C304A06AF9B57E23 /* p2.OAuth2-dummy.m */; };
+		5C87DDF06ACA79115B4BD071763F6752 /* Pods-outlook-client-tutorialUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DCF99D5F403961BA4097526D4B961A /* Pods-outlook-client-tutorialUITests-dummy.m */; };
+		6267B2DF96FA4467E4780157F6FBB8D8 /* OAuth2ImplicitGrantWithQueryParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09C2C64874484026DE068CA3EE9C8E0 /* OAuth2ImplicitGrantWithQueryParams.swift */; };
+		68CBDA817101DA5B13B002F6F72D3899 /* Pods-outlook-client-tutorialTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31CD428E19A8803C1276489E4B951439 /* Pods-outlook-client-tutorialTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E824F5EAA97629598899D48E72635F1 /* OAuth2CodeGrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6151F20F1643CA6C44DCD61776F9BFE /* OAuth2CodeGrant.swift */; };
+		7B2FB63C83EB5CC40411858E19A695B3 /* OAuth2CustomAuthorizerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C33FFF282CDD9F65A8052934905271 /* OAuth2CustomAuthorizerUI.swift */; };
+		7F65E9EA5E43F2E114D620A8CA744418 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DC218271DD045466CD2AF691E1E43C /* SwiftyJSON-dummy.m */; };
+		80A74090DE0BC1BA68F1801E82AEC94E /* OAuth2DataLoaderSessionTaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D797FFC6F79817D8FFC07722D40833 /* OAuth2DataLoaderSessionTaskDelegate.swift */; };
+		83D538E0789E4D642E165D2A1DB8D6C4 /* OAuth2CodeGrantAzure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F641E5034B0E075B66706211F593F1 /* OAuth2CodeGrantAzure.swift */; };
+		89FE81C8FFEBE09593802C9397384396 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D42562A75ED891637081C30F601B6DD /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B497C4136C2FC6CD940D12DF9189816 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2469144E64B760AEE2064C829AD3E927 /* extensions.swift */; };
+		90D3359748D8E8FE43F6F35D2AFE83DB /* Pods-outlook-client-tutorial-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A214161A6C64E84CF09BB1A81C9998FA /* Pods-outlook-client-tutorial-dummy.m */; };
+		9426766C8E638799A89F313267ECCDD9 /* OAuth2Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D18E4B6223AD49BD2672AD2130A5F72 /* OAuth2Logger.swift */; };
+		98861163901029F9D3246570B1513D83 /* OAuth2CodeGrantFacebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539E140D7CE6A92E86B59F8CC04DB6E2 /* OAuth2CodeGrantFacebook.swift */; };
+		9C276917BACBD07385CDF0EB38423AE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F296C01FFACA80FDE3AE236F23425680 /* Foundation.framework */; };
+		9DE41D2C67FF2ABA9B8E40D63B37A148 /* OAuth2Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4BBAF42AD16598023DB1AF28F06C21 /* OAuth2Requestable.swift */; };
+		9F8C523468EF2F7399DEA7FB743A89F4 /* OAuth2PasswordGrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54892C5452E6C29DF3CD33C148F6B6 /* OAuth2PasswordGrant.swift */; };
+		A48856A6243DD3143874ABF8B7F76BD3 /* OAuth2DebugURLSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67828948982CB0C297EC6BC7B68BC1F7 /* OAuth2DebugURLSessionDelegate.swift */; };
+		A984B5DD0F5451C2AF248CE4D4807480 /* Pods-outlook-client-tutorialUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0760DBF870D5CA8D5B561C9EF1066E51 /* Pods-outlook-client-tutorialUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B09FE0C8D40B7A5C7001E5F45D4BAE67 /* OAuth2Authorizer+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F303E6F7B36C4DD80EF4F6DB8AA379B5 /* OAuth2Authorizer+iOS.swift */; };
+		B4A089DAD28DB57F48EAB7FE04958A45 /* OAuth2Securable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61FC93031D361B6DC2B419DFB2A403E /* OAuth2Securable.swift */; };
+		BDD7C60A1584E1DD366445C331598034 /* Pods-outlook-client-tutorialTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E51E3F2D441CF260CE4A9B82854F7498 /* Pods-outlook-client-tutorialTests-dummy.m */; };
+		BE80786903DB42E55CEE4EE57661778B /* OAuth2DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58009E8F1A40CAF549E4A0D7490CAA /* OAuth2DataLoader.swift */; };
+		C1689DD0FF8023BDBACAF9D671FA41C2 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04CCCE951A5CCB5CE960390A7FF9113 /* SwiftyJSON.swift */; };
+		C885BA62674BEA5A75B883BA88E04546 /* p2.OAuth2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F831326500AB8247CCAF08B33675D6D0 /* p2.OAuth2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C94A139FACE1ED6CE637E9BB57D6CC04 /* OAuth2CodeGrantNoTokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357DF395A63825A4E6462F966F4D73F0 /* OAuth2CodeGrantNoTokenType.swift */; };
+		CD06C250DFC66E9BE6258D4E10A09E88 /* OAuth2ClientCredentialsReddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF403A29C10263B0E3143432E2003A4 /* OAuth2ClientCredentialsReddit.swift */; };
+		CD534A6BD70FE521A73A130076773D41 /* OAuth2ClientConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E4E1A3BDB41E9C93223570037DE6B /* OAuth2ClientConfig.swift */; };
+		D052AD4111C4139DC4BA623707D88A2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F296C01FFACA80FDE3AE236F23425680 /* Foundation.framework */; };
+		D23C19377FDC8BB636701E84A7BA15C5 /* OAuth2AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDC7E5FBD7524F91B6FABD0031CFEF5 /* OAuth2AuthRequest.swift */; };
+		D5D0F2D2EF92951237989FE0A12D5079 /* OAuth2Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61908ABA56BD8A49E66A296B80E8599 /* OAuth2Error.swift */; };
+		D6BCB7C5BB93202B685AECEDA665F1D2 /* OAuth2DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D59F598A33AF64952FEC3052D8B6E41 /* OAuth2DataRequest.swift */; };
+		D7BC341F969470869BEE61756FA642F3 /* OAuth2RequestPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08187AF86A2A4F98265843DBA40952FA /* OAuth2RequestPerformer.swift */; };
+		DCB37258AF28EE946EBC17E3C8CBEEA8 /* OAuth2AuthorizerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB193ACA9AFD9C06C2A6EAAE1E38E7AF /* OAuth2AuthorizerUI.swift */; };
+		DED135B1C0376A1F1F88118D5F7E0FD2 /* OAuth2CodeGrantLinkedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C139F3BA3AD3877D3E4A69A4CA0B5 /* OAuth2CodeGrantLinkedIn.swift */; };
+		E362CD4203E45B49103608DCA3A90D9C /* OAuth2KeychainAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6839D3A1C98099273C9741F40FA3492 /* OAuth2KeychainAccount.swift */; };
+		E9A7FB86A4EC39F9FEAD8683527730F1 /* OAuth2WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A392A84A4386BCDE955F5CBEFA1A5 /* OAuth2WebViewController.swift */; };
+		EB31BACB499B0700DAD44041124AD116 /* OAuth2CustomAuthorizer+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5E4729606FB7A2F56005FBECA719BA /* OAuth2CustomAuthorizer+iOS.swift */; };
+		EE220474909A61EAB8D3EB334ECAFB19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F296C01FFACA80FDE3AE236F23425680 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		511615AAD2931A4AE26E188CBD119C1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93DB956E05EC0C24F607E0DB69D2C109;
+			remoteInfo = "Pods-outlook-client-tutorial";
+		};
+		8926BD0145E079182EA508D79539162D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97DDEE5A1EB31FDE74A84A2AE12EFAC8;
+			remoteInfo = p2.OAuth2;
+		};
+		CBEE5D80334514BC85A0EBC65EEC7587 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93DB956E05EC0C24F607E0DB69D2C109;
+			remoteInfo = "Pods-outlook-client-tutorial";
+		};
+		D1C5EA53446BD3AA2FB093D0A259027D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E2CCCAD96977C1767D2816A3A8E5D6C;
+			remoteInfo = SwiftyJSON;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0371D605CBAD849493F483AC6E4AE80A /* Pods-outlook-client-tutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-outlook-client-tutorial.release.xcconfig"; sourceTree = "<group>"; };
+		0760DBF870D5CA8D5B561C9EF1066E51 /* Pods-outlook-client-tutorialUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-outlook-client-tutorialUITests-umbrella.h"; sourceTree = "<group>"; };
+		08187AF86A2A4F98265843DBA40952FA /* OAuth2RequestPerformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2RequestPerformer.swift; path = Sources/Base/OAuth2RequestPerformer.swift; sourceTree = "<group>"; };
+		08EFF62953237F4C2A93AF1A264A6205 /* OAuth2DynReg.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2DynReg.swift; path = Sources/Flows/OAuth2DynReg.swift; sourceTree = "<group>"; };
+		0C7172738344055C8B83C498D7C84D76 /* OAuth2Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Response.swift; path = Sources/Base/OAuth2Response.swift; sourceTree = "<group>"; };
+		0E5ABACD50A76EB3DE178721FA9DA9B5 /* Pods-outlook-client-tutorial.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-outlook-client-tutorial.modulemap"; sourceTree = "<group>"; };
+		1342B5788B33029B3D16F2A84A742F9C /* p2_OAuth2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = p2_OAuth2.framework; path = p2.OAuth2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18C33FFF282CDD9F65A8052934905271 /* OAuth2CustomAuthorizerUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2CustomAuthorizerUI.swift; path = Sources/Base/OAuth2CustomAuthorizerUI.swift; sourceTree = "<group>"; };
+		1BDC7E5FBD7524F91B6FABD0031CFEF5 /* OAuth2AuthRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2AuthRequest.swift; path = Sources/Base/OAuth2AuthRequest.swift; sourceTree = "<group>"; };
+		1D8B24F62E1E367D5E3F9F38D6802D56 /* p2.OAuth2-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "p2.OAuth2-Info.plist"; sourceTree = "<group>"; };
+		1E3BD9F337D3B5E398ED8EAAE338400C /* Pods-outlook-client-tutorial-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-outlook-client-tutorial-umbrella.h"; sourceTree = "<group>"; };
+		237E8B6912D9C688C5EA2B083365D321 /* OAuth2CodeGrantBasicAuth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2CodeGrantBasicAuth.swift; path = Sources/Flows/OAuth2CodeGrantBasicAuth.swift; sourceTree = "<group>"; };
+		2469144E64B760AEE2064C829AD3E927 /* extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = extensions.swift; path = Sources/Base/extensions.swift; sourceTree = "<group>"; };
+		24F37A979A524DDAED16734594818859 /* Pods-outlook-client-tutorial-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-outlook-client-tutorial-Info.plist"; sourceTree = "<group>"; };
+		31CD428E19A8803C1276489E4B951439 /* Pods-outlook-client-tutorialTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-outlook-client-tutorialTests-umbrella.h"; sourceTree = "<group>"; };
+		357DF395A63825A4E6462F966F4D73F0 /* OAuth2CodeGrantNoTokenType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2CodeGrantNoTokenType.swift; path = Sources/Flows/OAuth2CodeGrantNoTokenType.swift; sourceTree = "<group>"; };
+		366149421E4B4F829C36C2AC0CD15E96 /* Pods-outlook-client-tutorialTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-outlook-client-tutorialTests-Info.plist"; sourceTree = "<group>"; };
+		3B0E4E1A3BDB41E9C93223570037DE6B /* OAuth2ClientConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2ClientConfig.swift; path = Sources/Base/OAuth2ClientConfig.swift; sourceTree = "<group>"; };
+		3B54892C5452E6C29DF3CD33C148F6B6 /* OAuth2PasswordGrant.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2PasswordGrant.swift; path = Sources/Flows/OAuth2PasswordGrant.swift; sourceTree = "<group>"; };
+		3E4BBAF42AD16598023DB1AF28F06C21 /* OAuth2Requestable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Requestable.swift; path = Sources/Base/OAuth2Requestable.swift; sourceTree = "<group>"; };
+		4EE8A320DC4ACCC55FC14D5E04DF978A /* OAuth2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2.swift; path = Sources/Flows/OAuth2.swift; sourceTree = "<group>"; };
+		4F5AB6A9913D91510935DB094DDC9AF7 /* Pods-outlook-client-tutorialTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-outlook-client-tutorialTests.modulemap"; sourceTree = "<group>"; };
+		52A3AEF1CB6E488057849C7358159C48 /* Pods-outlook-client-tutorial-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-outlook-client-tutorial-acknowledgements.markdown"; sourceTree = "<group>"; };
+		539E140D7CE6A92E86B59F8CC04DB6E2 /* OAuth2CodeGrantFacebook.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2CodeGrantFacebook.swift; path = Sources/Flows/OAuth2CodeGrantFacebook.swift; sourceTree = "<group>"; };
+		56F4D72C82CD6E4F104AD4CE6C27A719 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		576A392A84A4386BCDE955F5CBEFA1A5 /* OAuth2WebViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2WebViewController.swift; path = Sources/iOS/OAuth2WebViewController.swift; sourceTree = "<group>"; };
+		60625C84D33CD4571A934FA907BBBBA0 /* OAuth2AuthConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2AuthConfig.swift; path = Sources/Base/OAuth2AuthConfig.swift; sourceTree = "<group>"; };
+		610C7F76D801F963FB8DC4F48BFA0916 /* Pods-outlook-client-tutorialTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-outlook-client-tutorialTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		61409E3F14ECADD210FD6FA87F513763 /* OAuth2ImplicitGrant.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2ImplicitGrant.swift; path = Sources/Flows/OAuth2ImplicitGrant.swift; sourceTree = "<group>"; };
+		668F63AE2F0A6BAB0CF91D8A6492035E /* Pods-outlook-client-tutorialTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-outlook-client-tutorialTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		66F8BD5D9A63042E1F1918B72EDA54DE /* SwiftyJSON-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyJSON-Info.plist"; sourceTree = "<group>"; };
+		67828948982CB0C297EC6BC7B68BC1F7 /* OAuth2DebugURLSessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2DebugURLSessionDelegate.swift; path = Sources/Base/OAuth2DebugURLSessionDelegate.swift; sourceTree = "<group>"; };
+		68A847A6BEFB6F3E491EF92157C87C8E /* p2.OAuth2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = p2.OAuth2.xcconfig; sourceTree = "<group>"; };
+		69DCF99D5F403961BA4097526D4B961A /* Pods-outlook-client-tutorialUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-outlook-client-tutorialUITests-dummy.m"; sourceTree = "<group>"; };
+		6A5E4729606FB7A2F56005FBECA719BA /* OAuth2CustomAuthorizer+iOS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OAuth2CustomAuthorizer+iOS.swift"; path = "Sources/iOS/OAuth2CustomAuthorizer+iOS.swift"; sourceTree = "<group>"; };
+		6D18E4B6223AD49BD2672AD2130A5F72 /* OAuth2Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Logger.swift; path = Sources/Base/OAuth2Logger.swift; sourceTree = "<group>"; };
+		6D42562A75ED891637081C30F601B6DD /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		6D59F598A33AF64952FEC3052D8B6E41 /* OAuth2DataRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2DataRequest.swift; path = Sources/DataLoader/OAuth2DataRequest.swift; sourceTree = "<group>"; };
+		75D797FFC6F79817D8FFC07722D40833 /* OAuth2DataLoaderSessionTaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2DataLoaderSessionTaskDelegate.swift; path = Sources/DataLoader/OAuth2DataLoaderSessionTaskDelegate.swift; sourceTree = "<group>"; };
+		7738A0B7399FBD2D01E1B8A6DC91FAC6 /* Pods-outlook-client-tutorialUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-outlook-client-tutorialUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		807C139F3BA3AD3877D3E4A69A4CA0B5 /* OAuth2CodeGrantLinkedIn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2CodeGrantLinkedIn.swift; path = Sources/Flows/OAuth2CodeGrantLinkedIn.swift; sourceTree = "<group>"; };
+		87CE2DC8286A02BCB826D17FA362A286 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
+		9747DF554D676DCB7A7DB70175511E27 /* OAuth2Base.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Base.swift; path = Sources/Base/OAuth2Base.swift; sourceTree = "<group>"; };
+		991FC2F9866258231C086E97F0A74F6A /* Pods-outlook-client-tutorial-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-outlook-client-tutorial-frameworks.sh"; sourceTree = "<group>"; };
+		9B0C5254999C6FD6C201EDD57D221BBF /* Pods-outlook-client-tutorialUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-outlook-client-tutorialUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EB14C456E213A4B87FB70267984D81A /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1276AF347BFA3848FC111A8C0FD0A04 /* Pods-outlook-client-tutorialUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-outlook-client-tutorialUITests.modulemap"; sourceTree = "<group>"; };
+		A214161A6C64E84CF09BB1A81C9998FA /* Pods-outlook-client-tutorial-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-outlook-client-tutorial-dummy.m"; sourceTree = "<group>"; };
+		A3A4D509A998C42DD84498F69BC1111A /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		ADD1571242FE769E4452B2B9BEFE18A5 /* Pods-outlook-client-tutorialUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-outlook-client-tutorialUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF58009E8F1A40CAF549E4A0D7490CAA /* OAuth2DataLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2DataLoader.swift; path = Sources/DataLoader/OAuth2DataLoader.swift; sourceTree = "<group>"; };
+		B2DC218271DD045466CD2AF691E1E43C /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		B5E41C197FF2273F6FAC558E6F0B0799 /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = SwiftKeychain/Keychain/Keychain.swift; sourceTree = "<group>"; };
+		B61908ABA56BD8A49E66A296B80E8599 /* OAuth2Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Error.swift; path = Sources/Base/OAuth2Error.swift; sourceTree = "<group>"; };
+		B6839D3A1C98099273C9741F40FA3492 /* OAuth2KeychainAccount.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2KeychainAccount.swift; path = Sources/Base/OAuth2KeychainAccount.swift; sourceTree = "<group>"; };
+		BAE3E6A7D17BE399C304A06AF9B57E23 /* p2.OAuth2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "p2.OAuth2-dummy.m"; sourceTree = "<group>"; };
+		BB193ACA9AFD9C06C2A6EAAE1E38E7AF /* OAuth2AuthorizerUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2AuthorizerUI.swift; path = Sources/Base/OAuth2AuthorizerUI.swift; sourceTree = "<group>"; };
+		BF0AD42E11A902C2EEFFDE7504E5E977 /* Pods_outlook_client_tutorialUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_outlook_client_tutorialUITests.framework; path = "Pods-outlook-client-tutorialUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C04CCCE951A5CCB5CE960390A7FF9113 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; };
+		C6151F20F1643CA6C44DCD61776F9BFE /* OAuth2CodeGrant.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2CodeGrant.swift; path = Sources/Flows/OAuth2CodeGrant.swift; sourceTree = "<group>"; };
+		C61FC93031D361B6DC2B419DFB2A403E /* OAuth2Securable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Securable.swift; path = Sources/Base/OAuth2Securable.swift; sourceTree = "<group>"; };
+		C9C544AA8663B2BE5C56F5DD504EF776 /* Pods-outlook-client-tutorialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-outlook-client-tutorialTests.release.xcconfig"; sourceTree = "<group>"; };
+		CC1DBA4BEF549DC1A178F03A8D9ACE2A /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/SafariServices.framework; sourceTree = DEVELOPER_DIR; };
+		D189FF0C66D12A98C413848E7FD0ACBA /* Pods_outlook_client_tutorialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_outlook_client_tutorialTests.framework; path = "Pods-outlook-client-tutorialTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D44E5112EB05520734E36EBC37895E7A /* Pods_outlook_client_tutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_outlook_client_tutorial.framework; path = "Pods-outlook-client-tutorial.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5F641E5034B0E075B66706211F593F1 /* OAuth2CodeGrantAzure.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2CodeGrantAzure.swift; path = Sources/Flows/OAuth2CodeGrantAzure.swift; sourceTree = "<group>"; };
+		D6FBD1FFF22D17C55BCEAFAE379064B0 /* Pods-outlook-client-tutorial-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-outlook-client-tutorial-acknowledgements.plist"; sourceTree = "<group>"; };
+		D75F86D11FC893531922CF853C06BF10 /* Pods-outlook-client-tutorialUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-outlook-client-tutorialUITests-Info.plist"; sourceTree = "<group>"; };
+		DBF508C1DA8DC34705AEDB96C417D5CA /* p2.OAuth2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = p2.OAuth2.modulemap; sourceTree = "<group>"; };
+		E51E3F2D441CF260CE4A9B82854F7498 /* Pods-outlook-client-tutorialTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-outlook-client-tutorialTests-dummy.m"; sourceTree = "<group>"; };
+		E53405C3BE95EF700A98E1BA45CC97D0 /* p2.OAuth2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "p2.OAuth2-prefix.pch"; sourceTree = "<group>"; };
+		E560C4FA048E1165E3F12F5325F61FA1 /* Pods-outlook-client-tutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-outlook-client-tutorial.debug.xcconfig"; sourceTree = "<group>"; };
+		EAA1D1ABDF91BCDECCCCDE6F3A3CE69A /* OAuth2ClientCredentials.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2ClientCredentials.swift; path = Sources/Flows/OAuth2ClientCredentials.swift; sourceTree = "<group>"; };
+		F09C2C64874484026DE068CA3EE9C8E0 /* OAuth2ImplicitGrantWithQueryParams.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2ImplicitGrantWithQueryParams.swift; path = Sources/Flows/OAuth2ImplicitGrantWithQueryParams.swift; sourceTree = "<group>"; };
+		F296C01FFACA80FDE3AE236F23425680 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F303E6F7B36C4DD80EF4F6DB8AA379B5 /* OAuth2Authorizer+iOS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OAuth2Authorizer+iOS.swift"; path = "Sources/iOS/OAuth2Authorizer+iOS.swift"; sourceTree = "<group>"; };
+		F54E7F33C686FD4B0E8313EA52D7605A /* Pods-outlook-client-tutorialUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-outlook-client-tutorialUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F831326500AB8247CCAF08B33675D6D0 /* p2.OAuth2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "p2.OAuth2-umbrella.h"; sourceTree = "<group>"; };
+		FC056A8C887303F9398019F3A487B920 /* Pods-outlook-client-tutorialTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-outlook-client-tutorialTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FFF403A29C10263B0E3143432E2003A4 /* OAuth2ClientCredentialsReddit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2ClientCredentialsReddit.swift; path = Sources/Flows/OAuth2ClientCredentialsReddit.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A522AAADFBF55164D70E0E6A9A0928F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43690B1A5DA6CF4D4BD361982E5B300E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6803615CE487BF5E8BEA0088F9D62AEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE220474909A61EAB8D3EB334ECAFB19 /* Foundation.framework in Frameworks */,
+				1E6399CF47CDA1BB4201B43B4260EEE5 /* SafariServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E3F41C409A947ECC1057EA96A7052AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C276917BACBD07385CDF0EB38423AE2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFBA0879952F11339AC903B317913990 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D052AD4111C4139DC4BA623707D88A2C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA29734276AC37A5E79082E887137C47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F040072C188BBBC7AB778D936F2980 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0647876A5BD96C4F9A3817DF8872A27B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBF508C1DA8DC34705AEDB96C417D5CA /* p2.OAuth2.modulemap */,
+				68A847A6BEFB6F3E491EF92157C87C8E /* p2.OAuth2.xcconfig */,
+				BAE3E6A7D17BE399C304A06AF9B57E23 /* p2.OAuth2-dummy.m */,
+				1D8B24F62E1E367D5E3F9F38D6802D56 /* p2.OAuth2-Info.plist */,
+				E53405C3BE95EF700A98E1BA45CC97D0 /* p2.OAuth2-prefix.pch */,
+				F831326500AB8247CCAF08B33675D6D0 /* p2.OAuth2-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/p2.OAuth2";
+			sourceTree = "<group>";
+		};
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9668B8798FCA7ED565F1B3F2044CCCA3 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48F4A4452E784235C93C2E81621FDA01 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8BFECC0BCE0B0E13E71000B1503359C0 /* p2.OAuth2 */,
+				80366A3DBE3C99853983223DEF66C0AF /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		64A9F1CDE4C55086BDBFEE72673D8BAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1342B5788B33029B3D16F2A84A742F9C /* p2_OAuth2.framework */,
+				D44E5112EB05520734E36EBC37895E7A /* Pods_outlook_client_tutorial.framework */,
+				D189FF0C66D12A98C413848E7FD0ACBA /* Pods_outlook_client_tutorialTests.framework */,
+				BF0AD42E11A902C2EEFFDE7504E5E977 /* Pods_outlook_client_tutorialUITests.framework */,
+				9EB14C456E213A4B87FB70267984D81A /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77C653CD3813BC9CB9D56403015713AE /* Pods-outlook-client-tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				0E5ABACD50A76EB3DE178721FA9DA9B5 /* Pods-outlook-client-tutorial.modulemap */,
+				52A3AEF1CB6E488057849C7358159C48 /* Pods-outlook-client-tutorial-acknowledgements.markdown */,
+				D6FBD1FFF22D17C55BCEAFAE379064B0 /* Pods-outlook-client-tutorial-acknowledgements.plist */,
+				A214161A6C64E84CF09BB1A81C9998FA /* Pods-outlook-client-tutorial-dummy.m */,
+				991FC2F9866258231C086E97F0A74F6A /* Pods-outlook-client-tutorial-frameworks.sh */,
+				24F37A979A524DDAED16734594818859 /* Pods-outlook-client-tutorial-Info.plist */,
+				1E3BD9F337D3B5E398ED8EAAE338400C /* Pods-outlook-client-tutorial-umbrella.h */,
+				E560C4FA048E1165E3F12F5325F61FA1 /* Pods-outlook-client-tutorial.debug.xcconfig */,
+				0371D605CBAD849493F483AC6E4AE80A /* Pods-outlook-client-tutorial.release.xcconfig */,
+			);
+			name = "Pods-outlook-client-tutorial";
+			path = "Target Support Files/Pods-outlook-client-tutorial";
+			sourceTree = "<group>";
+		};
+		7A0A6218A6F0F505F559CA4D26C0CBD9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3A4D509A998C42DD84498F69BC1111A /* SwiftyJSON.modulemap */,
+				87CE2DC8286A02BCB826D17FA362A286 /* SwiftyJSON.xcconfig */,
+				B2DC218271DD045466CD2AF691E1E43C /* SwiftyJSON-dummy.m */,
+				66F8BD5D9A63042E1F1918B72EDA54DE /* SwiftyJSON-Info.plist */,
+				56F4D72C82CD6E4F104AD4CE6C27A719 /* SwiftyJSON-prefix.pch */,
+				6D42562A75ED891637081C30F601B6DD /* SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		80366A3DBE3C99853983223DEF66C0AF /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				C04CCCE951A5CCB5CE960390A7FF9113 /* SwiftyJSON.swift */,
+				7A0A6218A6F0F505F559CA4D26C0CBD9 /* Support Files */,
+			);
+			name = SwiftyJSON;
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		8BFECC0BCE0B0E13E71000B1503359C0 /* p2.OAuth2 */ = {
+			isa = PBXGroup;
+			children = (
+				2469144E64B760AEE2064C829AD3E927 /* extensions.swift */,
+				B5E41C197FF2273F6FAC558E6F0B0799 /* Keychain.swift */,
+				4EE8A320DC4ACCC55FC14D5E04DF978A /* OAuth2.swift */,
+				60625C84D33CD4571A934FA907BBBBA0 /* OAuth2AuthConfig.swift */,
+				F303E6F7B36C4DD80EF4F6DB8AA379B5 /* OAuth2Authorizer+iOS.swift */,
+				BB193ACA9AFD9C06C2A6EAAE1E38E7AF /* OAuth2AuthorizerUI.swift */,
+				1BDC7E5FBD7524F91B6FABD0031CFEF5 /* OAuth2AuthRequest.swift */,
+				9747DF554D676DCB7A7DB70175511E27 /* OAuth2Base.swift */,
+				3B0E4E1A3BDB41E9C93223570037DE6B /* OAuth2ClientConfig.swift */,
+				EAA1D1ABDF91BCDECCCCDE6F3A3CE69A /* OAuth2ClientCredentials.swift */,
+				FFF403A29C10263B0E3143432E2003A4 /* OAuth2ClientCredentialsReddit.swift */,
+				C6151F20F1643CA6C44DCD61776F9BFE /* OAuth2CodeGrant.swift */,
+				D5F641E5034B0E075B66706211F593F1 /* OAuth2CodeGrantAzure.swift */,
+				237E8B6912D9C688C5EA2B083365D321 /* OAuth2CodeGrantBasicAuth.swift */,
+				539E140D7CE6A92E86B59F8CC04DB6E2 /* OAuth2CodeGrantFacebook.swift */,
+				807C139F3BA3AD3877D3E4A69A4CA0B5 /* OAuth2CodeGrantLinkedIn.swift */,
+				357DF395A63825A4E6462F966F4D73F0 /* OAuth2CodeGrantNoTokenType.swift */,
+				6A5E4729606FB7A2F56005FBECA719BA /* OAuth2CustomAuthorizer+iOS.swift */,
+				18C33FFF282CDD9F65A8052934905271 /* OAuth2CustomAuthorizerUI.swift */,
+				AF58009E8F1A40CAF549E4A0D7490CAA /* OAuth2DataLoader.swift */,
+				75D797FFC6F79817D8FFC07722D40833 /* OAuth2DataLoaderSessionTaskDelegate.swift */,
+				6D59F598A33AF64952FEC3052D8B6E41 /* OAuth2DataRequest.swift */,
+				67828948982CB0C297EC6BC7B68BC1F7 /* OAuth2DebugURLSessionDelegate.swift */,
+				08EFF62953237F4C2A93AF1A264A6205 /* OAuth2DynReg.swift */,
+				B61908ABA56BD8A49E66A296B80E8599 /* OAuth2Error.swift */,
+				61409E3F14ECADD210FD6FA87F513763 /* OAuth2ImplicitGrant.swift */,
+				F09C2C64874484026DE068CA3EE9C8E0 /* OAuth2ImplicitGrantWithQueryParams.swift */,
+				B6839D3A1C98099273C9741F40FA3492 /* OAuth2KeychainAccount.swift */,
+				6D18E4B6223AD49BD2672AD2130A5F72 /* OAuth2Logger.swift */,
+				3B54892C5452E6C29DF3CD33C148F6B6 /* OAuth2PasswordGrant.swift */,
+				3E4BBAF42AD16598023DB1AF28F06C21 /* OAuth2Requestable.swift */,
+				08187AF86A2A4F98265843DBA40952FA /* OAuth2RequestPerformer.swift */,
+				0C7172738344055C8B83C498D7C84D76 /* OAuth2Response.swift */,
+				C61FC93031D361B6DC2B419DFB2A403E /* OAuth2Securable.swift */,
+				576A392A84A4386BCDE955F5CBEFA1A5 /* OAuth2WebViewController.swift */,
+				0647876A5BD96C4F9A3817DF8872A27B /* Support Files */,
+			);
+			name = p2.OAuth2;
+			path = p2.OAuth2;
+			sourceTree = "<group>";
+		};
+		947CB14B6A1F08E321BAC67CE0CB4CC4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				77C653CD3813BC9CB9D56403015713AE /* Pods-outlook-client-tutorial */,
+				F912665E90C6EF4282A3E8551C5BD3AF /* Pods-outlook-client-tutorialTests */,
+				CD197CA61DD4EC8C2BB1624DF0BACA62 /* Pods-outlook-client-tutorialUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9668B8798FCA7ED565F1B3F2044CCCA3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F296C01FFACA80FDE3AE236F23425680 /* Foundation.framework */,
+				CC1DBA4BEF549DC1A178F03A8D9ACE2A /* SafariServices.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CD197CA61DD4EC8C2BB1624DF0BACA62 /* Pods-outlook-client-tutorialUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A1276AF347BFA3848FC111A8C0FD0A04 /* Pods-outlook-client-tutorialUITests.modulemap */,
+				7738A0B7399FBD2D01E1B8A6DC91FAC6 /* Pods-outlook-client-tutorialUITests-acknowledgements.markdown */,
+				9B0C5254999C6FD6C201EDD57D221BBF /* Pods-outlook-client-tutorialUITests-acknowledgements.plist */,
+				69DCF99D5F403961BA4097526D4B961A /* Pods-outlook-client-tutorialUITests-dummy.m */,
+				D75F86D11FC893531922CF853C06BF10 /* Pods-outlook-client-tutorialUITests-Info.plist */,
+				0760DBF870D5CA8D5B561C9EF1066E51 /* Pods-outlook-client-tutorialUITests-umbrella.h */,
+				ADD1571242FE769E4452B2B9BEFE18A5 /* Pods-outlook-client-tutorialUITests.debug.xcconfig */,
+				F54E7F33C686FD4B0E8313EA52D7605A /* Pods-outlook-client-tutorialUITests.release.xcconfig */,
+			);
+			name = "Pods-outlook-client-tutorialUITests";
+			path = "Target Support Files/Pods-outlook-client-tutorialUITests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				48F4A4452E784235C93C2E81621FDA01 /* Pods */,
+				64A9F1CDE4C55086BDBFEE72673D8BAF /* Products */,
+				947CB14B6A1F08E321BAC67CE0CB4CC4 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		F912665E90C6EF4282A3E8551C5BD3AF /* Pods-outlook-client-tutorialTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F5AB6A9913D91510935DB094DDC9AF7 /* Pods-outlook-client-tutorialTests.modulemap */,
+				668F63AE2F0A6BAB0CF91D8A6492035E /* Pods-outlook-client-tutorialTests-acknowledgements.markdown */,
+				610C7F76D801F963FB8DC4F48BFA0916 /* Pods-outlook-client-tutorialTests-acknowledgements.plist */,
+				E51E3F2D441CF260CE4A9B82854F7498 /* Pods-outlook-client-tutorialTests-dummy.m */,
+				366149421E4B4F829C36C2AC0CD15E96 /* Pods-outlook-client-tutorialTests-Info.plist */,
+				31CD428E19A8803C1276489E4B951439 /* Pods-outlook-client-tutorialTests-umbrella.h */,
+				FC056A8C887303F9398019F3A487B920 /* Pods-outlook-client-tutorialTests.debug.xcconfig */,
+				C9C544AA8663B2BE5C56F5DD504EF776 /* Pods-outlook-client-tutorialTests.release.xcconfig */,
+			);
+			name = "Pods-outlook-client-tutorialTests";
+			path = "Target Support Files/Pods-outlook-client-tutorialTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		08FA58B86603189B9DC616117A2BE94B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89FE81C8FFEBE09593802C9397384396 /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D1CEC6E208BA4AF9F9E8A475D450B4F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68CBDA817101DA5B13B002F6F72D3899 /* Pods-outlook-client-tutorialTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DFA42D72BA0D0C996DA4A0D50AD68CC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31192D4A7B0DC89C4FD0502F471DA4A3 /* Pods-outlook-client-tutorial-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B104C0358C576925E6A8E44933E2188 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C885BA62674BEA5A75B883BA88E04546 /* p2.OAuth2-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6EB8ACB9542F2F1623EAED342BB3ACE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A984B5DD0F5451C2AF248CE4D4807480 /* Pods-outlook-client-tutorialUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6E2CCCAD96977C1767D2816A3A8E5D6C /* SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21101AEA9E19E11E8635D2911E037BAA /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildPhases = (
+				08FA58B86603189B9DC616117A2BE94B /* Headers */,
+				265849A0AC39F2AA2C85E6E6F71F8F54 /* Sources */,
+				2A522AAADFBF55164D70E0E6A9A0928F /* Frameworks */,
+				FDD2FAB4CD10ABEE820CF57392882CC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyJSON;
+			productName = SwiftyJSON;
+			productReference = 9EB14C456E213A4B87FB70267984D81A /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		93DB956E05EC0C24F607E0DB69D2C109 /* Pods-outlook-client-tutorial */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D539B577D94DA541EE836C36AB222860 /* Build configuration list for PBXNativeTarget "Pods-outlook-client-tutorial" */;
+			buildPhases = (
+				1DFA42D72BA0D0C996DA4A0D50AD68CC /* Headers */,
+				07113A8DBF7FEE4A2939E42566063ECE /* Sources */,
+				6E3F41C409A947ECC1057EA96A7052AF /* Frameworks */,
+				382A3A3DE7EE3C58D9FC5237B5EDE1E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				314BA6258BB4B2F4123DDCCDCAFAFC52 /* PBXTargetDependency */,
+				175956E2FAE26D9E3F3D4BF65970AC6C /* PBXTargetDependency */,
+			);
+			name = "Pods-outlook-client-tutorial";
+			productName = "Pods-outlook-client-tutorial";
+			productReference = D44E5112EB05520734E36EBC37895E7A /* Pods_outlook_client_tutorial.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		97DDEE5A1EB31FDE74A84A2AE12EFAC8 /* p2.OAuth2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C36C3C130B01613AA22A9CE8ABFB9367 /* Build configuration list for PBXNativeTarget "p2.OAuth2" */;
+			buildPhases = (
+				2B104C0358C576925E6A8E44933E2188 /* Headers */,
+				5043272FCA7DC8C4F64DF0912BC6768C /* Sources */,
+				6803615CE487BF5E8BEA0088F9D62AEA /* Frameworks */,
+				8848FE6137F51BD4B089277B98204DC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = p2.OAuth2;
+			productName = p2.OAuth2;
+			productReference = 1342B5788B33029B3D16F2A84A742F9C /* p2_OAuth2.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F64046AAC328210944330BB7CDCCE869 /* Pods-outlook-client-tutorialUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD17D52002723E6F3D25DC5AB2AEB9B0 /* Build configuration list for PBXNativeTarget "Pods-outlook-client-tutorialUITests" */;
+			buildPhases = (
+				E6EB8ACB9542F2F1623EAED342BB3ACE /* Headers */,
+				B97FCB7E04268391A16F822176AFC18D /* Sources */,
+				FA29734276AC37A5E79082E887137C47 /* Frameworks */,
+				E3A93CBAE68544FE56C9B742050597F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B2C0C6FBA094A5CA3E89903F7E5667F /* PBXTargetDependency */,
+			);
+			name = "Pods-outlook-client-tutorialUITests";
+			productName = "Pods-outlook-client-tutorialUITests";
+			productReference = BF0AD42E11A902C2EEFFDE7504E5E977 /* Pods_outlook_client_tutorialUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F73EB88D0CCF72091F5DCC23B3B0E40E /* Pods-outlook-client-tutorialTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3471C6842584286E2034B56740E40B8A /* Build configuration list for PBXNativeTarget "Pods-outlook-client-tutorialTests" */;
+			buildPhases = (
+				1D1CEC6E208BA4AF9F9E8A475D450B4F /* Headers */,
+				CB9AB306515609C04D88B2462263A825 /* Sources */,
+				AFBA0879952F11339AC903B317913990 /* Frameworks */,
+				33AD08575924E3F49D1D313DDADE3510 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4FD1CB168C5ACC8E1E797DEF4E26CDEA /* PBXTargetDependency */,
+			);
+			name = "Pods-outlook-client-tutorialTests";
+			productName = "Pods-outlook-client-tutorialTests";
+			productReference = D189FF0C66D12A98C413848E7FD0ACBA /* Pods_outlook_client_tutorialTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 64A9F1CDE4C55086BDBFEE72673D8BAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				97DDEE5A1EB31FDE74A84A2AE12EFAC8 /* p2.OAuth2 */,
+				93DB956E05EC0C24F607E0DB69D2C109 /* Pods-outlook-client-tutorial */,
+				F73EB88D0CCF72091F5DCC23B3B0E40E /* Pods-outlook-client-tutorialTests */,
+				F64046AAC328210944330BB7CDCCE869 /* Pods-outlook-client-tutorialUITests */,
+				6E2CCCAD96977C1767D2816A3A8E5D6C /* SwiftyJSON */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		33AD08575924E3F49D1D313DDADE3510 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		382A3A3DE7EE3C58D9FC5237B5EDE1E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8848FE6137F51BD4B089277B98204DC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3A93CBAE68544FE56C9B742050597F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDD2FAB4CD10ABEE820CF57392882CC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07113A8DBF7FEE4A2939E42566063ECE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90D3359748D8E8FE43F6F35D2AFE83DB /* Pods-outlook-client-tutorial-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265849A0AC39F2AA2C85E6E6F71F8F54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F65E9EA5E43F2E114D620A8CA744418 /* SwiftyJSON-dummy.m in Sources */,
+				C1689DD0FF8023BDBACAF9D671FA41C2 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5043272FCA7DC8C4F64DF0912BC6768C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B497C4136C2FC6CD940D12DF9189816 /* extensions.swift in Sources */,
+				451DD2451949A63F2362E963E0D674F4 /* Keychain.swift in Sources */,
+				3ABBB12BAC3F7BE81DA7C13C2555FED4 /* OAuth2.swift in Sources */,
+				0DB19FFD0E012313DD4C5AAF7062E9EA /* OAuth2AuthConfig.swift in Sources */,
+				B09FE0C8D40B7A5C7001E5F45D4BAE67 /* OAuth2Authorizer+iOS.swift in Sources */,
+				DCB37258AF28EE946EBC17E3C8CBEEA8 /* OAuth2AuthorizerUI.swift in Sources */,
+				D23C19377FDC8BB636701E84A7BA15C5 /* OAuth2AuthRequest.swift in Sources */,
+				366B55484B806C602404D09F6BBDEE22 /* OAuth2Base.swift in Sources */,
+				CD534A6BD70FE521A73A130076773D41 /* OAuth2ClientConfig.swift in Sources */,
+				2C2F3D81B5A19BF4D9398EB4D14554E0 /* OAuth2ClientCredentials.swift in Sources */,
+				CD06C250DFC66E9BE6258D4E10A09E88 /* OAuth2ClientCredentialsReddit.swift in Sources */,
+				6E824F5EAA97629598899D48E72635F1 /* OAuth2CodeGrant.swift in Sources */,
+				83D538E0789E4D642E165D2A1DB8D6C4 /* OAuth2CodeGrantAzure.swift in Sources */,
+				30126A4CB48E290DFB2740F3FC65EDB2 /* OAuth2CodeGrantBasicAuth.swift in Sources */,
+				98861163901029F9D3246570B1513D83 /* OAuth2CodeGrantFacebook.swift in Sources */,
+				DED135B1C0376A1F1F88118D5F7E0FD2 /* OAuth2CodeGrantLinkedIn.swift in Sources */,
+				C94A139FACE1ED6CE637E9BB57D6CC04 /* OAuth2CodeGrantNoTokenType.swift in Sources */,
+				EB31BACB499B0700DAD44041124AD116 /* OAuth2CustomAuthorizer+iOS.swift in Sources */,
+				7B2FB63C83EB5CC40411858E19A695B3 /* OAuth2CustomAuthorizerUI.swift in Sources */,
+				BE80786903DB42E55CEE4EE57661778B /* OAuth2DataLoader.swift in Sources */,
+				80A74090DE0BC1BA68F1801E82AEC94E /* OAuth2DataLoaderSessionTaskDelegate.swift in Sources */,
+				D6BCB7C5BB93202B685AECEDA665F1D2 /* OAuth2DataRequest.swift in Sources */,
+				A48856A6243DD3143874ABF8B7F76BD3 /* OAuth2DebugURLSessionDelegate.swift in Sources */,
+				104C0C323984E398CA2C99A1F4764840 /* OAuth2DynReg.swift in Sources */,
+				D5D0F2D2EF92951237989FE0A12D5079 /* OAuth2Error.swift in Sources */,
+				27BE287CFACBB30393DCE7144B09F5DE /* OAuth2ImplicitGrant.swift in Sources */,
+				6267B2DF96FA4467E4780157F6FBB8D8 /* OAuth2ImplicitGrantWithQueryParams.swift in Sources */,
+				E362CD4203E45B49103608DCA3A90D9C /* OAuth2KeychainAccount.swift in Sources */,
+				9426766C8E638799A89F313267ECCDD9 /* OAuth2Logger.swift in Sources */,
+				9F8C523468EF2F7399DEA7FB743A89F4 /* OAuth2PasswordGrant.swift in Sources */,
+				9DE41D2C67FF2ABA9B8E40D63B37A148 /* OAuth2Requestable.swift in Sources */,
+				D7BC341F969470869BEE61756FA642F3 /* OAuth2RequestPerformer.swift in Sources */,
+				25EA4DE129C28557BC5C4E1B35248C43 /* OAuth2Response.swift in Sources */,
+				B4A089DAD28DB57F48EAB7FE04958A45 /* OAuth2Securable.swift in Sources */,
+				E9A7FB86A4EC39F9FEAD8683527730F1 /* OAuth2WebViewController.swift in Sources */,
+				598243B4413B2DA6278DD6D3FCD41A2A /* p2.OAuth2-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B97FCB7E04268391A16F822176AFC18D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C87DDF06ACA79115B4BD071763F6752 /* Pods-outlook-client-tutorialUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB9AB306515609C04D88B2462263A825 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDD7C60A1584E1DD366445C331598034 /* Pods-outlook-client-tutorialTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		175956E2FAE26D9E3F3D4BF65970AC6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = p2.OAuth2;
+			target = 97DDEE5A1EB31FDE74A84A2AE12EFAC8 /* p2.OAuth2 */;
+			targetProxy = 8926BD0145E079182EA508D79539162D /* PBXContainerItemProxy */;
+		};
+		314BA6258BB4B2F4123DDCCDCAFAFC52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = 6E2CCCAD96977C1767D2816A3A8E5D6C /* SwiftyJSON */;
+			targetProxy = D1C5EA53446BD3AA2FB093D0A259027D /* PBXContainerItemProxy */;
+		};
+		4FD1CB168C5ACC8E1E797DEF4E26CDEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-outlook-client-tutorial";
+			target = 93DB956E05EC0C24F607E0DB69D2C109 /* Pods-outlook-client-tutorial */;
+			targetProxy = 511615AAD2931A4AE26E188CBD119C1A /* PBXContainerItemProxy */;
+		};
+		8B2C0C6FBA094A5CA3E89903F7E5667F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-outlook-client-tutorial";
+			target = 93DB956E05EC0C24F607E0DB69D2C109 /* Pods-outlook-client-tutorial */;
+			targetProxy = CBEE5D80334514BC85A0EBC65EEC7587 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0731DC939425CB43C469269DC082D34A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E560C4FA048E1165E3F12F5325F61FA1 /* Pods-outlook-client-tutorial.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-outlook-client-tutorial/Pods-outlook-client-tutorial-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-outlook-client-tutorial/Pods-outlook-client-tutorial.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1564714DA76D9B7355650E54E7ABFC41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0371D605CBAD849493F483AC6E4AE80A /* Pods-outlook-client-tutorial.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-outlook-client-tutorial/Pods-outlook-client-tutorial-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-outlook-client-tutorial/Pods-outlook-client-tutorial.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		287DA49A9A11F9D1EE3922DDF3E33B09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87CE2DC8286A02BCB826D17FA362A286 /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5F0D305558AA5B82536D05D2528DD708 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68A847A6BEFB6F3E491EF92157C87C8E /* p2.OAuth2.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/p2.OAuth2/p2.OAuth2-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/p2.OAuth2/p2.OAuth2-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/p2.OAuth2/p2.OAuth2.modulemap";
+				PRODUCT_MODULE_NAME = p2_OAuth2;
+				PRODUCT_NAME = p2_OAuth2;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6DBB8DF7B417273A5F3D2F1FDBB56A9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC056A8C887303F9398019F3A487B920 /* Pods-outlook-client-tutorialTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-outlook-client-tutorialTests/Pods-outlook-client-tutorialTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-outlook-client-tutorialTests/Pods-outlook-client-tutorialTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A07890BE4980A3F422A7B743F8493541 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADD1571242FE769E4452B2B9BEFE18A5 /* Pods-outlook-client-tutorialUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-outlook-client-tutorialUITests/Pods-outlook-client-tutorialUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-outlook-client-tutorialUITests/Pods-outlook-client-tutorialUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A105C1752A0A49B30ED621B71E226CDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B0432EA21117E5D6A69FFF74509D457E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9C544AA8663B2BE5C56F5DD504EF776 /* Pods-outlook-client-tutorialTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-outlook-client-tutorialTests/Pods-outlook-client-tutorialTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-outlook-client-tutorialTests/Pods-outlook-client-tutorialTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C1391485F05B41BD35738A433056B7FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		CF67343AEFAFCF77E2A59101B723D1C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F54E7F33C686FD4B0E8313EA52D7605A /* Pods-outlook-client-tutorialUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-outlook-client-tutorialUITests/Pods-outlook-client-tutorialUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-outlook-client-tutorialUITests/Pods-outlook-client-tutorialUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F16DB879D0AD57848E23C67A9A652F39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87CE2DC8286A02BCB826D17FA362A286 /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F263EC75DEC286C52F536B886CC5E476 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68A847A6BEFB6F3E491EF92157C87C8E /* p2.OAuth2.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/p2.OAuth2/p2.OAuth2-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/p2.OAuth2/p2.OAuth2-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/p2.OAuth2/p2.OAuth2.modulemap";
+				PRODUCT_MODULE_NAME = p2_OAuth2;
+				PRODUCT_NAME = p2_OAuth2;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21101AEA9E19E11E8635D2911E037BAA /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F16DB879D0AD57848E23C67A9A652F39 /* Debug */,
+				287DA49A9A11F9D1EE3922DDF3E33B09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3471C6842584286E2034B56740E40B8A /* Build configuration list for PBXNativeTarget "Pods-outlook-client-tutorialTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DBB8DF7B417273A5F3D2F1FDBB56A9E /* Debug */,
+				B0432EA21117E5D6A69FFF74509D457E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1391485F05B41BD35738A433056B7FA /* Debug */,
+				A105C1752A0A49B30ED621B71E226CDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C36C3C130B01613AA22A9CE8ABFB9367 /* Build configuration list for PBXNativeTarget "p2.OAuth2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F0D305558AA5B82536D05D2528DD708 /* Debug */,
+				F263EC75DEC286C52F536B886CC5E476 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD17D52002723E6F3D25DC5AB2AEB9B0 /* Build configuration list for PBXNativeTarget "Pods-outlook-client-tutorialUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A07890BE4980A3F422A7B743F8493541 /* Debug */,
+				CF67343AEFAFCF77E2A59101B723D1C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D539B577D94DA541EE836C36AB222860 /* Build configuration list for PBXNativeTarget "Pods-outlook-client-tutorial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0731DC939425CB43C469269DC082D34A /* Debug */,
+				1564714DA76D9B7355650E54E7ABFC41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

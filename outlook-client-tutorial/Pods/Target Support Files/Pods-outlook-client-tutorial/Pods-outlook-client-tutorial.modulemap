@@ -1,0 +1,6 @@
+framework module Pods_outlook_client_tutorial {
+  umbrella header "Pods-outlook-client-tutorial-umbrella.h"
+
+  export *
+  module * { export * }
+}
