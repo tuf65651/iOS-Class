@@ -20,7 +20,7 @@ class MailViewController: UIViewController {
     
     func setLogInState(loggedIn: Bool) {
         if (loggedIn) {
-            loginButton.setTitle("Log Out", for: .normal);
+            logInButton.setTitle("Log Out", for: .normal);
         } else {
             logInButton.setTitle("Log In", for: .normal)
         }
@@ -39,7 +39,7 @@ class MailViewController: UIViewController {
                     NSLog("Error logging in: \(unwrappedError)")
                 } else {
                     NSLog("Successfully logged in.");
-                    setLogInState(loggedIn: true);
+                    self.setLogInState(loggedIn: true);
                 }
             }
         }

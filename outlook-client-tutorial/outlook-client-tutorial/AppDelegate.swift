@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ app: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         if url.scheme == "outlook-client-tutorial" {
             let service = OutlookService.shared();
-            service.handleOAuthCallback(url: <#T##URL#>);
+            service.handleOAuthCallback(url: url);
             return true;
         } else {
             return false;

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import p2.OAuth2
+import p2_OAuth2
 
 class OutlookService {
     
@@ -23,7 +23,7 @@ class OutlookService {
     private static var sharedService: OutlookService = {
         let service = OutlookService();
         return service;
-    }
+    }()
     
     private let oauth2: OAuth2CodeGrant;
     

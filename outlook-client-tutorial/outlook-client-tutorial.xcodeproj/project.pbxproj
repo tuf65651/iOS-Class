@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2FB57F8180F49D9789EC15F7 /* Pods_outlook_client_tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD65EF59DF2EF305DE51AF18 /* Pods_outlook_client_tutorial.framework */; };
-		487B194400ED194F11359FF8 /* Pods_outlook_client_tutorialUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9847624DDB0A4B6239A9BAA3 /* Pods_outlook_client_tutorialUITests.framework */; };
+		77E1CCD037A95E5826FF8953 /* Pods_outlook_client_tutorialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282046A985F476993CA95E76 /* Pods_outlook_client_tutorialTests.framework */; };
+		79A0EA212742CA5BBCFEB7AA /* Pods_outlook_client_tutorialUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5A078FEE9397E1DB0868CB /* Pods_outlook_client_tutorialUITests.framework */; };
 		C10B6CDD2267699F004F4C15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B6CDC2267699F004F4C15 /* AppDelegate.swift */; };
 		C10B6CDF2267699F004F4C15 /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B6CDE2267699F004F4C15 /* MailViewController.swift */; };
 		C10B6CE12267699F004F4C15 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B6CE02267699F004F4C15 /* SecondViewController.swift */; };
@@ -18,7 +18,7 @@
 		C10B6CF4226769A1004F4C15 /* outlook_client_tutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B6CF3226769A1004F4C15 /* outlook_client_tutorialTests.swift */; };
 		C10B6CFF226769A1004F4C15 /* outlook_client_tutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B6CFE226769A1004F4C15 /* outlook_client_tutorialUITests.swift */; };
 		C1B737142268DA7100CF9122 /* OutlookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B737132268DA7100CF9122 /* OutlookService.swift */; };
-		FE855B7338A7CC08B3B9E7BB /* Pods_outlook_client_tutorialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478E9132071DA0E36DD1A391 /* Pods_outlook_client_tutorialTests.framework */; };
+		D95D3BFE88438CCED47AF0ED /* Pods_outlook_client_tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2E47E03A58714B7B03A544 /* Pods_outlook_client_tutorial.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,13 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		405741DF7981AC610492B5A0 /* Pods-outlook-client-tutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-outlook-client-tutorial.release.xcconfig"; path = "Target Support Files/Pods-outlook-client-tutorial/Pods-outlook-client-tutorial.release.xcconfig"; sourceTree = "<group>"; };
-		478E9132071DA0E36DD1A391 /* Pods_outlook_client_tutorialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_outlook_client_tutorialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C4ACA59DA14C8EFCBDB2A14 /* Pods-outlook-client-tutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-outlook-client-tutorial.debug.xcconfig"; path = "Target Support Files/Pods-outlook-client-tutorial/Pods-outlook-client-tutorial.debug.xcconfig"; sourceTree = "<group>"; };
-		9847624DDB0A4B6239A9BAA3 /* Pods_outlook_client_tutorialUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_outlook_client_tutorialUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		99FB7A216D3107671BB2116F /* Pods-outlook-client-tutorialTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-outlook-client-tutorialTests.debug.xcconfig"; path = "Target Support Files/Pods-outlook-client-tutorialTests/Pods-outlook-client-tutorialTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A72665D8BDA2AE6A3EC2CFF3 /* Pods-outlook-client-tutorialUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-outlook-client-tutorialUITests.release.xcconfig"; path = "Target Support Files/Pods-outlook-client-tutorialUITests/Pods-outlook-client-tutorialUITests.release.xcconfig"; sourceTree = "<group>"; };
-		A94066D72285B6EFCC8ED726 /* Pods-outlook-client-tutorialUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-outlook-client-tutorialUITests.debug.xcconfig"; path = "Target Support Files/Pods-outlook-client-tutorialUITests/Pods-outlook-client-tutorialUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0AFF365BCC0636A2CD5D8307 /* Pods-outlook-client-tutorialTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-outlook-client-tutorialTests.debug.xcconfig"; path = "Target Support Files/Pods-outlook-client-tutorialTests/Pods-outlook-client-tutorialTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1B2E47E03A58714B7B03A544 /* Pods_outlook_client_tutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_outlook_client_tutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		282046A985F476993CA95E76 /* Pods_outlook_client_tutorialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_outlook_client_tutorialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E5A078FEE9397E1DB0868CB /* Pods_outlook_client_tutorialUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_outlook_client_tutorialUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		434BB58BE3BDC0176A179C51 /* Pods-outlook-client-tutorialUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-outlook-client-tutorialUITests.debug.xcconfig"; path = "Target Support Files/Pods-outlook-client-tutorialUITests/Pods-outlook-client-tutorialUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		45F65B0A8E77788D71A65702 /* Pods-outlook-client-tutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-outlook-client-tutorial.debug.xcconfig"; path = "Target Support Files/Pods-outlook-client-tutorial/Pods-outlook-client-tutorial.debug.xcconfig"; sourceTree = "<group>"; };
+		8640EBF70AE6B11AB1C17207 /* Pods-outlook-client-tutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-outlook-client-tutorial.release.xcconfig"; path = "Target Support Files/Pods-outlook-client-tutorial/Pods-outlook-client-tutorial.release.xcconfig"; sourceTree = "<group>"; };
+		A2A01DA73A7F329B067664BC /* Pods-outlook-client-tutorialUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-outlook-client-tutorialUITests.release.xcconfig"; path = "Target Support Files/Pods-outlook-client-tutorialUITests/Pods-outlook-client-tutorialUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C091289B24B082AB157BCE72 /* Pods-outlook-client-tutorialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-outlook-client-tutorialTests.release.xcconfig"; path = "Target Support Files/Pods-outlook-client-tutorialTests/Pods-outlook-client-tutorialTests.release.xcconfig"; sourceTree = "<group>"; };
 		C10B6CD92267699F004F4C15 /* outlook-client-tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "outlook-client-tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C10B6CDC2267699F004F4C15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C10B6CDE2267699F004F4C15 /* MailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailViewController.swift; sourceTree = "<group>"; };
@@ -62,8 +64,6 @@
 		C10B6D00226769A1004F4C15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1B737132268DA7100CF9122 /* OutlookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlookService.swift; sourceTree = "<group>"; };
 		C1B737152268E3E700CF9122 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		DD65EF59DF2EF305DE51AF18 /* Pods_outlook_client_tutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_outlook_client_tutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E798094300B3EC57B7707680 /* Pods-outlook-client-tutorialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-outlook-client-tutorialTests.release.xcconfig"; path = "Target Support Files/Pods-outlook-client-tutorialTests/Pods-outlook-client-tutorialTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FB57F8180F49D9789EC15F7 /* Pods_outlook_client_tutorial.framework in Frameworks */,
+				D95D3BFE88438CCED47AF0ED /* Pods_outlook_client_tutorial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE855B7338A7CC08B3B9E7BB /* Pods_outlook_client_tutorialTests.framework in Frameworks */,
+				77E1CCD037A95E5826FF8953 /* Pods_outlook_client_tutorialTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				487B194400ED194F11359FF8 /* Pods_outlook_client_tutorialUITests.framework in Frameworks */,
+				79A0EA212742CA5BBCFEB7AA /* Pods_outlook_client_tutorialUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,14 +97,24 @@
 		1FB886ABE4724CB35E653254 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4C4ACA59DA14C8EFCBDB2A14 /* Pods-outlook-client-tutorial.debug.xcconfig */,
-				405741DF7981AC610492B5A0 /* Pods-outlook-client-tutorial.release.xcconfig */,
-				99FB7A216D3107671BB2116F /* Pods-outlook-client-tutorialTests.debug.xcconfig */,
-				E798094300B3EC57B7707680 /* Pods-outlook-client-tutorialTests.release.xcconfig */,
-				A94066D72285B6EFCC8ED726 /* Pods-outlook-client-tutorialUITests.debug.xcconfig */,
-				A72665D8BDA2AE6A3EC2CFF3 /* Pods-outlook-client-tutorialUITests.release.xcconfig */,
+				45F65B0A8E77788D71A65702 /* Pods-outlook-client-tutorial.debug.xcconfig */,
+				8640EBF70AE6B11AB1C17207 /* Pods-outlook-client-tutorial.release.xcconfig */,
+				0AFF365BCC0636A2CD5D8307 /* Pods-outlook-client-tutorialTests.debug.xcconfig */,
+				C091289B24B082AB157BCE72 /* Pods-outlook-client-tutorialTests.release.xcconfig */,
+				434BB58BE3BDC0176A179C51 /* Pods-outlook-client-tutorialUITests.debug.xcconfig */,
+				A2A01DA73A7F329B067664BC /* Pods-outlook-client-tutorialUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		646F9CC41436D556BE6AF71C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B2E47E03A58714B7B03A544 /* Pods_outlook_client_tutorial.framework */,
+				282046A985F476993CA95E76 /* Pods_outlook_client_tutorialTests.framework */,
+				3E5A078FEE9397E1DB0868CB /* Pods_outlook_client_tutorialUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C10B6CD02267699F004F4C15 = {
@@ -115,7 +125,7 @@
 				C10B6CFD226769A1004F4C15 /* outlook-client-tutorialUITests */,
 				C10B6CDA2267699F004F4C15 /* Products */,
 				1FB886ABE4724CB35E653254 /* Pods */,
-				F41326E19F649071BC2AEF21 /* Frameworks */,
+				646F9CC41436D556BE6AF71C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,16 +173,6 @@
 			path = "outlook-client-tutorialUITests";
 			sourceTree = "<group>";
 		};
-		F41326E19F649071BC2AEF21 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DD65EF59DF2EF305DE51AF18 /* Pods_outlook_client_tutorial.framework */,
-				478E9132071DA0E36DD1A391 /* Pods_outlook_client_tutorialTests.framework */,
-				9847624DDB0A4B6239A9BAA3 /* Pods_outlook_client_tutorialUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,11 +180,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C10B6D03226769A1004F4C15 /* Build configuration list for PBXNativeTarget "outlook-client-tutorial" */;
 			buildPhases = (
-				FCA81274A921E9DEF052E5EC /* [CP] Check Pods Manifest.lock */,
+				7F77C1640A45F6720F24E17C /* [CP] Check Pods Manifest.lock */,
 				C10B6CD52267699F004F4C15 /* Sources */,
 				C10B6CD62267699F004F4C15 /* Frameworks */,
 				C10B6CD72267699F004F4C15 /* Resources */,
-				165D78FDAE51289C8C02BC1A /* [CP] Embed Pods Frameworks */,
+				3650637A76E2D8DE6267DE83 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -199,7 +199,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C10B6D06226769A1004F4C15 /* Build configuration list for PBXNativeTarget "outlook-client-tutorialTests" */;
 			buildPhases = (
-				0ECA5DA15AF1C7B5341AAC9C /* [CP] Check Pods Manifest.lock */,
+				45C54D198CE7F559569FC458 /* [CP] Check Pods Manifest.lock */,
 				C10B6CEB226769A1004F4C15 /* Sources */,
 				C10B6CEC226769A1004F4C15 /* Frameworks */,
 				C10B6CED226769A1004F4C15 /* Resources */,
@@ -218,7 +218,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C10B6D09226769A1004F4C15 /* Build configuration list for PBXNativeTarget "outlook-client-tutorialUITests" */;
 			buildPhases = (
-				19A8A5B5A26E01045B62ABD6 /* [CP] Check Pods Manifest.lock */,
+				B9E45837E15B05C097D8129A /* [CP] Check Pods Manifest.lock */,
 				C10B6CF6226769A1004F4C15 /* Sources */,
 				C10B6CF7226769A1004F4C15 /* Frameworks */,
 				C10B6CF8226769A1004F4C15 /* Resources */,
@@ -304,29 +304,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0ECA5DA15AF1C7B5341AAC9C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-outlook-client-tutorialTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		165D78FDAE51289C8C02BC1A /* [CP] Embed Pods Frameworks */ = {
+		3650637A76E2D8DE6267DE83 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -350,7 +328,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-outlook-client-tutorial/Pods-outlook-client-tutorial-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		19A8A5B5A26E01045B62ABD6 /* [CP] Check Pods Manifest.lock */ = {
+		45C54D198CE7F559569FC458 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -365,14 +343,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-outlook-client-tutorialUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-outlook-client-tutorialTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FCA81274A921E9DEF052E5EC /* [CP] Check Pods Manifest.lock */ = {
+		7F77C1640A45F6720F24E17C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -388,6 +366,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-outlook-client-tutorial-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9E45837E15B05C097D8129A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-outlook-client-tutorialUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -496,6 +496,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -510,13 +511,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -557,6 +559,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -565,19 +568,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		C10B6D04226769A1004F4C15 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C4ACA59DA14C8EFCBDB2A14 /* Pods-outlook-client-tutorial.debug.xcconfig */;
+			baseConfigurationReference = 45F65B0A8E77788D71A65702 /* Pods-outlook-client-tutorial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -596,7 +600,7 @@
 		};
 		C10B6D05226769A1004F4C15 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 405741DF7981AC610492B5A0 /* Pods-outlook-client-tutorial.release.xcconfig */;
+			baseConfigurationReference = 8640EBF70AE6B11AB1C17207 /* Pods-outlook-client-tutorial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -615,7 +619,7 @@
 		};
 		C10B6D07226769A1004F4C15 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99FB7A216D3107671BB2116F /* Pods-outlook-client-tutorialTests.debug.xcconfig */;
+			baseConfigurationReference = 0AFF365BCC0636A2CD5D8307 /* Pods-outlook-client-tutorialTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -637,7 +641,7 @@
 		};
 		C10B6D08226769A1004F4C15 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E798094300B3EC57B7707680 /* Pods-outlook-client-tutorialTests.release.xcconfig */;
+			baseConfigurationReference = C091289B24B082AB157BCE72 /* Pods-outlook-client-tutorialTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -659,7 +663,7 @@
 		};
 		C10B6D0A226769A1004F4C15 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A94066D72285B6EFCC8ED726 /* Pods-outlook-client-tutorialUITests.debug.xcconfig */;
+			baseConfigurationReference = 434BB58BE3BDC0176A179C51 /* Pods-outlook-client-tutorialUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -680,7 +684,7 @@
 		};
 		C10B6D0B226769A1004F4C15 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A72665D8BDA2AE6A3EC2CFF3 /* Pods-outlook-client-tutorialUITests.release.xcconfig */;
+			baseConfigurationReference = A2A01DA73A7F329B067664BC /* Pods-outlook-client-tutorialUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
