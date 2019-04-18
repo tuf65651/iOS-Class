@@ -10,13 +10,14 @@
 		2FB57F8180F49D9789EC15F7 /* Pods_outlook_client_tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD65EF59DF2EF305DE51AF18 /* Pods_outlook_client_tutorial.framework */; };
 		487B194400ED194F11359FF8 /* Pods_outlook_client_tutorialUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9847624DDB0A4B6239A9BAA3 /* Pods_outlook_client_tutorialUITests.framework */; };
 		C10B6CDD2267699F004F4C15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B6CDC2267699F004F4C15 /* AppDelegate.swift */; };
-		C10B6CDF2267699F004F4C15 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B6CDE2267699F004F4C15 /* FirstViewController.swift */; };
+		C10B6CDF2267699F004F4C15 /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B6CDE2267699F004F4C15 /* MailViewController.swift */; };
 		C10B6CE12267699F004F4C15 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B6CE02267699F004F4C15 /* SecondViewController.swift */; };
 		C10B6CE42267699F004F4C15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10B6CE22267699F004F4C15 /* Main.storyboard */; };
 		C10B6CE6226769A0004F4C15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C10B6CE5226769A0004F4C15 /* Assets.xcassets */; };
 		C10B6CE9226769A0004F4C15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10B6CE7226769A0004F4C15 /* LaunchScreen.storyboard */; };
 		C10B6CF4226769A1004F4C15 /* outlook_client_tutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B6CF3226769A1004F4C15 /* outlook_client_tutorialTests.swift */; };
 		C10B6CFF226769A1004F4C15 /* outlook_client_tutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B6CFE226769A1004F4C15 /* outlook_client_tutorialUITests.swift */; };
+		C1B737142268DA7100CF9122 /* OutlookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B737132268DA7100CF9122 /* OutlookService.swift */; };
 		FE855B7338A7CC08B3B9E7BB /* Pods_outlook_client_tutorialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478E9132071DA0E36DD1A391 /* Pods_outlook_client_tutorialTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +48,7 @@
 		A94066D72285B6EFCC8ED726 /* Pods-outlook-client-tutorialUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-outlook-client-tutorialUITests.debug.xcconfig"; path = "Target Support Files/Pods-outlook-client-tutorialUITests/Pods-outlook-client-tutorialUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C10B6CD92267699F004F4C15 /* outlook-client-tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "outlook-client-tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C10B6CDC2267699F004F4C15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C10B6CDE2267699F004F4C15 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		C10B6CDE2267699F004F4C15 /* MailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailViewController.swift; sourceTree = "<group>"; };
 		C10B6CE02267699F004F4C15 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C10B6CE32267699F004F4C15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C10B6CE5226769A0004F4C15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +60,8 @@
 		C10B6CFA226769A1004F4C15 /* outlook-client-tutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "outlook-client-tutorialUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C10B6CFE226769A1004F4C15 /* outlook_client_tutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = outlook_client_tutorialUITests.swift; sourceTree = "<group>"; };
 		C10B6D00226769A1004F4C15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1B737132268DA7100CF9122 /* OutlookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlookService.swift; sourceTree = "<group>"; };
+		C1B737152268E3E700CF9122 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DD65EF59DF2EF305DE51AF18 /* Pods_outlook_client_tutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_outlook_client_tutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E798094300B3EC57B7707680 /* Pods-outlook-client-tutorialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-outlook-client-tutorialTests.release.xcconfig"; path = "Target Support Files/Pods-outlook-client-tutorialTests/Pods-outlook-client-tutorialTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,7 +104,6 @@
 				A94066D72285B6EFCC8ED726 /* Pods-outlook-client-tutorialUITests.debug.xcconfig */,
 				A72665D8BDA2AE6A3EC2CFF3 /* Pods-outlook-client-tutorialUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,12 +133,14 @@
 			isa = PBXGroup;
 			children = (
 				C10B6CDC2267699F004F4C15 /* AppDelegate.swift */,
-				C10B6CDE2267699F004F4C15 /* FirstViewController.swift */,
+				C10B6CDE2267699F004F4C15 /* MailViewController.swift */,
+				C1B737152268E3E700CF9122 /* README.md */,
 				C10B6CE02267699F004F4C15 /* SecondViewController.swift */,
 				C10B6CE22267699F004F4C15 /* Main.storyboard */,
 				C10B6CE5226769A0004F4C15 /* Assets.xcassets */,
 				C10B6CE7226769A0004F4C15 /* LaunchScreen.storyboard */,
 				C10B6CEA226769A0004F4C15 /* Info.plist */,
+				C1B737132268DA7100CF9122 /* OutlookService.swift */,
 			);
 			path = "outlook-client-tutorial";
 			sourceTree = "<group>";
@@ -398,8 +402,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C10B6CE12267699F004F4C15 /* SecondViewController.swift in Sources */,
+				C1B737142268DA7100CF9122 /* OutlookService.swift in Sources */,
 				C10B6CDD2267699F004F4C15 /* AppDelegate.swift in Sources */,
-				C10B6CDF2267699F004F4C15 /* FirstViewController.swift in Sources */,
+				C10B6CDF2267699F004F4C15 /* MailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
