@@ -89,5 +89,37 @@ class OutlookService {
         
         var req = oauth2.request(forURL: apiUrl);
         req.addValue("application/json", forHTTPHeaderField: "Accept");
+        
+        let loader = OAuth2DataLoader(oauth2: oauth2);
+        // verbose response
+        loader.logger = OAuthwDebugLogger(.trace);
+        
+        loader.perform(request: req) {
+            response in
+            do {
+                let dict = try response.responseJSON()
+                DispatchQueue.main.async {
+                    let result = JSON(dict);
+                    callback(result);
+                }
+            }
+            catch let error {
+                DispatchQueue.main.async {
+                    let result = JSON(error);
+                    callback(result);
+                }
+            }
+        }
+    }
+    
+    func getUserEmail(callback: @escaping (String?) -> Void) -> Void {
+        if (userEmail.isEmpty) {
+            makeApiCall(api: "/v1.0/me") {
+                result in
+                if let unwrappedResult = result {
+                    var email = unwrappedResult["mail"].stringValue;
+                }
+            }
+        }
     }
 }
