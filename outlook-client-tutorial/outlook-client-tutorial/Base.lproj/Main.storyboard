@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
-                                    <action selector="logInButtonTapperWithSender:" destination="9pv-A4-QxB" eventType="touchUpInside" id="a8h-F2-qRF"/>
+                                    <action selector="logInButtonTappedWithSender:" destination="9pv-A4-QxB" eventType="touchUpInside" id="EYy-c9-wfL"/>
                                 </connections>
                             </button>
                         </subviews>
