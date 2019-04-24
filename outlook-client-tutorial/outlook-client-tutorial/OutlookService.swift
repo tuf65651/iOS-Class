@@ -15,7 +15,7 @@ class OutlookService {
     private var userEmail: String;
     
     private static let oauth2Settings = [
-        "client_id" : "cc40fc6c-ce8a-414c-b7d1-cf616310f7be",
+        "client_id" : "bf870949-794f-41fa-8e80-f80cadecc84c",
         "authorize_uri": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
         "token_uri": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
         "scope": "openid profile offline_access User.Read Mail.Read",
@@ -92,7 +92,7 @@ class OutlookService {
         
         let loader = OAuth2DataLoader(oauth2: oauth2);
         // verbose response
-        loader.logger = OAuthwDebugLogger(.trace);
+        loader.logger = OAuth2DebugLogger(.trace);
         
         loader.perform(request: req) {
             response in
