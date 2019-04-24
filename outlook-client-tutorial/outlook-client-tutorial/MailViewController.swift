@@ -40,7 +40,18 @@ class MailViewController: UIViewController {
                 } else {
                     NSLog("Successfully logged in.");
                     self.setLogInState(loggedIn: true);
+                    self.loadUserData();
                 }
+            }
+        }
+    }
+    
+    
+    func loadUserData() {
+        service.getUserEmail() {
+            email in
+            if let unwrappedEmail = email {
+                NSLog("Hello \(unwrappedEmail)");
             }
         }
     }

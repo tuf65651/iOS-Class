@@ -118,8 +118,18 @@ class OutlookService {
                 result in
                 if let unwrappedResult = result {
                     var email = unwrappedResult["mail"].stringValue;
+                    if(email.isEmpty) {
+                        email = unwrappedResult["userPrincipalName"].stringValue;
+                    }
+                    self.userEmail = email;
+                    callback(email);
+                } else {
+                    callback(nil);
                 }
             }
+        } else {
+            callback(userEmail);
         }
     }
+    
 }
