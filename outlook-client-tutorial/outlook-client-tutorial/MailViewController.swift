@@ -14,6 +14,9 @@ class MailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setLogInState(loggedIn: service.isLoggedIn);
+        if (service.isLoggedIn) {
+            loadUserData();
+        }
     }
     
     let service = OutlookService.shared();
@@ -30,17 +33,19 @@ class MailViewController: UIViewController {
     
     @IBAction func logInButtonTapped(sender: AnyObject) {
         if (service.isLoggedIn) {
-            service.logout();
-            setLogInState(loggedIn: false);
+            // Logout
+            service.logout()
+            setLogInState(loggedIn: false)
         } else {
+            // Login
             service.login(from: self) {
                 error in
                 if let unwrappedError = error {
                     NSLog("Error logging in: \(unwrappedError)")
                 } else {
-                    NSLog("Successfully logged in.");
-                    self.setLogInState(loggedIn: true);
-                    self.loadUserData();
+                    NSLog("Successfully logged in.")
+                    self.setLogInState(loggedIn: true)
+                    self.loadUserData()
                 }
             }
         }
@@ -52,6 +57,15 @@ class MailViewController: UIViewController {
             email in
             if let unwrappedEmail = email {
                 NSLog("Hello \(unwrappedEmail)");
+                
+                self.service.getInboxMessages() {
+                    messages in
+                    if let unwrappedMessages = messages {
+                        for (message) in unwrappedMessages["value"].arrayValue {
+                            NSLog(message["subject"].stringValue);
+                        }
+                    }
+                }
             }
         }
     }

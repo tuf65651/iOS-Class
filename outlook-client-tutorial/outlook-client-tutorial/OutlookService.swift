@@ -69,66 +69,82 @@ class OutlookService {
     }
     
     func makeApiCall(api: String, params: [String: String]? = nil, callback: @escaping (JSON?) -> Void) -> Void {
-        
         // Build the request URL
         var urlBuilder = URLComponents(string: "https://graph.microsoft.com")!
-        urlBuilder.path = api;
+        urlBuilder.path = api
         
         if let unwrappedParams = params {
             // Add query parameters to URL
-            urlBuilder.queryItems = [URLQueryItem]();
+            urlBuilder.queryItems = [URLQueryItem]()
             for (paramName, paramValue) in unwrappedParams {
                 urlBuilder.queryItems?.append(
-                    URLQueryItem(name: paramName, value: paramValue)
-                );
+                    URLQueryItem(name: paramName, value: paramValue))
             }
         }
         
-        let apiUrl = urlBuilder.url!;
-        NSLog("Making request to \(apiUrl)");
+        let apiUrl = urlBuilder.url!
+        NSLog("Making request to \(apiUrl)")
         
-        var req = oauth2.request(forURL: apiUrl);
-        req.addValue("application/json", forHTTPHeaderField: "Accept");
+        var req = oauth2.request(forURL: apiUrl)
+        req.addValue("application/json", forHTTPHeaderField: "Accept")
         
-        let loader = OAuth2DataLoader(oauth2: oauth2);
-        // verbose response
-        loader.logger = OAuth2DebugLogger(.trace);
+        let loader = OAuth2DataLoader(oauth2: oauth2)
+        
+        // Uncomment this line to get verbose request/response info in
+        // Xcode output window
+        //loader.logger = OAuth2DebugLogger(.trace)
         
         loader.perform(request: req) {
             response in
             do {
                 let dict = try response.responseJSON()
                 DispatchQueue.main.async {
-                    let result = JSON(dict);
-                    callback(result);
+                    let result = JSON(dict)
+                    callback(result)
                 }
             }
             catch let error {
                 DispatchQueue.main.async {
-                    let result = JSON(error);
-                    callback(result);
+                    let result = JSON(error)
+                    callback(result)
                 }
             }
         }
     }
     
     func getUserEmail(callback: @escaping (String?) -> Void) -> Void {
+        // If we don't have the user's email, get it from
+        // the API
         if (userEmail.isEmpty) {
             makeApiCall(api: "/v1.0/me") {
                 result in
                 if let unwrappedResult = result {
-                    var email = unwrappedResult["mail"].stringValue;
-                    if(email.isEmpty) {
-                        email = unwrappedResult["userPrincipalName"].stringValue;
+                    var email = unwrappedResult["mail"].stringValue
+                    if (email.isEmpty) {
+                        // Fallback to userPrincipalName ONLY if mail is empty
+                        email = unwrappedResult["userPrincipalName"].stringValue
                     }
-                    self.userEmail = email;
-                    callback(email);
+                    self.userEmail = email
+                    callback(email)
                 } else {
-                    callback(nil);
+                    callback(nil)
                 }
             }
         } else {
-            callback(userEmail);
+            callback(userEmail)
+        }
+    }
+    
+    func getInboxMessages(callback: @escaping (JSON?) -> Void) -> Void {
+        let apiParams = [
+            "$select": "subject,receivedDateTime,from",
+            "$orderby": "receivedDateTime DESC",
+            "$top": "10"
+        ];
+        
+        makeApiCall(api: "v1.0/me/mailfolders/inbox/messages", params: apiParams) {
+            result in
+            callback(result);
         }
     }
     
