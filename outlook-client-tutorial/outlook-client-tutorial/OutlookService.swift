@@ -11,9 +11,15 @@ import p2_OAuth2
 import SwiftyJSON
 
 class OutlookService {
-    
-    private var userEmail: String;
-    
+    // Configure the OAuth2 framework for Azure
+    //    private static let oauth2Settings = [
+    //        "client_id" : "YOUR APP ID HERE",
+    //        "authorize_uri": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
+    //        "token_uri": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+    //        "scope": "openid profile offline_access User.Read Mail.Read Calendars.Read Contacts.Read",
+    //        "redirect_uris": ["swift-tutorial://oauth2/callback"],
+    //        "verbose": true,
+    //        ] as OAuth2JSON
     private static let oauth2Settings = [
         "client_id" : "bf870949-794f-41fa-8e80-f80cadecc84c",
         "authorize_uri": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
@@ -24,48 +30,51 @@ class OutlookService {
         ] as OAuth2JSON;
     
     private static var sharedService: OutlookService = {
-        let service = OutlookService();
-        return service;
+        let service = OutlookService()
+        return service
     }()
     
-    private let oauth2: OAuth2CodeGrant;
+    private let oauth2: OAuth2CodeGrant
     
     private init() {
-        oauth2 = OAuth2CodeGrant(settings: OutlookService.oauth2Settings);
-        oauth2.authConfig.authorizeEmbedded = true;
-        userEmail = "";
+        oauth2 = OAuth2CodeGrant(settings: OutlookService.oauth2Settings)
+        oauth2.authConfig.authorizeEmbedded = true
+        //oauth2.authConfig.ui.useSafariView = false
+        
+        userEmail = ""
     }
     
     class func shared() -> OutlookService {
-        return sharedService;
+        return sharedService
     }
     
     var isLoggedIn: Bool {
         get {
-            return oauth2.hasUnexpiredAccessToken() || oauth2.refreshToken != nil;
+            return oauth2.hasUnexpiredAccessToken() || oauth2.refreshToken != nil
         }
     }
     
     func handleOAuthCallback(url: URL) -> Void {
-        oauth2.handleRedirectURL(url);
+        oauth2.handleRedirectURL(url)
     }
     
-    func login(from: AnyObject, callback: @escaping (String? ) -> Void) -> Void {
+    func login(from: AnyObject, callback: @escaping (String?) -> Void) -> Void {
         oauth2.authorizeEmbedded(from: from) {
             result, error in
             if let unwrappedError = error {
-                callback(unwrappedError.description);
+                callback(unwrappedError.description)
             } else {
                 if let unwrappedResult = result, let token = unwrappedResult["access_token"] as? String {
-                    NSLog("Access token: \(token)");
-                    callback(nil);
+                    // Print the access token to debug log
+                    NSLog("Access token: \(token)")
+                    callback(nil)
                 }
             }
         }
     }
     
     func logout() -> Void {
-        oauth2.forgetTokens();
+        oauth2.forgetTokens()
     }
     
     func makeApiCall(api: String, params: [String: String]? = nil, callback: @escaping (JSON?) -> Void) -> Void {
@@ -112,6 +121,8 @@ class OutlookService {
         }
     }
     
+    private var userEmail: String
+    
     func getUserEmail(callback: @escaping (String?) -> Void) -> Void {
         // If we don't have the user's email, get it from
         // the API
@@ -140,12 +151,37 @@ class OutlookService {
             "$select": "subject,receivedDateTime,from",
             "$orderby": "receivedDateTime DESC",
             "$top": "10"
-        ];
+        ]
         
-        makeApiCall(api: "v1.0/me/mailfolders/inbox/messages", params: apiParams) {
+        makeApiCall(api: "/v1.0/me/mailfolders/inbox/messages", params: apiParams) {
             result in
-            callback(result);
+            callback(result)
         }
     }
     
+    func getEvents(callback: @escaping (JSON?) -> Void) -> Void {
+        let apiParams = [
+            "$select": "subject,start,end",
+            "$orderby": "start/dateTime ASC",
+            "$top": "10"
+        ]
+        
+        makeApiCall(api: "/v1.0/me/events", params: apiParams) {
+            result in
+            callback(result)
+        }
+    }
+    
+    func getContacts(callback: @escaping (JSON?) -> Void) -> Void {
+        let apiParams = [
+            "$select": "givenName,surname,emailAddresses",
+            "$orderby": "givenName ASC",
+            "$top": "10"
+        ]
+        
+        makeApiCall(api: "/v1.0/me/contacts", params: apiParams) {
+            result in
+            callback(result)
+        }
+    }
 }
