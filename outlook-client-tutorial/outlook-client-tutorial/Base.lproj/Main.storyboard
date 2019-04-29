@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,21 +18,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BR7-54-NOZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BR7-54-NOZ">
                                 <rect key="frame" x="268" y="44" width="77" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
                                     <action selector="logInButtonTappedWithSender:" destination="9pv-A4-QxB" eventType="touchUpInside" id="EYy-c9-wfL"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rds-CR-Nfx">
+                                <rect key="frame" x="0.0" y="92" width="375" height="526"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="104" id="rD3-GK-pAH" customClass="MessageCell" customModule="outlook_client_tutorial" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="104"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rD3-GK-pAH" id="Sh6-wt-zRD">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="103.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="From: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRD-yT-FDT">
+                                                    <rect key="frame" x="15" y="11" width="40" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Received: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kz-eZ-aMU">
+                                                    <rect key="frame" x="15" y="40" width="70" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Subject: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqS-07-jaX">
+                                                    <rect key="frame" x="15" y="69" width="59" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cqS-07-jaX" firstAttribute="top" secondItem="6Kz-eZ-aMU" secondAttribute="bottom" constant="8" symbolic="YES" id="5N8-di-She"/>
+                                                <constraint firstItem="uRD-yT-FDT" firstAttribute="leading" secondItem="Sh6-wt-zRD" secondAttribute="leadingMargin" constant="-1" id="6cd-MY-TgC"/>
+                                                <constraint firstItem="uRD-yT-FDT" firstAttribute="top" secondItem="Sh6-wt-zRD" secondAttribute="topMargin" constant="-9" id="DvU-iI-z6q"/>
+                                                <constraint firstItem="6Kz-eZ-aMU" firstAttribute="leading" secondItem="cqS-07-jaX" secondAttribute="leading" id="F48-pf-42H"/>
+                                                <constraint firstItem="6Kz-eZ-aMU" firstAttribute="top" secondItem="uRD-yT-FDT" secondAttribute="bottom" constant="8" symbolic="YES" id="s7f-nZ-ges"/>
+                                                <constraint firstItem="uRD-yT-FDT" firstAttribute="leading" secondItem="6Kz-eZ-aMU" secondAttribute="leading" id="zQ3-b0-1wp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fromLabel" destination="uRD-yT-FDT" id="yGw-fK-HmO"/>
+                                            <outlet property="receivedLabel" destination="6Kz-eZ-aMU" id="EXM-1t-cNS"/>
+                                            <outlet property="subjectLabel" destination="cqS-07-jaX" id="UDt-LV-95f"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="BR7-54-NOZ" secondAttribute="trailing" constant="30" id="5xE-2N-zkf"/>
+                            <constraint firstItem="BR7-54-NOZ" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="24" id="B1c-Vd-N0f"/>
+                            <constraint firstItem="rds-CR-Nfx" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="EoG-en-aTg"/>
+                            <constraint firstAttribute="trailing" secondItem="rds-CR-Nfx" secondAttribute="trailing" id="Fv3-Br-j6d"/>
+                            <constraint firstItem="rds-CR-Nfx" firstAttribute="top" secondItem="BR7-54-NOZ" secondAttribute="bottom" constant="18" id="LlE-2w-uIa"/>
+                            <constraint firstItem="BR7-54-NOZ" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="268" id="Vbz-wM-8T4"/>
+                            <constraint firstItem="rds-CR-Nfx" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="fcc-m9-Mlh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Mail" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="logInButton" destination="BR7-54-NOZ" id="91Z-g6-EBh"/>
+                        <outlet property="tableView" destination="rds-CR-Nfx" id="2lU-Sn-ZnV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>

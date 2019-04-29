@@ -10,16 +10,23 @@ import UIKit
 
 class MailViewController: UIViewController {
 
+    let service = OutlookService.shared();
+    var dataSource: MessagesDataSource?;
+    
+    @IBOutlet var logInButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        tableView.estimatedRowHeight = 90;
+        tableView.rowHeight = UITableView.automaticDimension;
         setLogInState(loggedIn: service.isLoggedIn);
         if (service.isLoggedIn) {
             loadUserData();
         }
     }
     
-    let service = OutlookService.shared();
     
     func setLogInState(loggedIn: Bool) {
         if (loggedIn) {
@@ -29,7 +36,6 @@ class MailViewController: UIViewController {
         }
     }
 
-    @IBOutlet var logInButton: UIButton!
     
     @IBAction func logInButtonTapped(sender: AnyObject) {
         if (service.isLoggedIn) {
@@ -51,7 +57,6 @@ class MailViewController: UIViewController {
         }
     }
     
-    
     func loadUserData() {
         service.getUserEmail() {
             email in
@@ -61,9 +66,9 @@ class MailViewController: UIViewController {
                 self.service.getInboxMessages() {
                     messages in
                     if let unwrappedMessages = messages {
-                        for (message) in unwrappedMessages["value"].arrayValue {
-                            NSLog(message["subject"].stringValue);
-                        }
+                        self.dataSource = MessagesDataSource(messages: unwrappedMessages["value"].arrayValue);
+                        self.tableView.dataSource = self.dataSource
+                        self.tableView.reloadData();
                     }
                 }
             }

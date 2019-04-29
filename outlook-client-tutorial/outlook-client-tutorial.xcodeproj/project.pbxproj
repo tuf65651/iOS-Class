@@ -17,6 +17,12 @@
 		C10B6CE9226769A0004F4C15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10B6CE7226769A0004F4C15 /* LaunchScreen.storyboard */; };
 		C10B6CF4226769A1004F4C15 /* outlook_client_tutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B6CF3226769A1004F4C15 /* outlook_client_tutorialTests.swift */; };
 		C10B6CFF226769A1004F4C15 /* outlook_client_tutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B6CFE226769A1004F4C15 /* outlook_client_tutorialUITests.swift */; };
+		C18E8CB8227741DA0004606B /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18E8CB7227741DA0004606B /* MessageCell.swift */; };
+		C18E8CB9227741DA0004606B /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18E8CB7227741DA0004606B /* MessageCell.swift */; };
+		C18E8CBA227741DA0004606B /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18E8CB7227741DA0004606B /* MessageCell.swift */; };
+		C18E8CBC22774AF00004606B /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18E8CBB22774AF00004606B /* Formatter.swift */; };
+		C18E8CBD22774AF00004606B /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18E8CBB22774AF00004606B /* Formatter.swift */; };
+		C18E8CBE22774AF00004606B /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18E8CBB22774AF00004606B /* Formatter.swift */; };
 		C1B737142268DA7100CF9122 /* OutlookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B737132268DA7100CF9122 /* OutlookService.swift */; };
 		D95D3BFE88438CCED47AF0ED /* Pods_outlook_client_tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2E47E03A58714B7B03A544 /* Pods_outlook_client_tutorial.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +68,8 @@
 		C10B6CFA226769A1004F4C15 /* outlook-client-tutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "outlook-client-tutorialUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C10B6CFE226769A1004F4C15 /* outlook_client_tutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = outlook_client_tutorialUITests.swift; sourceTree = "<group>"; };
 		C10B6D00226769A1004F4C15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C18E8CB7227741DA0004606B /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		C18E8CBB22774AF00004606B /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		C1B737132268DA7100CF9122 /* OutlookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlookService.swift; sourceTree = "<group>"; };
 		C1B737152268E3E700CF9122 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +159,8 @@
 				C10B6CE7226769A0004F4C15 /* LaunchScreen.storyboard */,
 				C10B6CEA226769A0004F4C15 /* Info.plist */,
 				C1B737132268DA7100CF9122 /* OutlookService.swift */,
+				C18E8CB7227741DA0004606B /* MessageCell.swift */,
+				C18E8CBB22774AF00004606B /* Formatter.swift */,
 			);
 			path = "outlook-client-tutorial";
 			sourceTree = "<group>";
@@ -401,7 +411,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C18E8CBC22774AF00004606B /* Formatter.swift in Sources */,
 				C10B6CE12267699F004F4C15 /* SecondViewController.swift in Sources */,
+				C18E8CB8227741DA0004606B /* MessageCell.swift in Sources */,
 				C1B737142268DA7100CF9122 /* OutlookService.swift in Sources */,
 				C10B6CDD2267699F004F4C15 /* AppDelegate.swift in Sources */,
 				C10B6CDF2267699F004F4C15 /* MailViewController.swift in Sources */,
@@ -412,7 +424,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C18E8CBD22774AF00004606B /* Formatter.swift in Sources */,
 				C10B6CF4226769A1004F4C15 /* outlook_client_tutorialTests.swift in Sources */,
+				C18E8CB9227741DA0004606B /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +434,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C18E8CBE22774AF00004606B /* Formatter.swift in Sources */,
 				C10B6CFF226769A1004F4C15 /* outlook_client_tutorialUITests.swift in Sources */,
+				C18E8CBA227741DA0004606B /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
