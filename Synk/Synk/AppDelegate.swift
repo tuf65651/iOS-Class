@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    /**
+     Accept callback from Synk App Service in Microsoft Active Directory
+     - author: Jason Joh (Microsoft)
+     */
     func application(_ app: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         if url.scheme == "synk" {
             let service = OutlookService.shared()

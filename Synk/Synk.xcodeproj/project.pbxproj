@@ -19,6 +19,7 @@
 		C1C3FB1D2279E2130075E0AB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C1C3FB1C2279E2130075E0AB /* Podfile */; };
 		C1C3FB1F2279E5AA0075E0AB /* OutlookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C3FB1E2279E5AA0075E0AB /* OutlookService.swift */; };
 		C1C3FB222279F8880075E0AB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C3FB212279F8880075E0AB /* LoginViewController.swift */; };
+		C1C3FB24227A11080075E0AB /* TODO.yml in Resources */ = {isa = PBXBuildFile; fileRef = C1C3FB23227A11080075E0AB /* TODO.yml */; };
 		D12DF68CAD1A8A4979B41DAF /* Pods_Synk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC62D3D9265A5343C755A25E /* Pods_Synk.framework */; };
 		E01ADFF570EDF5B0F70FB9CC /* Pods_SynkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8831021D1F2D2C5BF8E605 /* Pods_SynkUITests.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		C1C3FB1E2279E5AA0075E0AB /* OutlookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlookService.swift; sourceTree = "<group>"; };
 		C1C3FB202279E9480075E0AB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C1C3FB212279F8880075E0AB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C1C3FB23227A11080075E0AB /* TODO.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO.yml; sourceTree = "<group>"; };
 		CC62D3D9265A5343C755A25E /* Pods_Synk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Synk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 		C1163FA522792F0A0040BBBA = {
 			isa = PBXGroup;
 			children = (
+				C1C3FB23227A11080075E0AB /* TODO.yml */,
 				C1C3FB1C2279E2130075E0AB /* Podfile */,
 				C1163FB022792F0A0040BBBA /* Synk */,
 				C1163FC722792F0B0040BBBA /* SynkTests */,
@@ -287,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1C3FB24227A11080075E0AB /* TODO.yml in Resources */,
 				C1163FBE22792F0A0040BBBA /* LaunchScreen.storyboard in Resources */,
 				C1163FBB22792F0A0040BBBA /* Assets.xcassets in Resources */,
 				C1C3FB1D2279E2130075E0AB /* Podfile in Resources */,
