@@ -32,6 +32,10 @@ class LoginViewController: UIViewController {
         }
     }
     
+    @IBAction func continueButtonTapped() {
+        performSegue(withIdentifier: "LogInSegue", sender: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad();
         UIElementDetails();

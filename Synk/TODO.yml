@@ -1,3 +1,5 @@
 ---
 - description: Seque from login to tabbed
 - description: comment headers on all files
+- description: delegate so keyboard goes away
+- description: Log Out forgets old user account
