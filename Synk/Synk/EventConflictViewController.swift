@@ -7,6 +7,7 @@
 //  NOTE: Do not handle no-login case. Program should crash if no login, since it shouldn't be allowed at this point.
 
 import UIKit
+import UserNotifications
 
 class EventConflictViewController: UIViewController {
     
