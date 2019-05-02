@@ -16,7 +16,7 @@
 		C1163FBE22792F0A0040BBBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1163FBC22792F0A0040BBBA /* LaunchScreen.storyboard */; };
 		C1163FC922792F0B0040BBBA /* SynkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1163FC822792F0B0040BBBA /* SynkTests.swift */; };
 		C1163FD422792F0B0040BBBA /* SynkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1163FD322792F0B0040BBBA /* SynkUITests.swift */; };
-		C15BD141227A9FD900AC0304 /* FetchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15BD140227A9FD900AC0304 /* FetchTableViewController.swift */; };
+		C15BD141227A9FD900AC0304 /* EventConflictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15BD140227A9FD900AC0304 /* EventConflictViewController.swift */; };
 		C1C3FB1D2279E2130075E0AB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C1C3FB1C2279E2130075E0AB /* Podfile */; };
 		C1C3FB1F2279E5AA0075E0AB /* OutlookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C3FB1E2279E5AA0075E0AB /* OutlookService.swift */; };
 		C1C3FB222279F8880075E0AB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C3FB212279F8880075E0AB /* LoginViewController.swift */; };
@@ -65,7 +65,7 @@
 		C1163FCF22792F0B0040BBBA /* SynkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SynkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1163FD322792F0B0040BBBA /* SynkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynkUITests.swift; sourceTree = "<group>"; };
 		C1163FD522792F0B0040BBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C15BD140227A9FD900AC0304 /* FetchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTableViewController.swift; sourceTree = "<group>"; };
+		C15BD140227A9FD900AC0304 /* EventConflictViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventConflictViewController.swift; sourceTree = "<group>"; };
 		C1C3FB1C2279E2130075E0AB /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		C1C3FB1E2279E5AA0075E0AB /* OutlookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlookService.swift; sourceTree = "<group>"; };
 		C1C3FB202279E9480075E0AB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 				C1163FBF22792F0A0040BBBA /* Info.plist */,
 				C1C3FB1E2279E5AA0075E0AB /* OutlookService.swift */,
 				C1C3FB202279E9480075E0AB /* README.md */,
-				C15BD140227A9FD900AC0304 /* FetchTableViewController.swift */,
+				C15BD140227A9FD900AC0304 /* EventConflictViewController.swift */,
 			);
 			path = Synk;
 			sourceTree = "<group>";
@@ -399,7 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C15BD141227A9FD900AC0304 /* FetchTableViewController.swift in Sources */,
+				C15BD141227A9FD900AC0304 /* EventConflictViewController.swift in Sources */,
 				C1163FB622792F0A0040BBBA /* MergeWorkflowViewController.swift in Sources */,
 				C1C3FB1F2279E5AA0075E0AB /* OutlookService.swift in Sources */,
 				C1163FB222792F0A0040BBBA /* AppDelegate.swift in Sources */,

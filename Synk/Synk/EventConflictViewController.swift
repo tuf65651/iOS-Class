@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FetchTableViewController: UITableViewController {
+class EventConflictViewController: UIViewController {
     
     let service = OutlookService.shared(); // Note: crash if singleton doesn't already have token
     
