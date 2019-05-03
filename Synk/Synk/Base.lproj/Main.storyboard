@@ -224,6 +224,20 @@
                                     <constraint firstItem="MU8-xF-ehq" firstAttribute="top" secondItem="LaH-tz-6xS" secondAttribute="top" constant="8" id="jKJ-6f-euo"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Some Error has occurred, but we can't figure out what." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-yT-dlw" userLabel="Error Label">
+                                <rect key="frame" x="16" y="414" width="343" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thanks! We're good to go and your merge will begin soon." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGQ-Yn-jyV" userLabel="All Good Label">
+                                <rect key="frame" x="0.0" y="116" width="375" height="182"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -236,6 +250,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eKw-9a-lZg"/>
                     </view>
+                    <connections>
+                        <outlet property="allGoodLabel" destination="QGQ-Yn-jyV" id="c7b-F0-08d"/>
+                        <outlet property="errorLabel" destination="ncL-yT-dlw" id="PM4-eX-ez9"/>
+                        <outlet property="localEventView" destination="LaH-tz-6xS" id="xZA-oo-pFv"/>
+                        <outlet property="remoteEventView" destination="BUa-Jg-5Xh" id="NHE-Vj-WY4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWn-Og-Fl7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

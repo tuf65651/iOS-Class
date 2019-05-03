@@ -5,19 +5,36 @@
 //  Created by Shmuel Jacobs on 5/1/19.
 //  Copyright © 2019 Shmuel Jacobs. All rights reserved.
 //  NOTE: Do not handle no-login case. Program should crash if no login, since it shouldn't be allowed at this point.
+//  Thanks to andrewcbancroft for EventKit Tutorial
 
 import UIKit
 import UserNotifications
+import EventKit
 
 class EventConflictViewController: UIViewController {
     
     let service = OutlookService.shared(); // Note: crash if singleton doesn't already have token
+    let localCalendar = EKEventStore();
+    
+    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var allGoodLabel: UILabel!
+    @IBOutlet weak var remoteEventView: UIView!
+    @IBOutlet weak var localEventView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        errorLabel.isHidden = true;
+        allGoodLabel.isHidden = true;
+        localEventView.isHidden = true;
+        remoteEventView.isHidden = true;
+        
         fetchEvents();
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        checkLocalCalendarPermission();
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,4 +59,39 @@ class EventConflictViewController: UIViewController {
         })
     }
     
+    func checkLocalCalendarPermission() {
+        let permission = EKEventStore.authorizationStatus(for: EKEntityType.event);
+        
+        switch(permission) {
+        case EKAuthorizationStatus.notDetermined:
+            requestAccessToCalendar()
+        case EKAuthorizationStatus.authorized:
+            loadEvents();
+        case EKAuthorizationStatus.restricted, .denied:
+            showErrorLabel(); // FIXME
+        }
+    }
+    
+    func requestAccessToCalendar() {
+        localCalendar.requestAccess(to: .event, completion: {
+            (accessGranted: Bool, error: Error?) in
+            if accessGranted {
+                self.loadEvents();
+            }
+            if let unwrappedError = error {
+                self.showErrorLabel(); // FIXME
+            }
+        })
+    }
+    
+    // FIXME
+    func loadEvents() {
+        allGoodLabel.isHidden = false;
+        allGoodLabel.isEnabled = true;
+    }
+    
+    func showErrorLabel() {
+        errorLabel.isEnabled = true;
+        errorLabel.isHidden = false;
+    }
 }

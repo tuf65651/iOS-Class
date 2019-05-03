@@ -3,3 +3,9 @@
 - description: comment headers on all files
 - description: delegate so keyboard goes away
 - description: Log Out forgets old user account
+- description: Add help button and help scene
+- description: workflow mechanic (next up with next up, assume sorted)
+- description: Demo retrieve and display of both event queues
+
+
+https://www.andrewcbancroft.com/2015/05/14/beginners-guide-to-eventkit-in-swift-requesting-permission/

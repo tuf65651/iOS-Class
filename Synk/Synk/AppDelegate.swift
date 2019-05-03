@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Request access to calendar
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .], completionHandler: <#T##(Bool, Error?) -> Void#>)
+//        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .], completionHandler: <#T##(Bool, Error?) -> Void#>)
         return true
     }
     
