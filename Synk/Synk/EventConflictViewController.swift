@@ -13,13 +13,22 @@ import EventKit
 
 class EventConflictViewController: UIViewController {
     
-    let service = OutlookService.shared(); // Note: crash if singleton doesn't already have token
+    let outlookService = OutlookService.shared(); // Note: crash if singleton doesn't already have token
+    let localCalendarService = LocalCalendarService();
     let localCalendar = EKEventStore();
+    var localEventQueue: [EKEvent] = [];
     
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var allGoodLabel: UILabel!
     @IBOutlet weak var remoteEventView: UIView!
     @IBOutlet weak var localEventView: UIView!
+    
+    @IBOutlet weak var localEventSubjectLabel: UILabel!
+    @IBOutlet weak var localEventStartLabel: UILabel!
+    @IBOutlet weak var localEventEndLabel: UILabel!
+    @IBOutlet weak var remoteEventSubjectLabel: UILabel!
+    @IBOutlet weak var remoteEventStartLabel: UILabel!
+    @IBOutlet weak var remoteEventEndLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,14 +39,14 @@ class EventConflictViewController: UIViewController {
         localEventView.isHidden = true;
         remoteEventView.isHidden = true;
         
-//        fetchEvents();
-        let lcs = LocalCalendarService();
-        for event in lcs.loadEvents() {
-            NSLog(event.description);
-        }
-        let dummyDate = NSDate();
-        NSLog("Can't init date \(dummyDate.description)")
+//        let eventsList = lcs.loadEvents();
+//        for event in eventsList {
+//            NSLog("Got another event");
+//            NSLog(event.description);
+//        }
         
+        loadEvents();
+        showNextLocalEvent();
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,12 +59,12 @@ class EventConflictViewController: UIViewController {
     }
     
     func fetchEvents() {
-        service.getUserEmail(callback: {
+        outlookService.getUserEmail(callback: {
             email in
             if let unwrappedEmail = email {
                 NSLog("Hello \(unwrappedEmail)");
                 
-                self.service.getEvents(callback: {
+                self.outlookService.getEvents(callback: {
                     retrievedMessages in
                     for message in retrievedMessages!["value"].arrayValue { // crash if no JSON response
                         NSLog(message["subject"].stringValue);
@@ -93,12 +102,34 @@ class EventConflictViewController: UIViewController {
     
     // FIXME
     func loadEvents() {
-        allGoodLabel.isHidden = false;
-        allGoodLabel.isEnabled = true;
+        localEventQueue = LocalCalendarService.loadEvents(localCalendarService)();
+        NSLog(self.localEventQueue.description);
     }
     
     func showErrorLabel() {
-        errorLabel.isEnabled = true;
-        errorLabel.isHidden = false;
+        
+    }
+    
+    @IBAction func showNextLocalEvent() {
+//        let nextLocalEvent: EKEvent? = localEventQueue.first;
+//        if nextLocalEvent == nil {
+        if let nextLocalEvent = localEventQueue.first {
+            localEventQueue.removeFirst();
+            
+            localEventSubjectLabel.isHidden = false;
+            localEventStartLabel.isHidden = false;
+            localEventEndLabel.isHidden = false;
+            localEventView.isHidden = false;
+            
+            localEventSubjectLabel.text = nextLocalEvent.title;
+            localEventStartLabel.text = nextLocalEvent.startDate.description;
+            localEventEndLabel.text = nextLocalEvent.endDate.description;
+            
+        } else {
+            
+            localEventSubjectLabel.text = "All done!";
+            localEventStartLabel.isHidden = true;
+            localEventEndLabel.isHidden = true;
+        }
     }
 }

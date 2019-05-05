@@ -153,23 +153,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BUa-Jg-5Xh" userLabel="RemoteEventView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BUa-Jg-5Xh" userLabel="RemoteEventView" customClass="UIButton">
                                 <rect key="frame" x="16" y="150" width="343" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8a-PA-C8M" userLabel="RemoteEventSubjectLabel">
                                         <rect key="frame" x="0.0" y="8" width="343" height="21"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atj-cs-smZ" userLabel="RemoteEventStartLabel">
                                         <rect key="frame" x="0.0" y="37" width="343" height="21"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sV6-jg-LHh" userLabel="RemoteEventEndLabel">
                                         <rect key="frame" x="0.0" y="66" width="343" height="21"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -188,23 +191,26 @@
                                     <constraint firstAttribute="trailing" secondItem="sV6-jg-LHh" secondAttribute="trailing" id="whN-3K-bVf"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LaH-tz-6xS" userLabel="LocalEventView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LaH-tz-6xS" userLabel="LocalEventView" customClass="UIButton">
                                 <rect key="frame" x="16" y="358" width="343" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MU8-xF-ehq" userLabel="LocalEventSubjectLabel">
                                         <rect key="frame" x="0.0" y="8" width="343" height="21"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nef-AU-tYU" userLabel="LocalEventStartLabel">
                                         <rect key="frame" x="0.0" y="37" width="343" height="21"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gH9-k0-B4R" userLabel="LocalEventEndLabel">
                                         <rect key="frame" x="0.0" y="66" width="343" height="21"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -223,6 +229,9 @@
                                     <constraint firstAttribute="trailing" secondItem="MU8-xF-ehq" secondAttribute="trailing" id="gsJ-kH-ptp"/>
                                     <constraint firstItem="MU8-xF-ehq" firstAttribute="top" secondItem="LaH-tz-6xS" secondAttribute="top" constant="8" id="jKJ-6f-euo"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="showNextLocalEvent" destination="Mn3-FM-F1a" eventType="touchUpInside" id="BOU-fD-egM"/>
+                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Some Error has occurred, but we can't figure out what." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-yT-dlw" userLabel="Error Label">
                                 <rect key="frame" x="16" y="414" width="343" height="200"/>
@@ -238,6 +247,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xx7-60-WkM">
+                                <rect key="frame" x="275" y="38" width="84" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Merge"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -253,7 +267,13 @@
                     <connections>
                         <outlet property="allGoodLabel" destination="QGQ-Yn-jyV" id="c7b-F0-08d"/>
                         <outlet property="errorLabel" destination="ncL-yT-dlw" id="PM4-eX-ez9"/>
+                        <outlet property="localEventEndLabel" destination="gH9-k0-B4R" id="0n0-hZ-elU"/>
+                        <outlet property="localEventStartLabel" destination="nef-AU-tYU" id="xvE-Mt-x7F"/>
+                        <outlet property="localEventSubjectLabel" destination="MU8-xF-ehq" id="3VE-Jj-smS"/>
                         <outlet property="localEventView" destination="LaH-tz-6xS" id="xZA-oo-pFv"/>
+                        <outlet property="remoteEventEndLabel" destination="sV6-jg-LHh" id="pck-8S-93Z"/>
+                        <outlet property="remoteEventStartLabel" destination="Atj-cs-smZ" id="dS1-WZ-xk0"/>
+                        <outlet property="remoteEventSubjectLabel" destination="k8a-PA-C8M" id="bou-Gs-sKX"/>
                         <outlet property="remoteEventView" destination="BUa-Jg-5Xh" id="NHE-Vj-WY4"/>
                     </connections>
                 </viewController>

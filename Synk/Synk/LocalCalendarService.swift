@@ -11,24 +11,29 @@ import EventKit
 
 class LocalCalendarService {
     
-    let secondsInWeek = 60*60*7 as Double;
+    let secondsInWeek = 60*60*24*7 as Double;
     var today: NSDate;
     var weekFromNowDate: NSDate;
     let eventStore: EKEventStore;
-    let localCalendar: EKCalendar;
+    let localCalendars: [EKCalendar];
     let formatter = DateFormatter();
     
     init() {
         eventStore = EKEventStore();
-        localCalendar = EKCalendar(for: .event, eventStore: eventStore);
-        today = NSDate.init();
+        localCalendars = eventStore.calendars(for: .event);
+        today = NSDate();
         weekFromNowDate = NSDate(timeIntervalSinceNow: secondsInWeek);
         
         NSLog("Initializing Calendar for events from \(today.description) to \(weekFromNowDate.description)");
     }
     
     func loadEvents() -> [EKEvent] {
-        let eventsPredicate = eventStore.predicateForEvents(withStart: today as Date, end: weekFromNowDate as Date, calendars: [localCalendar]);
+        let rawToday = today as Date;
+        let rawWeekFromNowDate = weekFromNowDate as Date;
+        
+        let eventsPredicate = eventStore.predicateForEvents(withStart: rawToday, end: rawWeekFromNowDate, calendars: localCalendars);
+        
+        NSLog("Trying to find events matching \(eventsPredicate.description)")
         
         return eventStore.events(matching: eventsPredicate);
     }
