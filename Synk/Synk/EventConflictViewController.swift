@@ -10,6 +10,7 @@
 import UIKit
 import UserNotifications
 import EventKit
+import SwiftyJSON
 
 class EventConflictViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class EventConflictViewController: UIViewController {
     let localCalendarService = LocalCalendarService();
     let localCalendar = EKEventStore();
     var localEventQueue: [EKEvent] = [];
+    var outlookEventQueue: [JSON] = [];
     
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var allGoodLabel: UILabel!
@@ -103,7 +105,13 @@ class EventConflictViewController: UIViewController {
     // FIXME
     func loadEvents() {
         localEventQueue = LocalCalendarService.loadEvents(localCalendarService)();
-        NSLog(self.localEventQueue.description);
+        outlookService.getEvents( callback: {
+            eventQueue in
+            for event in eventQueue! {
+                NSLog(event.0)
+                NSLog(event.1.description)
+            }
+        });
     }
     
     func showErrorLabel() {
