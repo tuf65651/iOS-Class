@@ -30,7 +30,14 @@ class EventConflictViewController: UIViewController {
         localEventView.isHidden = true;
         remoteEventView.isHidden = true;
         
-        fetchEvents();
+//        fetchEvents();
+        let lcs = LocalCalendarService();
+        for event in lcs.loadEvents() {
+            NSLog(event.description);
+        }
+        let dummyDate = NSDate();
+        NSLog("Can't init date \(dummyDate.description)")
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
