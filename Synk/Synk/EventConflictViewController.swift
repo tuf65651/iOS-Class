@@ -43,7 +43,7 @@ class EventConflictViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         checkLocalCalendarPermission();
-        loadEvents();
+        loadRemoteEvents();
     }
     
     override func viewDidLoad() {
@@ -81,7 +81,7 @@ class EventConflictViewController: UIViewController {
         localCalendar.requestAccess(to: .event, completion: {
             (accessGranted: Bool, error: Error?) in
             if accessGranted {
-                self.loadEvents();
+                self.loadRemoteEvents();
             }
             if let unwrappedError = error {
                 self.showErrorLabel(); // FIXME
@@ -90,8 +90,8 @@ class EventConflictViewController: UIViewController {
     }
     
     // FIXME
-    func loadEvents() {
-        localEventQueue = LocalCalendarService.loadEvents(localCalendarService)();
+    func loadRemoteEvents() {
+        
         outlookService.getUserEmail(callback: {
             email in
             if let unwrappedEmail = email {
@@ -105,8 +105,8 @@ class EventConflictViewController: UIViewController {
                         for event in eventJSON {
                             var eventStruct = Event(
                                 subject: event["subject"].stringValue,
-                                start: event["start"].stringValue,
-                                end: event["end"].stringValue,
+                                start: event["start"]["dateTime"].stringValue,
+                                end: event["end"]["dateTime"].stringValue,
                                 isAllDay: event["isAllDay"].boolValue,
                                 location: event["location"].stringValue,
                                 body: event["location"].stringValue
@@ -119,6 +119,15 @@ class EventConflictViewController: UIViewController {
                 }
             }
         })
+    }
+    
+    func getConflictingLocalEvents(event: Event) -> [EKEvent] {
+        let startDS = String(event.start.prefix(19));
+        let stopDS = String(event.end.prefix(19));
+        NSLog("Trying to get a date for \(startDS) and \(stopDS)")
+        let start = Formatter.stringToDate(date: startDS);
+        let stop = Formatter.stringToDate(date: stopDS);
+        return localCalendarService.loadEvents(start: start, stop: stop);
     }
     
     func showErrorLabel() {
@@ -161,6 +170,11 @@ class EventConflictViewController: UIViewController {
             remoteEventSubjectLabel.text = nextOutlookEvent.subject;
             remoteEventStartLabel.text = nextOutlookEvent.start;
             remoteEventEndLabel.text = nextOutlookEvent.end;
+            
+            let conflicts = getConflictingLocalEvents(event: nextOutlookEvent);
+            if !conflicts.isEmpty {
+                NSLog("Found some conflicts")
+            }
             
         } else {
             

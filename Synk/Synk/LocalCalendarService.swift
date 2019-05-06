@@ -37,4 +37,13 @@ class LocalCalendarService {
         
         return eventStore.events(matching: eventsPredicate);
     }
+    
+    func loadEvents(start: Date, stop: Date) -> [EKEvent] {
+        
+        let eventsPredicate = eventStore.predicateForEvents(withStart: start, end: stop, calendars: localCalendars);
+        
+        NSLog("Trying to find events matching \(eventsPredicate.description)")
+        
+        return eventStore.events(matching: eventsPredicate);
+    }
 }

@@ -56,4 +56,11 @@ class Formatter {
         
         return toStringFormatter.string(from: dateObj!)
     }
+    
+    class func stringToDate(date: String) -> Date {
+        let toDateFormatter = DateFormatter()
+        toDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        
+        return toDateFormatter.date(from: date)!
+    }
 }
