@@ -61,23 +61,6 @@ class EventConflictViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    func fetchEvents() {
-//        outlookService.getUserEmail(callback: {
-//            email in
-//            if let unwrappedEmail = email {
-//                NSLog("Hello \(unwrappedEmail)");
-//
-//                self.outlookService.getEvents(callback: {
-//                    retrievedMessages in
-//                    for message in retrievedMessages!["value"].arrayValue { // crash if no JSON response
-//                        NSLog(message["subject"].stringValue);
-//                        NSLog(message["start"].stringValue);
-//                    }
-//                })
-//            }
-//        })
-//    }
-//
     func checkLocalCalendarPermission() {
         let permission = EKEventStore.authorizationStatus(for: EKEntityType.event);
         
@@ -115,7 +98,7 @@ class EventConflictViewController: UIViewController {
                 
                 self.outlookService.getEvents(callback: {
                     retrievedEvents in
-                    for event in retrievedEvents!["values"].arrayValue {
+                    for event in retrievedEvents!["value"].arrayValue {
                         self.outlookEventQueue.append(event);
                         NSLog(event["subject"].stringValue)
                     }
