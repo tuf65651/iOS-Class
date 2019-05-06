@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		666903F35846C3F74505C3E6 /* Pods_SynkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 297C12485BCFAF1C93AAEEF6 /* Pods_SynkTests.framework */; };
+		C114DC582280A0760043FCA3 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C114DC572280A0760043FCA3 /* Formatter.swift */; };
 		C1163FB222792F0A0040BBBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1163FB122792F0A0040BBBA /* AppDelegate.swift */; };
 		C1163FB422792F0A0040BBBA /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1163FB322792F0A0040BBBA /* AgendaViewController.swift */; };
 		C1163FB622792F0A0040BBBA /* MergeWorkflowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1163FB522792F0A0040BBBA /* MergeWorkflowViewController.swift */; };
@@ -52,6 +53,7 @@
 		66704F166744E12B1B911B75 /* Pods-SynkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynkUITests.debug.xcconfig"; path = "Target Support Files/Pods-SynkUITests/Pods-SynkUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E375BE695DD42D1D44AFF2C /* Pods-SynkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynkTests.debug.xcconfig"; path = "Target Support Files/Pods-SynkTests/Pods-SynkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B60A552AEA039B8499AF2140 /* Pods-SynkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynkUITests.release.xcconfig"; path = "Target Support Files/Pods-SynkUITests/Pods-SynkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C114DC572280A0760043FCA3 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		C1163FAE22792F0A0040BBBA /* Synk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Synk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1163FB122792F0A0040BBBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1163FB322792F0A0040BBBA /* AgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				C1C3FB202279E9480075E0AB /* README.md */,
 				C15BD140227A9FD900AC0304 /* EventConflictViewController.swift */,
 				C12ED2BA227EAB5D00A87D4A /* LocalCalendarService.swift */,
+				C114DC572280A0760043FCA3 /* Formatter.swift */,
 			);
 			path = Synk;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				C1163FB222792F0A0040BBBA /* AppDelegate.swift in Sources */,
 				C12ED2BB227EAB5D00A87D4A /* LocalCalendarService.swift in Sources */,
 				C1C3FB222279F8880075E0AB /* LoginViewController.swift in Sources */,
+				C114DC582280A0760043FCA3 /* Formatter.swift in Sources */,
 				C1163FB422792F0A0040BBBA /* AgendaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

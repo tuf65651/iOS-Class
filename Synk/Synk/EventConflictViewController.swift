@@ -62,9 +62,6 @@ class EventConflictViewController: UIViewController {
         
         loadEvents();
         
-        for event in outlookEventQueue {
-            NSLog(event["body"]);
-        }
 //        showNextLocalEvent();
     }
     
@@ -108,11 +105,17 @@ class EventConflictViewController: UIViewController {
             if let unwrappedEmail = email {
                 NSLog("Hello \(unwrappedEmail)");
                 
-                self.outlookService.getEvents(callback: {
-                    retrievedEvents in
-                    for eventJSON in retrievedEvents!["value"].arrayValue {
-                        var eventStruct: Event;
-                        eventStruct.subject =
+                self.outlookService.getEvents() {
+                    events in
+                    if let unwrappedEvents = events {
+                        let eventJSON = unwrappedEvents["value"].arrayValue;
+                        
+                        for event in eventJSON {
+                            var eventStruct = Event(
+                                subject: event["subject"].string,
+                                start: <#T##String#>, end: <#T##String#>, isAllDay: <#T##Bool#>, location: <#T##String#>, body: <#T##String#>
+                            )
+                        }
                     }
                 })
             }
