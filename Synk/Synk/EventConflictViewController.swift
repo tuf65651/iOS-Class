@@ -112,12 +112,17 @@ class EventConflictViewController: UIViewController {
                         
                         for event in eventJSON {
                             var eventStruct = Event(
-                                subject: event["subject"].string,
-                                start: <#T##String#>, end: <#T##String#>, isAllDay: <#T##Bool#>, location: <#T##String#>, body: <#T##String#>
+                                subject: event["subject"].stringValue,
+                                start: event["start"].stringValue,
+                                end: event["end"].stringValue,
+                                isAllDay: event["isAllDay"].boolValue,
+                                location: event["location"].stringValue,
+                                body: event["location"].stringValue
                             )
+                            self.outlookEventQueue.append(eventStruct);
                         }
                     }
-                })
+                }
             }
         })
     }
@@ -135,6 +140,27 @@ class EventConflictViewController: UIViewController {
             localEventSubjectLabel.isHidden = false;
             localEventStartLabel.isHidden = false;
             localEventEndLabel.isHidden = false;
+            localEventView.isHidden = false;
+            
+            localEventSubjectLabel.text = nextLocalEvent.title;
+            localEventStartLabel.text = nextLocalEvent.startDate.description;
+            localEventEndLabel.text = nextLocalEvent.endDate.description;
+            
+        } else {
+            
+            localEventSubjectLabel.text = "All done!";
+            localEventStartLabel.isHidden = true;
+            localEventEndLabel.isHidden = true;
+        }
+    }
+    
+    @IBAction func showNextRetrievedEvent() {
+        if let nextOutlookEvent = outlookEventQueue.first {
+            outlookEventQueue.removeFirst();
+            
+            nextOutlookEvent.isHidden = false;
+            nextOutlookEvent.isHidden = false;
+            nextOutlookEvent.isHidden = false;
             localEventView.isHidden = false;
             
             localEventSubjectLabel.text = nextLocalEvent.title;
