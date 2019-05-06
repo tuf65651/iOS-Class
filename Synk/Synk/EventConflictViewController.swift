@@ -168,12 +168,12 @@ class EventConflictViewController: UIViewController {
             remoteEventView.isHidden = false;
             
             remoteEventSubjectLabel.text = nextOutlookEvent.subject;
-            remoteEventStartLabel.text = nextOutlookEvent.start;
-            remoteEventEndLabel.text = nextOutlookEvent.end;
+            remoteEventStartLabel.text = nextOutlookEvent.start.description;
+            remoteEventEndLabel.text = nextOutlookEvent.end.description;
             
-            let conflicts = getConflictingLocalEvents(event: nextOutlookEvent);
-            if !conflicts.isEmpty {
-                NSLog("Found some conflicts")
+            localEventQueue = getConflictingLocalEvents(event: nextOutlookEvent);
+            if !localEventQueue.isEmpty {
+                showNextLocalEvent();
             }
             
         } else {
