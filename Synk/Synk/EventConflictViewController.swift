@@ -32,6 +32,10 @@ class EventConflictViewController: UIViewController {
     @IBOutlet weak var remoteEventStartLabel: UILabel!
     @IBOutlet weak var remoteEventEndLabel: UILabel!
     
+    override func viewWillAppear(_ animated: Bool) {
+        checkLocalCalendarPermission();
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -48,11 +52,8 @@ class EventConflictViewController: UIViewController {
 //        }
         
         loadEvents();
+        
         showNextLocalEvent();
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        checkLocalCalendarPermission();
     }
     
     override func didReceiveMemoryWarning() {
@@ -60,23 +61,23 @@ class EventConflictViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func fetchEvents() {
-        outlookService.getUserEmail(callback: {
-            email in
-            if let unwrappedEmail = email {
-                NSLog("Hello \(unwrappedEmail)");
-                
-                self.outlookService.getEvents(callback: {
-                    retrievedMessages in
-                    for message in retrievedMessages!["value"].arrayValue { // crash if no JSON response
-                        NSLog(message["subject"].stringValue);
-                        NSLog(message["start"].stringValue);
-                    }
-                })
-            }
-        })
-    }
-    
+//    func fetchEvents() {
+//        outlookService.getUserEmail(callback: {
+//            email in
+//            if let unwrappedEmail = email {
+//                NSLog("Hello \(unwrappedEmail)");
+//
+//                self.outlookService.getEvents(callback: {
+//                    retrievedMessages in
+//                    for message in retrievedMessages!["value"].arrayValue { // crash if no JSON response
+//                        NSLog(message["subject"].stringValue);
+//                        NSLog(message["start"].stringValue);
+//                    }
+//                })
+//            }
+//        })
+//    }
+//
     func checkLocalCalendarPermission() {
         let permission = EKEventStore.authorizationStatus(for: EKEntityType.event);
         
@@ -84,7 +85,8 @@ class EventConflictViewController: UIViewController {
         case EKAuthorizationStatus.notDetermined:
             requestAccessToCalendar()
         case EKAuthorizationStatus.authorized:
-            loadEvents();
+            NSLog("Got permission to read calendar")
+//            loadEvents();
         case EKAuthorizationStatus.restricted, .denied:
             showErrorLabel(); // FIXME
         }
@@ -105,13 +107,21 @@ class EventConflictViewController: UIViewController {
     // FIXME
     func loadEvents() {
         localEventQueue = LocalCalendarService.loadEvents(localCalendarService)();
-        outlookService.getEvents( callback: {
-            eventQueue in
-            for event in eventQueue! {
-                NSLog(event.0)
-                NSLog(event.1.description)
+        
+        outlookService.getUserEmail(callback: {
+            email in
+            if let unwrappedEmail = email {
+                NSLog("Hello \(unwrappedEmail)");
+                
+                self.outlookService.getEvents(callback: {
+                    retrievedEvents in
+                    for event in retrievedEvents!["values"].arrayValue {
+                        self.outlookEventQueue.append(event);
+                        NSLog(event["subject"].stringValue)
+                    }
+                })
             }
-        });
+        })
     }
     
     func showErrorLabel() {
