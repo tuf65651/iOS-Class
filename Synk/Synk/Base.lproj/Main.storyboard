@@ -190,6 +190,9 @@
                                     <constraint firstAttribute="trailing" secondItem="Atj-cs-smZ" secondAttribute="trailing" id="Ywz-6e-IXl"/>
                                     <constraint firstAttribute="trailing" secondItem="sV6-jg-LHh" secondAttribute="trailing" id="whN-3K-bVf"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="showNextRetrievedEvent" destination="Mn3-FM-F1a" eventType="touchUpInside" id="yVd-VA-xCK"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LaH-tz-6xS" userLabel="LocalEventView" customClass="UIButton">
                                 <rect key="frame" x="16" y="358" width="343" height="200"/>

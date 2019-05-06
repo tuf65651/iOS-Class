@@ -43,6 +43,7 @@ class EventConflictViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         checkLocalCalendarPermission();
+        loadEvents();
     }
     
     override func viewDidLoad() {
@@ -54,15 +55,7 @@ class EventConflictViewController: UIViewController {
         localEventView.isHidden = true;
         remoteEventView.isHidden = true;
         
-//        let eventsList = lcs.loadEvents();
-//        for event in eventsList {
-//            NSLog("Got another event");
-//            NSLog(event.description);
-//        }
-        
-        loadEvents();
-        
-//        showNextLocalEvent();
+        showNextRetrievedEvent();
     }
     
     override func didReceiveMemoryWarning() {
@@ -99,7 +92,6 @@ class EventConflictViewController: UIViewController {
     // FIXME
     func loadEvents() {
         localEventQueue = LocalCalendarService.loadEvents(localCalendarService)();
-        
         outlookService.getUserEmail(callback: {
             email in
             if let unwrappedEmail = email {
@@ -118,8 +110,10 @@ class EventConflictViewController: UIViewController {
                                 isAllDay: event["isAllDay"].boolValue,
                                 location: event["location"].stringValue,
                                 body: event["location"].stringValue
-                            )
+                            );
                             self.outlookEventQueue.append(eventStruct);
+                            NSLog(eventStruct.subject);
+                            NSLog("\(self.outlookEventQueue.count) events now in Outlook event queue.");
                         }
                     }
                 }
@@ -155,23 +149,25 @@ class EventConflictViewController: UIViewController {
     }
     
     @IBAction func showNextRetrievedEvent() {
-        if let nextOutlookEvent = outlookEventQueue.first {
+        if let nextOutlookEvent = self.outlookEventQueue.first {
+            NSLog("Found another Outlook event.");
             outlookEventQueue.removeFirst();
             
-            nextOutlookEvent.isHidden = false;
-            nextOutlookEvent.isHidden = false;
-            nextOutlookEvent.isHidden = false;
-            localEventView.isHidden = false;
+            remoteEventSubjectLabel.isHidden = false;
+            remoteEventStartLabel.isHidden = false;
+            remoteEventEndLabel.isHidden = false;
+            remoteEventView.isHidden = false;
             
-            localEventSubjectLabel.text = nextLocalEvent.title;
-            localEventStartLabel.text = nextLocalEvent.startDate.description;
-            localEventEndLabel.text = nextLocalEvent.endDate.description;
+            remoteEventSubjectLabel.text = nextOutlookEvent.subject;
+            remoteEventStartLabel.text = nextOutlookEvent.start;
+            remoteEventEndLabel.text = nextOutlookEvent.end;
             
         } else {
             
-            localEventSubjectLabel.text = "All done!";
-            localEventStartLabel.isHidden = true;
-            localEventEndLabel.isHidden = true;
+            remoteEventView.isHidden = false;
+            remoteEventSubjectLabel.text = "All done!";
+            remoteEventStartLabel.isHidden = true;
+            remoteEventEndLabel.isHidden = true;
         }
     }
 }
