@@ -12,13 +12,22 @@ import UserNotifications
 import EventKit
 import SwiftyJSON
 
+struct Event {
+    let subject: String;
+    let start: String;
+    let end: String;
+    let isAllDay: Bool;
+    let location: String;
+    let body: String;
+}
+
 class EventConflictViewController: UIViewController {
     
     let outlookService = OutlookService.shared(); // Note: crash if singleton doesn't already have token
     let localCalendarService = LocalCalendarService();
     let localCalendar = EKEventStore();
     var localEventQueue: [EKEvent] = [];
-    var outlookEventQueue: [JSON] = [];
+    var outlookEventQueue: [Event] = [];
     
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var allGoodLabel: UILabel!
@@ -53,7 +62,10 @@ class EventConflictViewController: UIViewController {
         
         loadEvents();
         
-        showNextLocalEvent();
+        for event in outlookEventQueue {
+            NSLog(event["body"]);
+        }
+//        showNextLocalEvent();
     }
     
     override func didReceiveMemoryWarning() {
@@ -98,9 +110,9 @@ class EventConflictViewController: UIViewController {
                 
                 self.outlookService.getEvents(callback: {
                     retrievedEvents in
-                    for event in retrievedEvents!["value"].arrayValue {
-                        self.outlookEventQueue.append(event);
-                        NSLog(event["subject"].stringValue)
+                    for eventJSON in retrievedEvents!["value"].arrayValue {
+                        var eventStruct: Event;
+                        eventStruct.subject =
                     }
                 })
             }
