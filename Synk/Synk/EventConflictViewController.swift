@@ -109,7 +109,7 @@ class EventConflictViewController: UIViewController {
                                 end: event["end"]["dateTime"].stringValue,
                                 isAllDay: event["isAllDay"].boolValue,
                                 location: event["location"].stringValue,
-                                body: event["location"].stringValue
+                                body: event["bodyPreview"].stringValue
                             );
                             self.outlookEventQueue.append(eventStruct);
                             NSLog(eventStruct.subject);
@@ -151,7 +151,8 @@ class EventConflictViewController: UIViewController {
             
         } else {
             
-            localEventSubjectLabel.text = "All done!";
+//            localEventSubjectLabel.text = "All done!";
+            localEventView.isHidden = true;
             localEventStartLabel.isHidden = true;
             localEventEndLabel.isHidden = true;
         }
@@ -159,7 +160,6 @@ class EventConflictViewController: UIViewController {
     
     @IBAction func showNextRetrievedEvent() {
         if let nextOutlookEvent = self.outlookEventQueue.first {
-            NSLog("Found another Outlook event.");
             outlookEventQueue.removeFirst();
             
             remoteEventSubjectLabel.isHidden = false;
@@ -168,20 +168,24 @@ class EventConflictViewController: UIViewController {
             remoteEventView.isHidden = false;
             
             remoteEventSubjectLabel.text = nextOutlookEvent.subject;
-            remoteEventStartLabel.text = nextOutlookEvent.start.description;
-            remoteEventEndLabel.text = nextOutlookEvent.end.description;
+            remoteEventStartLabel.text = nextOutlookEvent.start;
+            remoteEventEndLabel.text = nextOutlookEvent.end;
+            NSLog("Supposedly showing \(remoteEventStartLabel.text) to \(remoteEventEndLabel.text)")
             
             localEventQueue = getConflictingLocalEvents(event: nextOutlookEvent);
-            if !localEventQueue.isEmpty {
-                showNextLocalEvent();
-            }
+            
+            showNextLocalEvent();
             
         } else {
             
             remoteEventView.isHidden = false;
-            remoteEventSubjectLabel.text = "All done!";
-            remoteEventStartLabel.isHidden = true;
-            remoteEventEndLabel.isHidden = true;
+            remoteEventSubjectLabel.text = "No merge in progress.";
+//            remoteEventStartLabel.isHidden = true;
+//            remoteEventEndLabel.isHidden = true;
+            
+            localEventView.isHidden = true;
         }
+        
+        NSLog("remoteEventStartLabel.isHidden: \(remoteEventStartLabel.isHidden)")
     }
 }
