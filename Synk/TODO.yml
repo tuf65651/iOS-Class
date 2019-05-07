@@ -6,6 +6,6 @@
 - description: Add help button and help scene
 - description: workflow mechanic (next up with next up, assume sorted)
 - description: Demo retrieve and display of both event queues
-
+- description: Filter out matching name
 
 https://www.andrewcbancroft.com/2015/05/14/beginners-guide-to-eventkit-in-swift-requesting-permission/

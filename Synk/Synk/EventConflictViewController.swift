@@ -28,6 +28,8 @@ class EventConflictViewController: UIViewController {
     let localCalendar = EKEventStore();
     var localEventQueue: [EKEvent] = [];
     var outlookEventQueue: [Event] = [];
+    var currentRemoteEvent: Event;
+    var currentLocalEvent: EKEvent;
     
     @IBOutlet weak var errorLabel: UILabel!
 //    @IBOutlet weak var allGoodLabel: UILabel!
@@ -154,6 +156,8 @@ class EventConflictViewController: UIViewController {
             keepConflictButton.isEnabled = true;
             keepConflictButton.isHidden = false;
             
+            currentLocalEvent = nextLocalEvent;
+            
         } else {
             
 //            localEventSubjectLabel.text = "All done!";
@@ -183,6 +187,8 @@ class EventConflictViewController: UIViewController {
             
             showNextLocalEvent();
             
+            currentRemoteEvent = nextOutlookEvent;
+            
         } else {
             
             remoteEventView.isHidden = false;
@@ -197,10 +203,33 @@ class EventConflictViewController: UIViewController {
     }
     
     @IBAction func remoteEventWasTapped() {
+        var addEKEvent = EKEvent(eventStore: localCalendar);
+        addEKEvent.title = currentRemoteEvent.subject;
+        addEKEvent.notes = currentRemoteEvent.body;
+        addEKEvent.startDate = Formatter.stringToDate(date: currentRemoteEvent.start);
+        addEKEvent.endDate = Formatter.stringToDate(date: currentRemoteEvent.end);
+        addEKEvent.isAllDay = currentRemoteEvent.isAllDay;
+        addEKEvent.location = currentRemoteEvent.location;
         
+        do {
+            try localCalendar.save(addEKEvent, span: .thisEvent, commit: true);
+            remoteEventSubjectLabel.text = "Event Saved";
+        } catch {
+            remoteEventSubjectLabel.text = "Couldn't save";
+        }
+        remoteEventStartLabel.isHidden = true;
+        remoteEventEndLabel.isHidden = true;
+        do {
+            try localCalendar.remove(currentLocalEvent, span: .thisEvent);
+        } catch {
+            remoteEventSubjectLabel.text = "Couldn't remove conflicting";
+        }
+        
+        showNextRetrievedEvent();
     }
     
     @IBAction func localEventWasTapped() {
+        
         
     }
     
