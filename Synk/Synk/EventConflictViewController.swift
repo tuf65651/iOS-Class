@@ -30,9 +30,10 @@ class EventConflictViewController: UIViewController {
     var outlookEventQueue: [Event] = [];
     
     @IBOutlet weak var errorLabel: UILabel!
-    @IBOutlet weak var allGoodLabel: UILabel!
+//    @IBOutlet weak var allGoodLabel: UILabel!
     @IBOutlet weak var remoteEventView: UIView!
     @IBOutlet weak var localEventView: UIView!
+    @IBOutlet weak var keepConflictButton: UIButton!
     
     @IBOutlet weak var localEventSubjectLabel: UILabel!
     @IBOutlet weak var localEventStartLabel: UILabel!
@@ -51,9 +52,10 @@ class EventConflictViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         errorLabel.isHidden = true;
-        allGoodLabel.isHidden = true;
+        // allGoodLabel.isHidden = true;
         localEventView.isHidden = true;
         remoteEventView.isHidden = true;
+        keepConflictButton.isHidden = true;
         
         showNextRetrievedEvent();
     }
@@ -134,7 +136,7 @@ class EventConflictViewController: UIViewController {
         
     }
     
-    @IBAction func showNextLocalEvent() {
+    func showNextLocalEvent() {
 //        let nextLocalEvent: EKEvent? = localEventQueue.first;
 //        if nextLocalEvent == nil {
         if let nextLocalEvent = localEventQueue.first {
@@ -149,28 +151,33 @@ class EventConflictViewController: UIViewController {
             localEventStartLabel.text = nextLocalEvent.startDate.description;
             localEventEndLabel.text = nextLocalEvent.endDate.description;
             
+            keepConflictButton.isEnabled = true;
+            keepConflictButton.isHidden = false;
+            
         } else {
             
 //            localEventSubjectLabel.text = "All done!";
             localEventView.isHidden = true;
             localEventStartLabel.isHidden = true;
             localEventEndLabel.isHidden = true;
+            
+            keepConflictButton.isEnabled = false;
+            keepConflictButton.isHidden = true;
         }
     }
     
-    @IBAction func showNextRetrievedEvent() {
+    func showNextRetrievedEvent() {
         if let nextOutlookEvent = self.outlookEventQueue.first {
             outlookEventQueue.removeFirst();
+            
+            remoteEventSubjectLabel.text = nextOutlookEvent.subject;
+            remoteEventStartLabel.text = nextOutlookEvent.start;
+            remoteEventEndLabel.text = nextOutlookEvent.end;
             
             remoteEventSubjectLabel.isHidden = false;
             remoteEventStartLabel.isHidden = false;
             remoteEventEndLabel.isHidden = false;
             remoteEventView.isHidden = false;
-            
-            remoteEventSubjectLabel.text = nextOutlookEvent.subject;
-            remoteEventStartLabel.text = nextOutlookEvent.start;
-            remoteEventEndLabel.text = nextOutlookEvent.end;
-            NSLog("Supposedly showing \(remoteEventStartLabel.text) to \(remoteEventEndLabel.text)")
             
             localEventQueue = getConflictingLocalEvents(event: nextOutlookEvent);
             
@@ -180,12 +187,24 @@ class EventConflictViewController: UIViewController {
             
             remoteEventView.isHidden = false;
             remoteEventSubjectLabel.text = "No merge in progress.";
-//            remoteEventStartLabel.isHidden = true;
-//            remoteEventEndLabel.isHidden = true;
+            remoteEventStartLabel.isHidden = true;
+            remoteEventEndLabel.isHidden = true;
             
             localEventView.isHidden = true;
         }
         
         NSLog("remoteEventStartLabel.isHidden: \(remoteEventStartLabel.isHidden)")
+    }
+    
+    @IBAction func remoteEventWasTapped() {
+        
+    }
+    
+    @IBAction func localEventWasTapped() {
+        
+    }
+    
+    @IBAction func keepConflictWasTapped() {
+        
     }
 }

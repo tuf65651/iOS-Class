@@ -10,8 +10,6 @@
 		666903F35846C3F74505C3E6 /* Pods_SynkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 297C12485BCFAF1C93AAEEF6 /* Pods_SynkTests.framework */; };
 		C114DC582280A0760043FCA3 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C114DC572280A0760043FCA3 /* Formatter.swift */; };
 		C1163FB222792F0A0040BBBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1163FB122792F0A0040BBBA /* AppDelegate.swift */; };
-		C1163FB422792F0A0040BBBA /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1163FB322792F0A0040BBBA /* AgendaViewController.swift */; };
-		C1163FB622792F0A0040BBBA /* MergeWorkflowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1163FB522792F0A0040BBBA /* MergeWorkflowViewController.swift */; };
 		C1163FB922792F0A0040BBBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1163FB722792F0A0040BBBA /* Main.storyboard */; };
 		C1163FBB22792F0A0040BBBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1163FBA22792F0A0040BBBA /* Assets.xcassets */; };
 		C1163FBE22792F0A0040BBBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1163FBC22792F0A0040BBBA /* LaunchScreen.storyboard */; };
@@ -56,8 +54,6 @@
 		C114DC572280A0760043FCA3 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		C1163FAE22792F0A0040BBBA /* Synk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Synk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1163FB122792F0A0040BBBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C1163FB322792F0A0040BBBA /* AgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
-		C1163FB522792F0A0040BBBA /* MergeWorkflowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeWorkflowViewController.swift; sourceTree = "<group>"; };
 		C1163FB822792F0A0040BBBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1163FBA22792F0A0040BBBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1163FBD22792F0A0040BBBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -157,8 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				C1163FB122792F0A0040BBBA /* AppDelegate.swift */,
-				C1163FB322792F0A0040BBBA /* AgendaViewController.swift */,
-				C1163FB522792F0A0040BBBA /* MergeWorkflowViewController.swift */,
 				C1163FB722792F0A0040BBBA /* Main.storyboard */,
 				C1163FBA22792F0A0040BBBA /* Assets.xcassets */,
 				C1163FBC22792F0A0040BBBA /* LaunchScreen.storyboard */,
@@ -406,13 +400,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C15BD141227A9FD900AC0304 /* EventConflictViewController.swift in Sources */,
-				C1163FB622792F0A0040BBBA /* MergeWorkflowViewController.swift in Sources */,
 				C1C3FB1F2279E5AA0075E0AB /* OutlookService.swift in Sources */,
 				C1163FB222792F0A0040BBBA /* AppDelegate.swift in Sources */,
 				C12ED2BB227EAB5D00A87D4A /* LocalCalendarService.swift in Sources */,
 				C1C3FB222279F8880075E0AB /* LoginViewController.swift in Sources */,
 				C114DC582280A0760043FCA3 /* Formatter.swift in Sources */,
-				C1163FB422792F0A0040BBBA /* AgendaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
